@@ -139,7 +139,7 @@ module.exports = {
                 return [
                   stylelint(),
                   doiuse({
-                    browsers: ['ie >= 9', 'last 2 versions'],
+                    browsers: ['ie >= 9', 'last 2 Chrome versions', 'Firefox > 20'],
                     ignore: ['flexbox', 'rem', 'css-resize', 'css-masks', 'object-fit'],
                     ignoreFiles: ['**/normalize.css'],
                     onFeatureUsage: function (usageInfo) {

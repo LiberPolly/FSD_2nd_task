@@ -1,7 +1,7 @@
 # FSD_2nd_task
-Обучающее задание на фронтенд разработчика -  практика верстки
+Обучающее задание на фронтенд разработчика -  практика верстки.
 
-* Run doiuse: doiuse --browsers "ie >= 11, > 1%, last 2 versions" C:/GeekBrains/Git/FSD/FSD_2nd_task/src/theme/style.css
+* Run doiuse: doiuse C:/GeekBrains/Git/FSD/FSD_2nd_task/src/theme/style.css
 
 * Run stylelint: npx stylelint "**/*.less"
 
