@@ -80,11 +80,8 @@ module.exports = {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist')
   },
-  resolve: { 
-    extensions: ['.js', '.json'],
-    alias: {
-      '@': path.resolve(__dirname, 'src')
-    }
+  resolve: {
+    extensions: ['.js', '.json']
   },
   optimization: optimization(),
   devServer: {
