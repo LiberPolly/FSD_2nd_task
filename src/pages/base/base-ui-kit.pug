@@ -1,0 +1,19 @@
+block variables
+
+include ../../components/layout/layout.pug
+
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content='initial-scale=1.0, width=device-width')
+    title UI kit
+  body
+    block wrapper
+      +ui-kit__layout()
+        +layout__header()
+          block header
+            include ../../components/header_ui-kit/header_ui-kit.pug
+        +layout__main()
+          block main
+    block scripts
