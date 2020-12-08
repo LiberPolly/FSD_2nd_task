@@ -27,13 +27,15 @@ fs
     pages.push(file.split('/', 2));
   });
 
-const htmlPlugins = pages.map(fileName => new HTMLWebpackPlugin({
-  filename: `${fileName}.html`,
-  template: `./pages/${fileName}/${fileName}.pug`,
-  minify: {
-    collapseWhitespace: isProd
+const htmlPlugins = pages.map(fileName => new HTMLWebpackPlugin(
+  {
+    filename: `${fileName}.html`,
+    template: `./pages/${fileName}/${fileName}.pug`,
+    minify: {
+      collapseWhitespace: isProd
+    }
   }
-}));
+));
 
 const optimization = () => {
   const config = {
@@ -73,13 +75,16 @@ const jsLoaders = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: './index.js',
+  entry: './main.js',
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist')
   },
-  resolve: {
-    extensions: ['.js', '.json']
+  resolve: { 
+    extensions: ['.js', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   optimization: optimization(),
   devServer: {
