@@ -1,17 +1,31 @@
-doctype html
-html(lang='ru')
-  head
-    meta(charset='utf-8')
-    title= "Pug"
-    link(rel='icon', href='favicon.png', type='image/png')
-  body
-    h1 Hello, world!
-    a(rel='stylesheet', href='test.html') link
-    .example
+extends ../base/base.pug
 
-    .fff(id='dd')
-    .col
-    p This is plain old <em>text</em> content.
-p
-  | The pipe always goes at the beginning of its own line,
-  | not counting indentation.
+block title
+  | Start page
+
+block header
+
+block main
+  h1 Start page
+  ul
+    li
+      a(rel='stylesheet', href='ui-kit__colors-n-type.html') UI-kit: Colors & Type
+    li
+      a(rel='stylesheet', href='#') UI-kit: Cards
+    li
+      a(rel='stylesheet', href='#') UI-kit: Headers & Footers
+    li
+      a(rel='stylesheet', href='#') UI-kit: Form Elements
+  ul
+    li
+      a(rel='stylesheet', href='#') Landing page
+    li
+      a(rel='stylesheet', href='#') Search room
+    li
+      a(rel='stylesheet', href='#') Room details
+    li
+      a(rel='stylesheet', href='#') Registration
+
+block footer
+
+block scripts
