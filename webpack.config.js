@@ -33,6 +33,7 @@ const htmlPlugins = pages.map(fileName => new HTMLWebpackPlugin(
     template: `./pages/${fileName}/${fileName}.pug`,
     minify: {
       collapseWhitespace: isProd
+      // collapseWhitespace: false
     }
   }
 ));
@@ -81,7 +82,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.js', '.json']
+    alias: {
+      '@fonts': path.resolve(__dirname, 'src/theme/fonts')
+    },
+    // modules: ['node_modules'],
+    extensions: ['.js', '.json'],
   },
   optimization: optimization(),
   devServer: {
@@ -109,6 +114,9 @@ module.exports = {
         test: /\.css$/,
         use: [{
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: ''
+          }
           },
           'css-loader',
           'postcss-loader'
@@ -118,6 +126,9 @@ module.exports = {
         test: /\.less$/,
         use: [{
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '',
+          }
           },
           'css-loader',
           {
@@ -132,6 +143,7 @@ module.exports = {
               },
             },
           },
+          'resolve-url-loader',
           'less-loader',
           {
             loader: 'postcss-loader',
@@ -165,8 +177,32 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
+      },
+      {
+        test: /\.(ttf|woff|woff2|eot)$/,
+        use: ['file-loader']
       }
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[name].[ext]',
+      //     outputPath: 'fonts/'
+      //   }
+      // }, 
+
+      // {
+      //   test: /\.(ttf|woff|woff2|eot)$/,
+      //   loader: 'url-loader',
+      //   options: {
+      //     limit: 8192,
+      //     // name: '[name].[ext]'
+      //   }
+      // }
     ]
   }
 };

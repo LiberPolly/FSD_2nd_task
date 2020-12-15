@@ -1,0 +1,40 @@
+@import "~normalize.css";
+@font-face {
+  font-family: 'Roboto';
+  src: url("../../theme/fonts/Roboto-Regular.ttf") format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+li {
+  list-style-type: none;
+}
+.colors-n-type__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 35px 150px 0 150px;
+}
+.color {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.color__sample {
+  height: 70px;
+  width: 70px;
+  margin-right: 40px;
+  border-radius: 6px;
+}
+.color__description {
+  font-family: 'Roboto', sans-serif;
+}

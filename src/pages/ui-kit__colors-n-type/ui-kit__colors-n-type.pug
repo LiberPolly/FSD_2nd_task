@@ -1,1 +1,27 @@
 extends ../base/base-ui-kit.pug
+
+block variables
+  - const colors = [{'color name': 'Dark Shade 100%', 'color code': '#1f2041'},{'color name': 'Dark Shade 75%', 'color code': '#575871'},{'color name': 'Dark Shade 50%', 'color code': '#8f90a0'},{'color name': 'Dark Shade 25%', 'color code': '#c7c7cf'},{'color name': 'Dark Shade 5%', 'color code': '#f3f4f5'},{'color name': 'Purple', 'color code': '#bd9cff'},{'color name': 'Green', 'color code': '#70cf97'}]
+
+block main
+  .colors-n-type__wrapper
+    ul.colors-list
+      each color in colors
+        li.color
+          .color__sample(style=`background-color: ${color['color code']}`)
+          .color__description
+            p.color-name= color['color name']
+            p.color-code= color['color code']
+    ul.types-list
+      li.type
+        p.type__tag.type__tag_h1 H1
+        p.type__description This one is the sub-section or widget title
+      li.type
+        p.type__tag.type__tag_h2 H2
+        p.type-description Next one is the item title inside widgets
+      li.type
+        p.type__tag.type__tag_h3 H3
+        p.type__description This is a label or CTA text
+      li.type
+        p.type__tag.type__tag_body Body
+        p.type-description This is the body text which is used for most of the design, like paragraphs, lists, etc.
