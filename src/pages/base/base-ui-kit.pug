@@ -3,18 +3,17 @@ block variables
 include ../../components/layout/layout.pug
 
 doctype html
-html
+html (lang='ru')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1.0, width=device-width')
     link(rel='icon', href='favicon.png', type='image/png')
     title UI kit
   body
-    block wrapper
-      +ui-kit__layout()
-        +layout__header()
-          block header
-            include ../../components/header_ui-kit/header_ui-kit.pug
-        +layout__main()
-          block main
+    +ui-kit__layout()
+      +layout__header()
+        block header
+          include ../../components/header_ui-kit/header_ui-kit.pug
+      +layout__main()
+        block main
     block scripts

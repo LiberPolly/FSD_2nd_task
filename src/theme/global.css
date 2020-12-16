@@ -1,5 +1,4 @@
 @import "~normalize.css";
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +9,33 @@ body {
   background-color: black;
   height: 100%;
   width: 100%;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 li {
   list-style-type: none;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  color: #1F2041;
+}
+h2 {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.687rem;
+  color: #1F2041;
+}
+h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.687rem;
+  color: #1F2041;
+  text-transform: uppercase;
+}
+p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #575871;
+  line-height: 1.687rem;
 }

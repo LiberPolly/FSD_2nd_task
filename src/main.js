@@ -1,5 +1,6 @@
 import './theme/global.css';
 import './theme/variables.css';
+import './theme/fonts.css';
 // import keys from 'lodash/keys';
 import map from 'lodash/map';
 // import * as $ from 'jquery';

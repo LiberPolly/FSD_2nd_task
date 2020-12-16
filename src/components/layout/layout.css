@@ -31,3 +31,12 @@
   min-width: 320px;
   background-color: white;
 }
+@media (max-width: 1199px) {
+  .ui-kit__layout {
+    position: inherit;
+    top: 0;
+    transform: initial;
+    min-height: 100%;
+    min-width: 100%;
+  }
+}

@@ -2,22 +2,123 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 35px 150px 0 150px;
+  flex-wrap: wrap;
+  padding: 2.35rem 9.375rem 0 9.375rem;
+}
+@media (max-width: 1199px) {
+  .colors-n-type__wrapper {
+    padding: 1rem 5rem 0 5rem;
+  }
+}
+@media (max-width: 991px) {
+  .colors-n-type__wrapper {
+    padding: 1rem 1.9rem 0 1.9rem;
+  }
+}
+@media (max-width: 575px) {
+  .colors-n-type__wrapper {
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+}
+.colors-list {
+  margin-bottom: 2rem;
 }
 .color {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.24rem;
 }
 .color__sample {
-  height: 70px;
-  width: 70px;
-  margin-right: 40px;
+  margin-right: 2.45rem;
+  min-height: 70px;
+  min-width: 70px;
   border-radius: 6px;
 }
-.color__description {
-  font-family: 'Montserrat-700', sans-serif;
+@media (max-width: 575px) {
+  .color__sample {
+    margin-right: 1rem;
+  }
+}
+.color__name {
+  margin-top: 0.2rem;
   font-weight: 700;
-  size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.6rem;
+}
+.color__code {
+  margin-top: 0.1rem;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+.types-list {
+  display: flex;
+  flex-direction: column;
+}
+.type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 0.44rem;
+}
+.type__tag {
+  margin-right: 1.875rem;
+  color: #C7C7CF;
+}
+.type__description {
+  margin-top: 0.2rem;
+  width: 23.125rem;
+}
+@media (max-width: 575px) {
+  .type__description {
+    width: 100%;
+  }
+}
+.type__description-text {
+  color: #1F2041;
+}
+.type_h1 .type__description-text {
+  margin-bottom: 3.1875rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.675rem;
+}
+.type_h1 .type__tag {
+  margin-top: 0.1rem;
+  font-size: 1.5rem;
+}
+.type_h2 .type__description-text {
+  margin-bottom: 2.4875rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+}
+.type_h2 .type__tag {
+  margin-top: 0.2rem;
+  font-size: 1.1875rem;
+}
+.type_h3 .type__description-text {
+  margin-bottom: 2.1875rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.type_h3 .type__tag {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+}
+@media (max-width: 575px) {
+  .type {
+    justify-content: flex-start;
+  }
+}
+.type_body .type__description-text {
+  margin-bottom: 1.1875rem;
+}
+.type_body .type__tag {
+  margin-top: 0.2rem;
 }

@@ -1,4 +1,5 @@
 @import "~normalize.css";
+@import './variables.less';
 
 * {
   box-sizing: border-box;
@@ -10,41 +11,41 @@ html, body {
   background-color: black;
   height: 100%;
   width: 100%;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 li {
   list-style-type: none;
 }
 
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  color: @color-100; 
+}
 
+h2 {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.687rem;
+  color: @color-100; 
+}
 
-// @font-face {
-//   font-family: 'Montserrat-normal';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url("src/theme/fonts/montserrat-v15-latin_cyrillic-regular.woff") format("woff"),
-//        url("src/theme/fonts/montserrat-v15-latin_cyrillic-regular.ttf") format("truetype"),
-//        url("src/theme/fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat") format("svg");
-// }
+h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.687rem;
+  color: @color-100; 
+  text-transform: uppercase;
+}
 
-// @font-face {
-//   font-family: 'Montserrat';
-//   font-style: bold;
-//   font-weight: 700;
-//   src: url("src/theme/fonts/montserrat-v15-latin_cyrillic-700.woff") format("woff"),
-//        url("src/theme/fonts/montserrat-v15-latin_cyrillic-700.ttf") format("truetype"),
-//        url("src/theme/fonts/montserrat-v15-latin_cyrillic-700.svg#Montserrat") format("svg");
-// }
-
-
-// * {
-//   box-sizing: border-box;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// html {
-//   font-size: 8px;
+p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: @color-75;
+  line-height: 1.687rem;
+}
 
 //   @include media-breakpoint-up($xxs) {
 //     font-size: 10px;
@@ -53,26 +54,4 @@ li {
 //   @include media-breakpoint-up($xs) {
 //     font-size: 12px;
 //   }
-// }
-
-// html,
-// body {
-//   height: 100%;
-// }
-
-// h1,
-// h2 {
-//   text-align: center;
-//   text-transform: uppercase;
-//   color: #777;
-//   font-family: LatoBlack, sans-serif;
-// }
-
-// h1 {
-//   font-size: 2rem;
-// }
-
-// h2 {
-//   padding: 1rem;
-//   font-size: 1.67rem;
 // }
