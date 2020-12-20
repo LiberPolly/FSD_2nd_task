@@ -8,11 +8,9 @@ html(lang='ru')
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1.0, width=device-width')
     link(rel='icon', href='favicon.png', type='image/png')
-    title
-      block title
-        | UI kit
+    title UI kit
   body
-    +layout()
+    +layout_short-page()
       +layout__header()
         block header
           include ../../components/header_ui-kit/header_ui-kit.pug
