@@ -7,11 +7,15 @@ block main
       .form-elements__column
         .form-element_margin-bottom-1
           .form-element__description
-            p.form-element__name
-            p.form-element__state
-          +text-field('email', 'email')
+            p.form-element__name Text Field
+            p.form-element__state Default
+          +text-field('email', 'Email')
         .form-element_margin-bottom-1
-          |gggg
+          .form-element__description
+            p.form-element__name Text Field
+            p.form-element__state Hover / Focus
+          .text-field-form_active
+            +text-field('email', 'Email')(value='This is pretty awesome')
         .form-element_margin-bottom-1
           |gggg
       .form-elements__column

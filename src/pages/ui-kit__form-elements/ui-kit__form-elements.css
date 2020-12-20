@@ -9,8 +9,29 @@
   margin-bottom: 6.25rem;
 }
 .form-element_margin-bottom-1 {
-  margin-bottom: 1.438rem;
+  margin-bottom: 1.25rem;
 }
 .form-element_margin-bottom-2 {
   margin-bottom: 2.688rem;
+}
+.form-element__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-element__description p {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+.form-element__name {
+  font-weight: bold;
+  color: #1F2041;
+}
+.form-element__state {
+  color: #8F90A0;
+}
+.text-field-form_active input {
+  border: 1px solid #8F90A0;
+  outline: none;
 }
