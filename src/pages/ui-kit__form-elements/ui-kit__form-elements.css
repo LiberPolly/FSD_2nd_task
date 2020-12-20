@@ -31,7 +31,7 @@
 .form-element__state {
   color: #8F90A0;
 }
-.text-field-form_active input {
+.form-text-field_active input {
   border: 1px solid #8F90A0;
   outline: none;
 }
