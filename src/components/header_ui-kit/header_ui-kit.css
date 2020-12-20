@@ -8,7 +8,21 @@
   height: 3rem;
   margin: 1.875rem 1.875rem 1.875rem 1.875rem;
 }
-.header_ui-kit__logo {
+@media (max-width: 575px) {
+  .header_ui-kit__link {
+    margin: 0 auto;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+}
+.header_ui-kit__logo_grey {
   width: 3rem;
   height: 3rem;
+  fill: #1F2041;
+}
+.header_ui-kit__logo_grey:hover {
+  fill: #BD9CFF;
+}
+.header_ui-kit__logo_grey:active {
+  fill: #70CF97;
 }
