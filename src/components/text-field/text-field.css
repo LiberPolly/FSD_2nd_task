@@ -1,4 +1,4 @@
-.text-field-form {
+.text-field {
   padding: 0.813rem 0.938rem;
   width: 20rem;
   height: 2.75rem;
@@ -7,13 +7,13 @@
   font-size: 0.875rem;
   color: #575871;
 }
-.text-field-form::placeholder {
+.text-field::placeholder {
   color: #C7C7CF;
 }
-.text-field-form:hover {
+.text-field:hover {
   border: 1px solid #8F90A0;
 }
-.text-field-form:focus {
+.text-field:focus {
   border: 1px solid #8F90A0;
   outline: none;
 }
