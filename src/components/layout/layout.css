@@ -48,3 +48,9 @@
   min-width: 320px;
   background-color: #fff;
 }
+@media (max-width: 1199px) {
+  .layout_long-page {
+    min-height: 100%;
+    min-width: 100%;
+  }
+}

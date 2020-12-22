@@ -1,0 +1,26 @@
+.dropdown-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 5.75rem;
+}
+.dropdown-counter__value {
+  font-size: 0.75rem;
+}
+.dropdown-counter__button {
+  height: 1.875rem;
+  width: 1.875rem;
+  border: 1px solid #8F90A0;
+  border-radius: 50%;
+}
+.dropdown-counter__minus {
+  color: #8F90A0;
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+}
+.dropdown-counter__plus {
+  color: #8F90A0;
+  font-size: 1.125rem;
+  line-height: 1.95rem;
+}

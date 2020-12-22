@@ -1,0 +1,48 @@
+@import '../../theme/variables.less';
+
+.dropdown-guests {
+  display: flex;
+  flex-direction: column;
+  border-radius: @border-radius-form;
+  // border: 1px solid @color-25;
+  border: 1px solid @color-50;
+  width: 20rem;
+
+  &__menu {
+    // display: none;
+    border-top: 1px solid @color-50;
+  }
+
+  &__menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.713rem 0.838rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.713rem 0.838rem;
+  }
+
+  &__reset {
+    // visibility: hidden;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: @color-purple;
+  }
+
+  &__submit {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: @color-purple;
+  }
+  
+}

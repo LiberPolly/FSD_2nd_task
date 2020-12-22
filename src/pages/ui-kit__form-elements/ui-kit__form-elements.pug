@@ -1,5 +1,5 @@
 extends ../base/base-ui-kit_long-page.pug
-include ../../components/form-text-field/form-text-field.pug
+include ../../components/text-field/text-field.pug
 
 block main
   .form-elements
@@ -9,15 +9,16 @@ block main
           .form-element__description
             p.form-element__name Text Field
             p.form-element__state Default
-          +form-text-field('email', 'Email')
+          +text-field('email', 'Email')
         .form-element_margin-bottom-1
           .form-element__description
             p.form-element__name Text Field
             p.form-element__state Hover / Focus
           .form-text-field_active
-            +form-text-field('email', 'Email')(value='This is pretty awesome')
+            +text-field('email', 'Email')(value='This is pretty awesome')
         .form-element_margin-bottom-1
-          |gggg
+          p.form-element__name Text Field
+          include ../../components/dropdown-guests/dropdown-guests.pug
       .form-elements__column
         .form-element_margin-bottom-2
           |gggg

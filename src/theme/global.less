@@ -8,7 +8,7 @@
 }
 
 html, body {
-  background-color: black;
+  background-color: @color-background;
   height: 100%;
   width: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -16,6 +16,12 @@ html, body {
 
 li {
   list-style-type: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: @color-white;
 }
 
 h1 {
@@ -46,12 +52,3 @@ p {
   color: @color-75;
   line-height: 1.687rem;
 }
-
-//   @include media-breakpoint-up($xxs) {
-//     font-size: 10px;
-//   }
-
-//   @include media-breakpoint-up($xs) {
-//     font-size: 12px;
-//   }
-// }

@@ -6,13 +6,18 @@
 }
 html,
 body {
-  background-color: black;
+  background-color: #f4f4f6;
   height: 100%;
   width: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
 }
 li {
   list-style-type: none;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: #fff;
 }
 h1 {
   font-size: 1.5rem;

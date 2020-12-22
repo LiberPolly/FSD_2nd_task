@@ -1,0 +1,32 @@
+@import '../../theme/variables.less';
+
+.dropdown-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 5.75rem;
+
+  &__value {
+    font-size: 0.75rem;
+  }
+
+  &__button {
+    height: 1.875rem;
+    width: 1.875rem;
+    border: 1px solid @color-50;
+    border-radius: 50%;
+  }
+
+  &__minus {
+    color: @color-50;
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+  }
+
+  &__plus {
+    color: @color-50;
+    font-size: 1.125rem;
+    line-height: 1.95rem;
+  }
+}
