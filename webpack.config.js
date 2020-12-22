@@ -185,24 +185,7 @@ module.exports = {
       {
         test: /\.(ttf|woff(2)?|eot|svg)$/,
         use: ['file-loader']
-      }
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: '[name].[ext]',
-      //     outputPath: 'fonts/'
-      //   }
-      // }, 
-
-      // {
-      //   test: /\.(ttf|woff|woff2|eot)$/,
-      //   loader: 'url-loader',
-      //   options: {
-      //     limit: 8192,
-      //     // name: '[name].[ext]'
-      //   }
-      // }
+      }     
     ]
   }
 };
