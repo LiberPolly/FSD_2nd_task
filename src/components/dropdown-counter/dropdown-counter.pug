@@ -1,7 +1,7 @@
-mixin dropdown-counter(value)
-  .dropdown-counter(data-counter-value= value)
-    button.dropdown-counter__button
+mixin dropdown-counter(value, minValue, maxValue)
+  .dropdown-counter(data-counter-value= value, data-min-value= minValue, data-max-value= maxValue)
+    button.dropdown-counter__button-minus
       span.dropdown-counter__minus -
     span.dropdown-counter__value= value
-    button.dropdown-counter__button
+    button.dropdown-counter__button-plus
       span.dropdown-counter__plus +

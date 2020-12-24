@@ -8,11 +8,20 @@
 .dropdown-counter__value {
   font-size: 0.75rem;
 }
-.dropdown-counter__button {
+.dropdown-counter__button-minus {
   height: 1.875rem;
   width: 1.875rem;
   border: 1px solid #8F90A0;
   border-radius: 50%;
+}
+.dropdown-counter__button-plus {
+  height: 1.875rem;
+  width: 1.875rem;
+  border: 1px solid #8F90A0;
+  border-radius: 50%;
+}
+.dropdown-counter__button_disabled {
+  border: 1px solid #C7C7CF;
 }
 .dropdown-counter__minus {
   color: #8F90A0;
