@@ -1,20 +1,20 @@
 include ../../components/dropdown-button/dropdown-button.pug
-include ../../components/dropdown-counter/dropdown-counter.pug
+include ../../components/dropdown-counter/dropdown-counter.pug 
 
-.dropdown-guests
+.dropdown-guests.dropdown-guests_disabled
   input.dropdown-guests__value(type='hidden', value='1', name='number-of-guests')
   +dropdown-button('Сколько гостей')
-  .dropdown-guests__menu
+  .dropdown-guests__menu.dropdown-guests__menu_disabled
     ul.dropdown-guests__menu-list
       li.dropdown-guests__menu-item
         span.dropdown-guests__menu-item-name взрослые
-        +dropdown-counter(1)
+        +dropdown-counter(0, 0, 4)
       li.dropdown-guests__menu-item
         span.dropdown-guests__menu-item-name дети
-        +dropdown-counter(0)
+        +dropdown-counter(0, 0, 6)
       li.dropdown-guests__menu-item
         span.dropdown-guests__menu-item-name младенцы
-        +dropdown-counter(0)
+        +dropdown-counter(0, 0, 2)
     .dropdown-guests__footer
-      button.dropdown-guests__reset очистить
+      button.dropdown-guests__reset.dropdown-guests__reset_disable очистить
       button.dropdown-guests__submit применить
