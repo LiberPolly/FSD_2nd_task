@@ -70,5 +70,5 @@ resetButton.addEventListener('click', () => {
 
 // Обработка клика по кнопке submit
 submitButton.addEventListener('click', () => {
-  console.log('Sending data from guest dropdown to server...');
+  console.log('Sending data from the guest dropdown to server...');
 });

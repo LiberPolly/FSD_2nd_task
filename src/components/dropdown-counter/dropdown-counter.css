@@ -7,6 +7,7 @@
 }
 .dropdown-counter__value {
   font-size: 0.75rem;
+  margin-bottom: 0.2rem;
 }
 .dropdown-counter__button-minus {
   height: 1.875rem;
