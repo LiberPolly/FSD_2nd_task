@@ -26,6 +26,9 @@ function activateResetButton(value, minValue) {
   }
 }
 
+// Значение кнопки по умолчанию
+dropdownMessage.textContent = 'Сколько гостей';
+
 // Обработка изменения значений счетчиков дропдауна
 forEach(currentCounters, (counter) => {
   const minValue = +counter.getAttribute('data-min-value');

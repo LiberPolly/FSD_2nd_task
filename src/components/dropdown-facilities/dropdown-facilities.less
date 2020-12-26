@@ -1,13 +1,13 @@
 @import '../../theme/variables.less';
 
-.dropdown-guests {
+.dropdown-facilities {
   position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid @color-50;
   border-radius: 4px 4px 0px 0px;
   width: 20rem;
-    
+  
   &__menu {
     position: absolute;
     z-index: 100;
@@ -31,32 +31,6 @@
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
-  }
-
-  &__footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.72rem 0.36rem 0.8rem 0.85rem;
-  }
-
-  &__reset {
-    visibility: visible;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: @color-purple;
-  }
-  
-  &__reset_disable {
-    visibility: hidden;
-  }
-
-  &__submit {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: @color-purple;
   }
 }
 
