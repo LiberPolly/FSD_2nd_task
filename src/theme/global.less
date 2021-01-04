@@ -12,6 +12,16 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
+
+  @media (max-width: @xxs) {
+    overflow: scroll;
+    overflow-x: hidden;
+    
+    ::-webkit-scrollbar {
+      width: 0px;  /* remove scrollbar space */
+      background: transparent;  /* optional: just make scrollbar invisible */
+    }
+  }
 }
 
 li {
