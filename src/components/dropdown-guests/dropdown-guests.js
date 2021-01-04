@@ -74,4 +74,6 @@ resetButton.addEventListener('click', () => {
 // Обработка клика по кнопке submit
 submitButton.addEventListener('click', () => {
   console.log('Sending data from the guest dropdown to server...');
+  const dropdownButton = dropdownGuests.querySelector('.dropdown-button');
+  dropdownButton.click();
 });
