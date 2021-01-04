@@ -13,6 +13,7 @@ const postcss = require('postcss');
 const doiuse = require('doiuse');
 const autoprefixer = require('autoprefixer');
 const stylelint = require('stylelint');
+const webpack = require('webpack');
 
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -83,7 +84,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@fonts': path.resolve(__dirname, 'src/theme/fonts')
+      '@fonts': path.resolve(__dirname, 'src/theme/fonts'),
+      // Force all modules to use the same jquery version.
+      'jquery': path.join(__dirname, 'node_modules/jquery/src/jquery'),
     },
     // modules: ['node_modules'],
     extensions: ['.js', '.json'],
@@ -104,6 +107,11 @@ module.exports = {
         from: path.resolve(__dirname, 'src/theme/favicon.png'),
         to: path.resolve(__dirname, 'dist')
       }]
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new MiniCssExtractPlugin({
       filename: filename('css')
