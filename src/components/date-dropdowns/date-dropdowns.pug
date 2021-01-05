@@ -1,0 +1,7 @@
+include ../../components/text-field/text-field.pug
+
+mixin date-dropdowns()
+  .date-dropdowns
+    input.datepicker-double(type='text', data-range='true', data-position='bottom left')
+    +text-field('text', 'ДД.ММ.ГГГГ').date-from
+    +text-field('text', 'ДД.ММ.ГГГГ').date-to
