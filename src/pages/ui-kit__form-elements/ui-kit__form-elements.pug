@@ -1,6 +1,7 @@
 extends ../base/base-ui-kit_long-page.pug
 include ../../components/text-field/text-field.pug
 include ../../components/date-dropdowns/date-dropdowns.pug
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 
 block main
   .form-elements
@@ -29,6 +30,10 @@ block main
           .form-element__description
             p.form-element__name date dropdown
           +date-dropdowns()
+        .form-element_margin-bottom-2
+          .form-element__description
+            p.form-element__name filter date dropdown
+          +filter-date-dropdown()
       .form-elements__column
         .form-element_margin-bottom-2
           .form-element__description
