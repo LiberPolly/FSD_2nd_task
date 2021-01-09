@@ -1,0 +1,22 @@
+.filter-date-dropdown {
+  position: relative;
+  width: 16.625rem;
+}
+.filter-date-dropdown__arrow {
+  position: absolute;
+  right: 1%;
+  top: 52%;
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #8F90A0;
+}
+.filter-date-dropdown__arrow::after {
+  content: '';
+  display: block;
+  width: 36.95%;
+  height: 36.95%;
+  border-left: 2px solid #575871;
+  border-bottom: 2px solid #575871;
+  transform: translate(-50%, -75%) rotate(-45deg);
+}
