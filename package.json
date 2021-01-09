@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "air-datepicker": "^2.2.3",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
