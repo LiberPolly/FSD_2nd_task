@@ -1,0 +1,9 @@
+.subscription-text-field {
+  width: 16.625rem;
+}
+.svg-inline--fa.fa-arrow-right.fa-w-14.subscription-text-field__arrow {
+  width: 3rem;
+  height: 3rem;
+  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
