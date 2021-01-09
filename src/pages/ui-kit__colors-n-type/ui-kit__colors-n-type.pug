@@ -10,22 +10,22 @@ block main
         li.color
           .color__sample(style=`background-color: ${color['color code']}`)
           .color__description
-            p.color__name= color['color name']
-            p.color__code= color['color code']
+            span.color__name= color['color name']
+            span.color__code= color['color code']
     ul.types-list
       li.type.type_h1
-        p.type__tag H1
+        span.type__tag H1
         .type__description        
           p.type__description-text This one is&nbsp;the sub-section or widget title
       li.type.type_h2
-        p.type__tag H2
+        span.type__tag H2
         .type__description        
           p.type__description-text Next one is&nbsp;the item title inside widgets
       li.type.type_h3
-        p.type__tag H3
+        span.type__tag H3
         .type__description        
           p.type__description-text This is&nbsp;a&nbsp;label or&nbsp;CTA text
       li.type.type_body
-        p.type__tag Body
+        span.type__tag Body
         .type__description        
           p.type__description-text This is&nbsp;the body text which is&nbsp;used for most <br/> of&nbsp;the design, like paragraphs, lists, etc.

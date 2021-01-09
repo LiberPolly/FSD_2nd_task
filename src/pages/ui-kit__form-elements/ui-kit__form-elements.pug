@@ -9,40 +9,44 @@ block main
       .form-elements__column
         .form-element_margin-bottom-1
           .form-element__description
-            p.form-element__name text field
-            p.form-element__state default
+            span.form-element__name text field
+            span.form-element__state default
           +text-field('email', 'Email')
         .form-element_margin-bottom-1
           .form-element__description
-            p.form-element__name text field
-            p.form-element__state hover / focus
+            span.form-element__name text field
+            span.form-element__state hover / focus
           .form-text-field_active
             +text-field('email', 'Email')(value='This is pretty awesome')
         .form-element_margin-bottom-1
           .form-element__description
-            p.form-element__name dropdown
+            span.form-element__name dropdown
           include ../../components/dropdown-guests/dropdown-guests.pug
         .form-element_margin-bottom-2
           .form-element__description
-            p.form-element__name masked text field
+            span.form-element__name masked text field
           +text-field('text', 'ДД.ММ.ГГГГ').masked-text-field
         .form-element_margin-bottom-2
           .form-element__description
-            p.form-element__name date dropdown
+            span.form-element__name date dropdown
           +date-dropdowns()
         .form-element_margin-bottom-2
           .form-element__description
-            p.form-element__name filter date dropdown
+            span.form-element__name filter date dropdown
           +filter-date-dropdown()
+        .form-element_margin-bottom-2
+          .form-element__description
+            span.form-element__name subscription text field
+          include ../../components/subscription-text-field/subscription-text-field.pug
       .form-elements__column
         .form-element_margin-bottom-2
-          .form-element__description
-            p.form-element__name dropdown
-          include ../../components/dropdown-facilities/dropdown-facilities.pug
+          //- .form-element__description
+          //-   span.form-element__name dropdown
+          //- include ../../components/dropdown-facilities/dropdown-facilities.pug
         .form-element_margin-bottom-2
           .form-element__description
-            p.form-element__name text field
-            p.form-element__state default
+            span.form-element__name text field
+            span.form-element__state default
           //- +date-dropdowns()
       .form-elements__column
         .form-element_margin-bottom-2
@@ -51,7 +55,11 @@ block main
           |gggg
 
     .form-elements__row
-      |gggg
+      .form-elements__column
+        .form-element_margin-bottom-2
+          .form-element__description
+            span.form-element__name dropdown
+          include ../../components/dropdown-facilities/dropdown-facilities.pug
     .form-elements__row
       |gggg
     .form-elements__row

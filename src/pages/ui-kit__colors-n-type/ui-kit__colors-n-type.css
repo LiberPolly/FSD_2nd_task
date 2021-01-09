@@ -16,6 +16,10 @@
   flex-wrap: wrap;
   margin-bottom: 1.24rem;
 }
+.colors-n-type .color__description {
+  display: flex;
+  flex-direction: column;
+}
 .colors-n-type .color__sample {
   margin-right: 2.45rem;
   min-height: 70px;
