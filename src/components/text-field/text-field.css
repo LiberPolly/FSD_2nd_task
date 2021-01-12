@@ -1,4 +1,11 @@
 .text-field {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #1F2041;
+}
+.text-field__input {
   padding: 0.813rem 0.938rem;
   width: 100%;
   height: 2.75rem;
@@ -7,13 +14,13 @@
   font-size: 0.875rem;
   color: #575871;
 }
-.text-field::placeholder {
+.text-field__input::placeholder {
   color: #C7C7CF;
 }
-.text-field:hover {
+.text-field__input:hover {
   border: 1px solid #8F90A0;
 }
-.text-field:focus {
+.text-field__input:focus {
   border: 1px solid #8F90A0;
   outline: none;
 }
