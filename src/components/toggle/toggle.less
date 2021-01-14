@@ -1,0 +1,50 @@
+@import '../../theme/variables.less';
+
+.toggle {
+  height: 2.6rem;
+  &__label {
+      position: relative;
+      // height: 2.6rem;
+    }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .toggle__toggle:after {
+      box-shadow:  0 0 0 1.5px @color-purple;
+    }
+    
+    &:checked + .toggle__toggle:before {
+      transform: translateX(1.21rem);
+      background: @color-purple-gradient;
+    }
+  }
+
+  &__toggle:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2.34rem;
+    height: 1.08rem;
+    border-radius: @border-radius-toggle;
+    box-shadow:  0 0 0 1.5px @color-25;
+  }
+  
+  &__toggle:before {
+    content: "";
+    position: absolute;
+    left: 0.2rem;
+    top: 0.35rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    background: @color-25;
+  }
+
+  &__label-name {
+    display: inline-block;
+    margin-left: 3.01rem;
+    font-size: 0.845rem;
+    letter-spacing: 0.022rem;
+  }
+}

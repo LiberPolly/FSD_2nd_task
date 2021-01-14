@@ -1,0 +1,41 @@
+.toggle {
+  height: 2.6rem;
+}
+.toggle__label {
+  position: relative;
+}
+.toggle__checkbox {
+  display: none;
+}
+.toggle__checkbox:checked + .toggle__toggle:after {
+  box-shadow: 0 0 0 1.5px #BD9CFF;
+}
+.toggle__checkbox:checked + .toggle__toggle:before {
+  transform: translateX(1.21rem);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.toggle__toggle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2.34rem;
+  height: 1.08rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1.5px #C7C7CF;
+}
+.toggle__toggle:before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.35rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background: #C7C7CF;
+}
+.toggle__label-name {
+  display: inline-block;
+  margin-left: 3.01rem;
+  font-size: 0.845rem;
+  letter-spacing: 0.022rem;
+}
