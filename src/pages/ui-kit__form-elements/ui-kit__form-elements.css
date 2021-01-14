@@ -27,15 +27,9 @@
     padding: 1.875rem 0 1.875rem 0;
   }
 }
-.form-element__description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-@media (max-width: 320px) {
-  .form-element__description {
-    padding: 0 0.14rem 0 0.14rem;
-  }
+.form-element {
+  position: relative;
+  margin-bottom: 1.25rem;
 }
 .form-element__name {
   text-transform: uppercase;
@@ -43,18 +37,26 @@
   line-height: 1.5rem;
   font-weight: bold;
   color: #1F2041;
+  margin-bottom: 5rem;
 }
 .form-element__state {
+  position: absolute;
+  top: 0;
+  right: 0;
   text-transform: uppercase;
   font-size: 0.75rem;
   line-height: 1.5rem;
   color: #8F90A0;
 }
-.form-element_margin-bottom-1 {
-  margin-bottom: 1.25rem;
-}
-.form-element_margin-bottom-2 {
+.form-element_margin-bottom {
   margin-bottom: 2.688rem;
+}
+.form-element__toggle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 4.3rem;
+  margin-top: 0.62rem;
 }
 .form-text-field_active input {
   border: 1px solid #8F90A0;

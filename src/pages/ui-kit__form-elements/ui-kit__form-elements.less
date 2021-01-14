@@ -2,7 +2,6 @@
 
 .form-elements {
   padding: 1.875rem 8.75rem 1.875rem 8.75rem;
-
   &__row {
     display: flex;
     flex-direction: row;
@@ -10,57 +9,54 @@
     justify-content: space-between;
     margin-bottom: 6.25rem;
   }
-
   &__column {
     min-width: 20rem;
     margin: 0 auto;
   }
-  
   @media (max-width: @md) {
     padding: 1.875rem 1.875rem 1.875rem 1.875rem;
   }
-
   @media (max-width: @xs) {
     padding: 1.875rem 0.5rem 1.875rem 0.5rem;
   }
-
   @media (max-width: @xxs) {
     padding: 1.875rem 0 1.875rem 0;
   }
 }
 
 .form-element {
-  &__description {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  position: relative;
+  margin-bottom: 1.25rem;
 
-    @media (max-width: @xxs) {
-      padding: 0 0.140rem 0 0.140rem;
-    }
-  }
-  
   &__name {
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 1.5rem;
     font-weight: bold;
     color: @color-100;
+    margin-bottom: 5rem;
   }
-  
+
   &__state {
+    position: absolute;
+    top: 0;
+    right: 0;
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 1.5rem;
     color: @color-50;
   }
 
-  &_margin-bottom-1 {
-    margin-bottom: 1.25rem;
+  &_margin-bottom {
+    margin-bottom: 2.688rem;
   }
 
-  &_margin-bottom-2 {
-    margin-bottom: 2.688rem;
+  &__toggle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4.3rem;
+    margin-top: 0.62rem;
   }
 }
 
