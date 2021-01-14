@@ -1,20 +1,23 @@
 include ../../components/dropdown-button/dropdown-button.pug
 include ../../components/dropdown-counter/dropdown-counter.pug 
 
-.dropdown-guests.dropdown_disabled
-  input.dropdown-guests__value(type='hidden', value='0', name='number-of-guests')
-  +dropdown-button()
-  .dropdown-guests__menu.dropdown__menu_disabled
-    ul.dropdown-guests__menu-list
-      li.dropdown-guests__menu-item
-        span.dropdown-guests__menu-item-name взрослые
-        +dropdown-counter(0, 0, 4)
-      li.dropdown-guests__menu-item
-        span.dropdown-guests__menu-item-name дети
-        +dropdown-counter(0, 0, 6)
-      li.dropdown-guests__menu-item
-        span.dropdown-guests__menu-item-name младенцы
-        +dropdown-counter(0, 0, 2)
-    .dropdown-guests__footer
-      button.dropdown-guests__reset.dropdown-guests__reset_disable очистить
-      button.dropdown-guests__submit применить
+mixin dropdown-guests(labelName)
+  .dropdown-guests__wrapper
+    label.dropdown-guests__label= labelName
+      input.dropdown-guests__value(type='hidden', value='0', name='number-of-guests')
+    .dropdown-guests.dropdown_disabled
+      +dropdown-button()
+      .dropdown-guests__menu.dropdown__menu_disabled
+        ul.dropdown-guests__menu-list
+          li.dropdown-guests__menu-item
+            span.dropdown-guests__menu-item-name взрослые
+            +dropdown-counter(0, 0, 4)
+          li.dropdown-guests__menu-item
+            span.dropdown-guests__menu-item-name дети
+            +dropdown-counter(0, 0, 6)
+          li.dropdown-guests__menu-item
+            span.dropdown-guests__menu-item-name младенцы
+            +dropdown-counter(0, 0, 2)
+        .dropdown-guests__footer
+          button.dropdown-guests__reset.dropdown-guests__reset_disable очистить
+          button.dropdown-guests__submit применить

@@ -5,7 +5,7 @@
 }
 .subscription-text-field__button {
   position: absolute;
-  top: 23%;
+  bottom: 0.5rem;
   right: 0.61rem;
 }
 .subscription-text-field__button .material-icons.arrow-forward_gradient {

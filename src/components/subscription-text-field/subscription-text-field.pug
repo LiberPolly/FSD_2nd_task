@@ -1,7 +1,7 @@
 include ../../components/text-field/text-field.pug
-include ../../components/text-field/text-field.pug
 
-.subscription-text-field
-  +text-field('email', 'Email')
-  button.subscription-text-field__button
-    i.material-icons.arrow-forward_gradient arrow_forward
+mixin subscription-text-field(labelName)
+  .subscription-text-field
+    +text-field('email', 'Email', labelName)
+    button.subscription-text-field__button
+      i.material-icons.arrow-forward_gradient arrow_forward

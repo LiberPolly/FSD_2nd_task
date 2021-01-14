@@ -1,17 +1,20 @@
 include ../../components/dropdown-button/dropdown-button.pug
 include ../../components/dropdown-counter/dropdown-counter.pug 
 
-.dropdown-facilities.dropdown_disabled
-  input.dropdown-facilities__value(type='hidden', value='1', name='number-of-guests')
-  +dropdown-button()
-  .dropdown-facilities__menu.dropdown__menu_disabled
-    ul.dropdown-facilities__menu-list
-      li.dropdown-facilities__menu-item
-        span.dropdown-facilities__menu-item-name.dropdown-facilities__menu-item-bedrooms спальни
-        +dropdown-counter(2, 2, 9)
-      li.dropdown-facilities__menu-item
-        span.dropdown-facilities__menu-item-name.dropdown-facilities__menu-item-beds кровати
-        +dropdown-counter(2, 2, 9)
-      li.dropdown-facilities__menu-item
-        span.dropdown-facilities__menu-item-name.dropdown-facilities__menu-item-bathrooms ванные комнаты
-        +dropdown-counter(0, 0, 9)
+mixin dropdown-facilities(labelName)
+  .dropdown-facilities__wrapper
+    label.dropdown-facilities__label= labelName
+      input.dropdown-facilities__value(type='hidden', value='1', name='number-of-guests')
+    .dropdown-facilities.dropdown_disabled
+      +dropdown-button()
+      .dropdown-facilities__menu.dropdown__menu_disabled
+        ul.dropdown-facilities__menu-list
+          li.dropdown-facilities__menu-item
+            span.dropdown-facilities__menu-item-name.dropdown-facilities__menu-item-bedrooms спальни
+            +dropdown-counter(2, 2, 9)
+          li.dropdown-facilities__menu-item
+            span.dropdown-facilities__menu-item-name.dropdown-facilities__menu-item-beds кровати
+            +dropdown-counter(2, 2, 9)
+          li.dropdown-facilities__menu-item
+            span.dropdown-facilities__menu-item-name.dropdown-facilities__menu-item-bathrooms ванные комнаты
+            +dropdown-counter(0, 0, 9)

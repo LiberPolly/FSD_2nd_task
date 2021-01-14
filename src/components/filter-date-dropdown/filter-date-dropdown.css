@@ -5,7 +5,7 @@
 .filter-date-dropdown__arrow {
   position: absolute;
   right: 1%;
-  top: 52%;
+  bottom: 0.3rem;
   display: block;
   width: 1.1rem;
   height: 1.1rem;

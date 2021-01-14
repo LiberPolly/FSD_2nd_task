@@ -1,11 +1,11 @@
 include ../../components/text-field/text-field.pug
 
-mixin date-dropdowns()
+mixin date-dropdowns(startDate, endDate)
   //- .date-dropdowns.datepicker-double
   .date-dropdowns
     .date-dropdowns__item
-      +text-field('text', 'ДД.ММ.ГГГГ').datepicker-double.date-dropdowns__start(id='1', autocomplete='off')
+      +text-field('text', 'ДД.ММ.ГГГГ', startDate).datepicker-double.date-dropdowns__start(autocomplete='off')
       .date-dropdowns__arrow
     .date-dropdowns__item
-      +text-field('text', 'ДД.ММ.ГГГГ').datepicker-double.date-dropdowns__end(id='1', autocomplete='off')
+      +text-field('text', 'ДД.ММ.ГГГГ', endDate).datepicker-double.date-dropdowns__end(autocomplete='off')
       .date-dropdowns__arrow

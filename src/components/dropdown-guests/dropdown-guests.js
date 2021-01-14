@@ -2,7 +2,7 @@ import './dropdown-guests.css';
 import forEach from 'lodash/forEach';
 import nounDeclension from '../noun-declension/noun-declension';
 
-const dropdownGuests = document.querySelector('.dropdown-guests');
+const dropdownGuests = document.querySelector('.dropdown-guests__wrapper');
 const dropdownMessage = dropdownGuests.querySelector('.dropdown-button__message');
 const currentCounters = dropdownGuests.querySelectorAll('.dropdown-counter');
 const resetButton = dropdownGuests.querySelector('.dropdown-guests__reset');

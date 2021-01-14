@@ -1,7 +1,7 @@
 include ../../components/text-field/text-field.pug
 
-mixin filter-date-dropdown()
+mixin filter-date-dropdown(labelName)
   //- .date-dropdowns.datepicker-double
   .filter-date-dropdown
-    +text-field('text', 'ДД.ММ.ГГГГ').datepicker-range(id='1', autocomplete='off', data-multiple-dates-separator=' - ')
+    +text-field('text', 'ДД.ММ.ГГГГ', labelName).datepicker-range(id='1', autocomplete='off', data-multiple-dates-separator=' - ')
     .filter-date-dropdown__arrow
