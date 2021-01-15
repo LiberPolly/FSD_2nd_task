@@ -6,6 +6,9 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/toggle/toggle.pug
 include ../../components/dropdown-facilities/dropdown-facilities.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/radio-buttons/radio-buttons.pug
+include ../../components/like-button/like-button.pug
 
 block main
   .form-elements
@@ -23,7 +26,7 @@ block main
         .form-element.form-element_margin-bottom
           +text-field('text', 'ДД.ММ.ГГГГ', 'masked text field').masked-text-field
         .form-element.form-element_margin-bottom
-          span.form-element__name date dropdown
+          h3.form-element__name date dropdown
           +date-dropdowns()
         .form-element.form-element_margin-bottom
           +filter-date-dropdown('filter date dropdown')
@@ -31,14 +34,22 @@ block main
           +subscription-text-field('subscription text field')
       .form-elements__column
         .form-element.form-element_margin-bottom
-          span.form-element__name toggle
-          .form-element__toggle-container
+          - const settings = {'Можно курить': false, 'Можно с питомцами': true, 'Можно пригласить гостей (до 10 человек)': true}
+          +checkbox-buttons('Checkbox Buttons', settings)
+        .form-element.form-element_margin-bottom
+          h3.form-element__name radio buttons
+          - const labelNames = ['мужчина', 'женщина']
+          +radio-buttons('Radio Buttons', labelNames)(name='sex')
+        .form-element.form-element_margin-bottom
+          h3.form-element__name toggle
+          .form-element__toggles-container
             +toggle('Получать спецпредложения')(checked)
             +toggle('Получать спецпредложения')
         .form-element.form-element_margin-bottom
-          |ggggggggggggggggggggggggggg
-        .form-element.form-element_margin-bottom
-          |ggggggggggggggggggggggggggg
+          h3.form-element__name like button
+          .form-element__likes-container
+            +like-button(2)
+            +like-button(11)(checked)
       .form-elements__column
         .form-element.form-element_margin-bottom
           |ggggggggggggggggggggggggggg

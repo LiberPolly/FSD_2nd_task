@@ -29,12 +29,12 @@
   margin-bottom: 1.25rem;
 
   &__name {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    line-height: 1.5rem;
-    font-weight: bold;
-    color: @color-100;
-    margin-bottom: 5rem;
+    margin-bottom: 0.6rem;
+    // text-transform: uppercase;
+    // font-size: 0.75rem;
+    // line-height: 1.5rem;
+    // font-weight: bold;
+    // color: @color-100;
   }
 
   &__state {
@@ -51,12 +51,24 @@
     margin-bottom: 2.688rem;
   }
 
-  &__toggle-container {
+  &__toggles-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 4.3rem;
-    margin-top: 0.62rem;
+  }
+
+  &__likes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .like-button:nth-child(2n) {
+      margin-right: 1rem;
+    }
+    .like-button:nth-child(2n+1) {
+      margin-right: 1rem;
+    }
   }
 }
 
