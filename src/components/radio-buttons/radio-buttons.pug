@@ -1,0 +1,8 @@
+mixin radio-buttons(header, labelNames)
+  .radio-buttons
+    h3.radio-buttons__header= header
+    .radio-buttons__list
+      each name in labelNames
+        label.radio-button
+          input.radio-button__radio(type= 'radio', value= name, checked)&attributes(attributes)               
+          span.radio-button__label-name= name
