@@ -1,12 +1,5 @@
 .radio-buttons {
   display: flex;
-  flex-direction: column;
-}
-.radio-buttons__header {
-  margin-bottom: 0.6rem;
-}
-.radio-buttons__list {
-  display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }

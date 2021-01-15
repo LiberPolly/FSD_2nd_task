@@ -2,17 +2,8 @@
 
 .radio-buttons {
   display: flex;
-  flex-direction: column;
-  
-  &__header {
-    margin-bottom: 0.6rem;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
+  flex-direction: row;
+  justify-content: flex-start;
 
   .radio-button {
     position: relative;
@@ -20,10 +11,12 @@
 
     &__radio {
       display: none;
-      &:checked + .radio-button__label-name:before {
+
+      &:checked+.radio-button__label-name:before {
         border: 0.0714rem solid @color-purple;
       }
-      &:checked + .radio-button__label-name:after {
+
+      &:checked+.radio-button__label-name:after {
         display: block;
       }
     }
@@ -47,7 +40,7 @@
         border: 0.0714rem solid @color-25;
         border-radius: 50%;
       }
-  
+
       &:after {
         content: '';
         position: absolute;
