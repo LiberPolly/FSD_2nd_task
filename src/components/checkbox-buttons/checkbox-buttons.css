@@ -34,8 +34,6 @@
 .checkbox-buttons .checkbox-button .checkbox-button__mark-tick.checkbox-button__label-name {
   display: inline-block;
   width: 12rem;
-}
-.checkbox-buttons .checkbox-button__mark-tick {
   margin-left: 1.89rem;
   font-size: 0.875rem;
   line-height: 1.3rem;

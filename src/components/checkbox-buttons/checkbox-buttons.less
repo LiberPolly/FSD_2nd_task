@@ -26,7 +26,6 @@
     &__checkbox {
       display: none;
 
-
       &:checked + .checkbox-button__mark-tick:before {
         display: block;
       }
@@ -41,14 +40,13 @@
     .checkbox-button__mark-tick.checkbox-button__label-name {
       display: inline-block;
       width: 12rem;
-    }
-
-    &__mark-tick {
       margin-left: 1.89rem;
       font-size: 0.875rem;
       line-height: 1.3rem;
       color: @color-50;
+    }
 
+    &__mark-tick {
       &:before {
         content: '';
         position: absolute;

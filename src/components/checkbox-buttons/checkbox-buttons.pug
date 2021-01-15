@@ -3,6 +3,6 @@ mixin checkbox-buttons(header, settings)
     h3.checkbox-buttons__header= header
     - for (let key in settings)
       label.checkbox-button
-        input.checkbox-button__checkbox(type='checkbox', checked = settings[key])               
+        input.checkbox-button__checkbox(type= 'checkbox', value= key, checked= settings[key])               
         span.checkbox-button__mark-tick.checkbox-button__label-name= key
         span.checkbox-button__mark-square
