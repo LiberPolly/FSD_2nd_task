@@ -1,0 +1,10 @@
+mixin rate-button(full, empty)
+  .rate-button
+    - let i = 0;
+    while i < full 
+      span.material-icons.rate-button__star_full star
+      - i++
+    - let j = 0;
+    while j < empty
+      span.material-icons.rate-button__star_empty star_border
+      - j++
