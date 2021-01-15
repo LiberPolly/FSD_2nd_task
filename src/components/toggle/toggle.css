@@ -14,15 +14,6 @@
   transform: translateX(1.21rem);
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
-.toggle__toggle:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 2.34rem;
-  height: 1.08rem;
-  border-radius: 10px;
-  box-shadow: 0 0 0 1.5px #C7C7CF;
-}
 .toggle__toggle:before {
   content: "";
   position: absolute;
@@ -32,10 +23,21 @@
   width: 0.75rem;
   border-radius: 50%;
   background: #C7C7CF;
+  transition: 0.2s;
+}
+.toggle__toggle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2.34rem;
+  height: 1.08rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1.5px #C7C7CF;
 }
 .toggle__label-name {
   display: inline-block;
   margin-left: 3.01rem;
   font-size: 0.845rem;
-  letter-spacing: 0.022rem;
+  letter-spacing: 0.017rem;
+  color: #575871;
 }
