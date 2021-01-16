@@ -1,0 +1,22 @@
+@import '../../theme/variables.less';
+
+.button_filled {
+  height: 2.75rem;
+  min-width: 6.188rem;
+  border-radius: @border-radius-button;
+  background: @color-purple-gradient;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  
+  &__message {
+    margin-right: 0.05rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+}

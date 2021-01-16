@@ -1,0 +1,18 @@
+.button_filled {
+  height: 2.75rem;
+  min-width: 6.188rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_filled:hover {
+  opacity: 0.5;
+}
+.button_filled__message {
+  margin-right: 0.05rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: #fff;
+}

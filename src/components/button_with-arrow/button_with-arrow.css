@@ -1,0 +1,23 @@
+.button_with-arrow {
+  position: relative;
+  height: 2.75rem;
+  width: 20rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_with-arrow:hover {
+  opacity: 0.5;
+}
+.button_with-arrow__message {
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.button_with-arrow .material-icons.arrow-forward_gradient {
+  position: absolute;
+  bottom: 0.65rem;
+  right: 0.61rem;
+  color: #fff;
+}

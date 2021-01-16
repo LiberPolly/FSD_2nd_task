@@ -1,0 +1,26 @@
+.button_bordered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  height: 2.75rem;
+  min-width: 6.188rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordered:hover {
+  opacity: 0.5;
+}
+.button_bordered__message {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 22px;
+  background-color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: #BD9CFF;
+}

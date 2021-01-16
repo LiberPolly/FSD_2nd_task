@@ -1,0 +1,28 @@
+@import '../../theme/variables.less';
+
+.button_with-arrow {
+  position: relative;
+  height: 2.75rem;
+  width: 20rem;
+  border-radius: @border-radius-button;
+  background: @color-purple-gradient;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  
+  &__message {
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+
+  .material-icons.arrow-forward_gradient {
+    position: absolute;
+    bottom: 0.65rem;
+    right: 0.61rem;
+    color: @color-white;
+  }
+}
