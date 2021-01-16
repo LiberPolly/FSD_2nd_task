@@ -1,0 +1,54 @@
+@import '../../theme/variables.less';
+@import '~material-design-icons/iconfont/material-icons.css';
+
+.like-button {
+  position: relative;
+
+  &__checkbox {
+    display: none;
+
+    &:checked+.like-button__value-wrapper {
+      box-shadow: none;
+      color: @color-purple;
+
+      &:before {
+        content: "favorite";
+      }
+    }
+  }
+
+  &__value-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.6rem;
+    height: 1.3rem;
+    border-radius: @border-radius-like;
+    box-shadow: inset 0 0 0 0.188rem @color-25;
+    background-image: @color-purple-gradient;
+    color: @color-25;
+
+    &:before {
+      content: "favorite_border";
+      position: absolute;
+      left: 0.375rem;
+      top: 0.313rem;
+      font-family: Material Icons;
+      font-size: 0.63rem;
+    }
+  }
+
+  &__value {
+    display: block;
+    padding-left: 1.19rem;
+    width: 2.4rem;
+    height: 1.08rem;
+    border-radius: @border-radius-like;
+    background-color: @color-white;
+    font-size: 0.59rem;
+    line-height: 1rem;
+    color: inherit;
+    user-select: none;
+  }
+}
