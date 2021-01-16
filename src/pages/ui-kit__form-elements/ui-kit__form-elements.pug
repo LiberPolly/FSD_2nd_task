@@ -9,6 +9,11 @@ include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug
 include ../../components/radio-buttons/radio-buttons.pug
 include ../../components/like-button/like-button.pug
+include ../../components/rate-button/rate-button.pug
+include ../../components/button_filled/button_filled.pug
+include ../../components/button_bordered/button_bordered.pug
+include ../../components/button_text-only/button_text-only.pug
+include ../../components/button_with-arrow/button_with-arrow.pug
 
 block main
   .form-elements
@@ -42,20 +47,41 @@ block main
           +radio-buttons('Radio Buttons', labelNames)(name='sex')
         .form-element.form-element_margin-bottom
           h3.form-element__name toggle
-          .form-element__toggles-container
+          .form-element__container_column
             +toggle('Получать спецпредложения')(checked)
             +toggle('Получать спецпредложения')
         .form-element.form-element_margin-bottom
           h3.form-element__name like button
-          .form-element__likes-container
+          .form-element__container_row
             +like-button(2)
-            +like-button(11)(checked)
+            +like-button(12)(checked)
+        .form-element.form-element_margin-bottom
+          h3.form-element__name rate button
+          .form-element__container_row
+            +rate-button(4, 1)
+            +rate-button(1, 4)
       .form-elements__column
         .form-element.form-element_margin-bottom
           |ggggggggggggggggggggggggggg
         .form-element.form-element_margin-bottom
-          |ggggggggggggggggggggggggggg
-
+          h3.form-element__name buttons
+          .form-element__container_row
+            +button_filled('click me')
+            .button_hovered
+              +button_filled('click me')
+        .form-element.form-element_margin-bottom
+          .form-element__container_row
+            +button_bordered('click me')
+            .button_hovered
+              +button_bordered('click me')    
+        .form-element.form-element_margin-bottom
+          .form-element__container_row
+            +button_text-only('click me')
+            .button-text-only_hovered
+              +button_text-only('click me')  
+        .form-element.form-element_margin-bottom
+          .form-element__container_row
+            +button_with-arrow('перейти к оплате')                         
     .form-elements__row
       .form-elements__column
         .form-element.form-element_margin-bottom
