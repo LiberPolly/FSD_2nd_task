@@ -1,5 +1,6 @@
 include ../../components/dropdown-button/dropdown-button.pug
 include ../../components/dropdown-counter/dropdown-counter.pug 
+include ../../components/button_text-only/button_text-only.pug
 
 mixin dropdown-guests(labelName)
   .dropdown-guests__wrapper
@@ -19,5 +20,5 @@ mixin dropdown-guests(labelName)
             span.dropdown-guests__menu-item-name младенцы
             +dropdown-counter(0, 0, 2)
         .dropdown-guests__footer
-          button.dropdown-guests__reset.dropdown-guests__reset_disable очистить
-          button.dropdown-guests__submit применить
+          +button_text-only('очистить', 'dropdown-guests__reset dropdown-guests__reset_disable')
+          +button_text-only('применить', 'dropdown-guests__submit')
