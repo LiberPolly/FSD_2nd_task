@@ -5,9 +5,8 @@ const dropdownButtons = document.querySelectorAll('.dropdown-button');
 
 function toggleDropdown(elem) {
   const menu = elem.nextElementSibling;
-  const dropdown = elem.parentElement;
 
-  dropdown.classList.toggle('dropdown_disabled');
+  elem.classList.toggle('dropdown-button_disabled');
   menu.classList.toggle('dropdown__menu_disabled');
 }
 

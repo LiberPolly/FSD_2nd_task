@@ -5,7 +5,7 @@ mixin dropdown-facilities(labelName)
   .dropdown-facilities__wrapper
     label.dropdown-facilities__label= labelName
       input.dropdown-facilities__value(type='hidden', value='1', name='number-of-guests')
-    .dropdown-facilities.dropdown_disabled
+    .dropdown-facilities
       +dropdown-button()
       .dropdown-facilities__menu.dropdown__menu_disabled
         ul.dropdown-facilities__menu-list

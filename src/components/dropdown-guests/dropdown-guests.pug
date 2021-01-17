@@ -6,7 +6,7 @@ mixin dropdown-guests(labelName)
   .dropdown-guests__wrapper
     label.dropdown-guests__label= labelName
       input.dropdown-guests__value(type='hidden', value='0', name='number-of-guests')
-    .dropdown-guests.dropdown_disabled
+    .dropdown-guests
       +dropdown-button()
       .dropdown-guests__menu.dropdown__menu_disabled
         ul.dropdown-guests__menu-list

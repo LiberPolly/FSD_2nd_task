@@ -2,11 +2,7 @@
 
 .dropdown-guests {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid @color-50;
-  border-radius: 4px 4px 0px 0px;
-  width: 20rem;
+  width: 100%;
 
   &__label {
     text-transform: uppercase;
@@ -19,23 +15,28 @@
   &__menu {
     position: absolute;
     z-index: 100;
-    top: 100%;
-    left: -0.069rem;
-    width: 20rem;
-    padding-top: 0.25rem;
+    top: 2.45rem;
+    left: 0;
+    width: 100%;
     border: 1px solid @color-50;
     border-radius: 0px 0px 4px 4px;
     background-color: @color-white;
   }
 
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 7.56rem;
+  }
+
   &__menu-item {
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 2.4rem;
-    padding: 0rem 0.35rem 0.3rem 0.9rem;
+    height: 1.4rem;
+    padding: 0.1rem 0.4rem 0.55rem 0.9rem;
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
@@ -45,7 +46,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.72rem 0.36rem 0.8rem 0.85rem;
+    padding: 0 0.4rem 0rem 0.85rem;
   }
 
   &__reset {
@@ -55,11 +56,6 @@
   &__reset_disable {
     visibility: hidden;
   }
-}
-
-.dropdown_disabled {
-  border: 1px solid @color-25;
-  border-radius: @border-radius-form;
 }
 
 .dropdown__menu_disabled {
