@@ -1,0 +1,10 @@
+mixin additional-room-info(header, settings)
+  .additional-room-info
+    h2.additional-room-info__header= header
+    ul.additional-room-info__list
+      each key in settings
+        li.additional-room-info__item
+          i(class=`additional-room-info__item-icon ${key[2]}`)= key[3]
+          .additional-room-info__item-text-wrapper
+            span.additional-room-info__item-name= key[0]
+            span.additional-room-info__item-description= key[1]

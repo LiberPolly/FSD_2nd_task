@@ -1,0 +1,42 @@
+@import '../../theme/variables.less';
+
+.additional-room-info {
+  &__header{
+    margin-bottom: 0.45rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5.57rem;
+    max-width: 17.5rem;
+    border-bottom: 1px solid @color-10;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: @color-75;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .material-icons.additional-room-info__item-icon {
+    display: inline-block;
+    font-size: 3rem;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__item-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.6rem;
+  }
+
+  &__item-name {
+    font-weight: bold;
+  }
+}
