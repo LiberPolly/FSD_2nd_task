@@ -1,0 +1,89 @@
+.expandable-checkbox-list__header {
+  margin-bottom: 0.6rem;
+}
+.expandable-checkbox-list__button {
+  position: relative;
+  display: block;
+}
+.expandable-checkbox-list__button:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 15.28rem;
+  top: 0.78rem;
+  width: 0.45rem;
+  height: 0.45em;
+  border-left: 2px solid #8F90A0;
+  border-bottom: 2px solid #8F90A0;
+  transform: translate(-50%, -75%) rotate(-45deg);
+  transition: 0.05s;
+}
+.expandable-checkbox-list .expandable-checkbox-list__button_disabled:after {
+  left: 15rem;
+  top: 0.65rem;
+  transition: 0.05s;
+  transform: rotate(135deg);
+}
+.expandable-checkbox-list .expandable-checkbox-list__menu {
+  display: flex;
+  flex-direction: column;
+}
+.expandable-checkbox-list .expandable-checkbox-list__menu_disabled {
+  display: none;
+}
+.expandable-checkbox-list .expandable-checkbox-item {
+  position: relative;
+  margin-bottom: 0.65rem;
+}
+.expandable-checkbox-list .expandable-checkbox-item__mark-square {
+  position: absolute;
+  display: block;
+  top: 0.05rem;
+  left: 0.05rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  border: 0.0714rem solid #C7C7CF;
+  border-radius: 0.2857rem;
+}
+.expandable-checkbox-list .expandable-checkbox-item__checkbox {
+  display: none;
+}
+.expandable-checkbox-list .expandable-checkbox-item__checkbox:checked + .expandable-checkbox-item__mark-tick:before {
+  display: block;
+}
+.expandable-checkbox-list .expandable-checkbox-item__checkbox:checked + .expandable-checkbox-item__mark-tick:after {
+  display: block;
+}
+.expandable-checkbox-list .expandable-checkbox-item__checkbox:checked ~ .expandable-checkbox-item__mark-square {
+  border: 0.0714rem solid #BD9CFF;
+}
+.expandable-checkbox-list .expandable-checkbox-item .expandable-checkbox-item__mark-tick.expandable-checkbox-item__label-name {
+  display: inline-block;
+  width: 12rem;
+  margin-left: 1.89rem;
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  color: #8F90A0;
+}
+.expandable-checkbox-list .expandable-checkbox-item__mark-tick:before {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 0.4rem;
+  left: 0.43rem;
+  height: 0.38rem;
+  width: 0.5rem;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  transform: rotate(-45deg);
+}
+.expandable-checkbox-list .expandable-checkbox-item__mark-tick:after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 0.21rem;
+  left: 0.43rem;
+  height: 0.375rem;
+  width: 0.5rem;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,110 @@
+@import '../../theme/variables.less';
+
+.expandable-checkbox-list {
+  &__header{
+    margin-bottom: 0.6rem;
+  }
+
+  &__button {
+    position: relative;
+    display: block;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 15.28rem;
+      top: 0.78rem;
+      width: 0.45rem;
+      height: 0.45em; 
+      border-left: 2px solid @color-50;;
+      border-bottom: 2px solid @color-50;
+      transform: translate(-50%, -75%) rotate(-45deg);
+      transition: 0.05s;
+    }
+
+  }
+
+  .expandable-checkbox-list__button_disabled {
+    &:after {
+      left: 15rem;
+      top: 0.65rem;
+      transition: 0.05s;
+      transform: rotate(135deg);
+    }
+  }
+  
+  .expandable-checkbox-list__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .expandable-checkbox-list__menu_disabled {
+    display: none;
+  }
+
+  .expandable-checkbox-item {
+    position: relative;
+    margin-bottom: 0.65rem;
+
+    &__mark-square {
+      position: absolute;
+      display: block;
+      top: 0.05rem;
+      left: 0.05rem;
+      height: 1.25rem;
+      width: 1.25rem;
+      border: 0.0714rem solid @color-25;
+      border-radius: 0.2857rem;
+    }
+
+    &__checkbox {
+      display: none;
+
+      &:checked + .expandable-checkbox-item__mark-tick:before {
+        display: block;
+      }
+      &:checked + .expandable-checkbox-item__mark-tick:after {
+        display: block;
+      }
+      &:checked ~ .expandable-checkbox-item__mark-square {
+        border: 0.0714rem solid @color-purple;
+      }
+    }
+
+    .expandable-checkbox-item__mark-tick.expandable-checkbox-item__label-name {
+      display: inline-block;
+      width: 12rem;
+      margin-left: 1.89rem;
+      font-size: 0.875rem;
+      line-height: 1.3rem;
+      color: @color-50;
+    }
+
+    &__mark-tick {
+      &:before {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 0.4rem;
+        left: 0.43rem;
+        height: 0.38rem;
+        width: 0.5rem;
+        background: @color-purple-gradient;
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 0.21rem;
+        left: 0.43rem;
+        height: 0.375rem;
+        width: 0.5rem;
+        background-color: @color-white;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

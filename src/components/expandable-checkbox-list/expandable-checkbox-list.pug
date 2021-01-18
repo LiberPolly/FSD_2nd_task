@@ -1,0 +1,10 @@
+mixin expandable-checkbox-list(header, settings)
+  .expandable-checkbox-list
+    button.expandable-checkbox-list__button.expandable-checkbox-list__button_disabled
+      h3.expandable-checkbox-list__header= header
+    .expandable-checkbox-list__menu.expandable-checkbox-list__menu_disabled
+      - for (let key in settings)
+        label.expandable-checkbox-item
+          input.expandable-checkbox-item__checkbox(type= 'checkbox', value= key, checked= settings[key])               
+          span.expandable-checkbox-item__mark-tick.expandable-checkbox-item__label-name= key
+          span.expandable-checkbox-item__mark-square
