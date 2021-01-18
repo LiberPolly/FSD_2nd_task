@@ -2,11 +2,7 @@ import './dropdown-guests.css';
 import forEach from 'lodash/forEach';
 import nounDeclension from '../noun-declension/noun-declension';
 
-const dropdownGuests = document.querySelector('.dropdown-guests__wrapper');
-const dropdownMessage = dropdownGuests.querySelector('.dropdown-button__message');
-const currentCounters = dropdownGuests.querySelectorAll('.dropdown-counter');
-const resetButton = dropdownGuests.querySelector('.dropdown-guests__reset');
-const submitButton = dropdownGuests.querySelector('.dropdown-guests__submit');
+const dropdownsGuests = document.querySelectorAll('.dropdown-guests__wrapper');
 const messageGuests = ['гость', 'гостя', 'гостей'];
 const messageNewborns = ['младенец', 'младенца', 'младенцев'];
 
@@ -28,28 +24,27 @@ function sumCounters(counters) {
   return [guestsValue, newbornsValue];
 }
 
-// Функция, активирующая кнопку reset при первом изменении значения счетчика
-function activateResetButton(value, minValue) {
+// Функция, активирующая кнопку reset, при первом изменении значения счетчика
+function activateResetButton(resetButton, value, minValue) {
   if (value > minValue) {
     resetButton.classList.remove('dropdown-guests__reset_disable');
   }
 }
 
-// Значение кнопки по умолчанию
-dropdownMessage.textContent = 'Сколько гостей';
-
-// Обработка изменения значений счетчиков дропдауна
-forEach(currentCounters, (counter) => {
+// Функция, обновляющая сообщение в кнопке дропдауна, в зависимости от значений счетчиков
+function updateDropdownMessage(counter, thisMessage, thisCounters, resetButton) {
   const minValue = +counter.getAttribute('data-min-value');
+  const currentCounters = thisCounters;
+  const dropdownMessage = thisMessage;
 
   counter.addEventListener('click', () => {
-    // Новое значение счетчика при каждом клике
+    // Доступ к новому значению счетчика при каждом клике
     const value = +counter.querySelector('.dropdown-counter__value').textContent;
     // Подсчет сумм счетчиков при каждом клике по отдельному счетчику
     const totalValue = sumCounters(currentCounters);
 
     // Активация кнопки reset
-    activateResetButton(value, minValue);
+    activateResetButton(resetButton, value, minValue);
 
     // Обновление сообщения в кнопке дропдауна в зависимости от значений счетчиков
     if (totalValue[0] === 0 && totalValue[1] === 0) {
@@ -63,10 +58,11 @@ forEach(currentCounters, (counter) => {
       dropdownMessage.textContent = `${totalValue[0]} ${nounGuests}, ${totalValue[1]} ${nounNewborns}`;
     }
   });
-});
+}
 
-// Обработка клика по кнопке reset
-resetButton.addEventListener('click', () => {
+// Функция, сбрасывающая значения счетчиков, при клике по кнопке reset
+function resetCounters(currentCounters, resetButton, thisMessage) {
+  const dropdownMessage = thisMessage;
   forEach(currentCounters, ((counter) => {
     const valueElement = counter.querySelector('.dropdown-counter__value');
     const minValue = +counter.getAttribute('data-min-value');
@@ -83,10 +79,10 @@ resetButton.addEventListener('click', () => {
     minusButton.classList.add('dropdown-counter__button_disabled');
     plusButton.classList.remove('dropdown-counter__button_disabled');
   }));
-});
+}
 
-// Обработка клика по кнопке submit
-submitButton.addEventListener('click', () => {
+// Функция, имитирующая отправку данных дропдауна при клике по кнопке submit
+function submitDropdownData(dropdownGuests, dropdownMessage) {
   const valueInput = dropdownGuests.querySelector('.dropdown-guests__value');
   const dropdownButton = dropdownGuests.querySelector('.dropdown-button');
 
@@ -96,4 +92,24 @@ submitButton.addEventListener('click', () => {
   dropdownButton.click();
   // Имитация отправки данных на сервер
   console.log(`Sending data (${valueInput.value}) from the guest dropdown to server...`);
+}
+
+// Поведение каждого дропдауна на странице
+forEach(dropdownsGuests, (dropdownGuests) => {
+  const thisMessage = dropdownGuests.querySelector('.dropdown-button__message');
+  const thisCounters = dropdownGuests.querySelectorAll('.dropdown-counter');
+  const resetButton = dropdownGuests.querySelector('.dropdown-guests__reset');
+  const submitButton = dropdownGuests.querySelector('.dropdown-guests__submit');
+
+  // Значение кнопки по умолчанию
+  thisMessage.textContent = 'Сколько гостей';
+
+  // Обработка изменения значений счетчиков дропдауна
+  forEach(thisCounters, (counter) => {
+    updateDropdownMessage(counter, thisMessage, thisCounters, resetButton);
+  });
+
+  // Поведение кнопок submit и reset
+  resetButton.addEventListener('click', () => resetCounters(thisCounters, resetButton, thisMessage));
+  submitButton.addEventListener('click', () => submitDropdownData(dropdownGuests, thisMessage));
 });
