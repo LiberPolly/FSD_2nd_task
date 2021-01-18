@@ -1,0 +1,6 @@
+mixin bullet-list(header, list)
+  .bullet-list
+    h3.bullet-list__header= header
+    ul.bullet-list__list
+      each key in list
+        li.bullet-list__item= key

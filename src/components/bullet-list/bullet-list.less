@@ -1,0 +1,27 @@
+@import '../../theme/variables.less';
+
+.bullet-list {
+  &__header{
+    margin-bottom: 0.45rem;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 0 0.65rem 1.35rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: @color-75;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.4rem;
+      left: -1.3rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 50%;
+      background-color: @color-25;
+    }
+  }
+
+}

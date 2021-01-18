@@ -1,0 +1,20 @@
+.bullet-list__header {
+  margin-bottom: 0.45rem;
+}
+.bullet-list__item {
+  position: relative;
+  margin: 0 0 0.65rem 1.35rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #575871;
+}
+.bullet-list__item:before {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  left: -1.3rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #C7C7CF;
+}
