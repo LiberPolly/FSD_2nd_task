@@ -1,0 +1,9 @@
+mixin rich-checkbox-buttons(header, settings)
+  .rich-checkbox-buttons
+    h3.rich-checkbox-buttons__header= header
+    each key in settings
+      label.rich-checkbox-button
+        input.rich-checkbox-button__checkbox(type= 'checkbox', value= key[0], checked= key[2])               
+        span.rich-checkbox-button__mark-tick.rich-checkbox-button__label-name= key[0]
+        span.rich-checkbox-button__description= key[1]
+        span.rich-checkbox-button__mark-square
