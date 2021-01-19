@@ -48,6 +48,6 @@
 .dropdown-guests__reset_disable {
   visibility: hidden;
 }
-.dropdown__menu_disabled {
+.dropdown-guests .dropdown__menu_disabled {
   display: none;
 }

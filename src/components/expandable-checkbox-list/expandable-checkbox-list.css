@@ -1,28 +1,30 @@
 .expandable-checkbox-list__header {
   margin-bottom: 0.6rem;
+  text-align: left;
 }
 .expandable-checkbox-list__button {
   position: relative;
   display: block;
+  width: 100%;
 }
 .expandable-checkbox-list__button:after {
   content: '';
   position: absolute;
   display: block;
   left: 15.28rem;
-  top: 0.78rem;
+  top: 1rem;
   width: 0.45rem;
   height: 0.45em;
   border-left: 2px solid #8F90A0;
   border-bottom: 2px solid #8F90A0;
-  transform: translate(-50%, -75%) rotate(-45deg);
+  transform: translate(-50%, -75%) rotate(135deg);
   transition: 0.05s;
 }
 .expandable-checkbox-list .expandable-checkbox-list__button_disabled:after {
   left: 15rem;
-  top: 0.65rem;
+  top: 0.4rem;
   transition: 0.05s;
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
 }
 .expandable-checkbox-list .expandable-checkbox-list__menu {
   display: flex;
