@@ -16,6 +16,7 @@
   left: 0;
   width: 100%;
   border: 1px solid #8F90A0;
+  border-top-color: #C7C7CF;
   border-radius: 0px 0px 4px 4px;
   background-color: #fff;
 }
