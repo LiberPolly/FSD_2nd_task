@@ -11,7 +11,7 @@
     display: none;
 
     &:checked+.toggle__toggle:after {
-      box-shadow: 0 0 0 1.5px @color-purple;
+      background-image: linear-gradient(@color-white, @color-white), @color-purple-gradient;
     }
 
     &:checked+.toggle__toggle:before {
@@ -24,8 +24,9 @@
     &:before {
       content: "";
       position: absolute;
-      left: 0.2rem;
-      top: 0.35rem;
+      z-index: 100;
+      left: 0.25rem;
+      top: 0.28rem;
       height: 0.75rem;
       width: 0.75rem;
       border-radius: 50%;
@@ -36,17 +37,21 @@
     &:after {
       content: "";
       position: absolute;
+      top: 0;
       left: 0;
       width: 2.34rem;
       height: 1.08rem;
+      border: solid 0.1rem transparent;
       border-radius: @border-radius-toggle;
-      box-shadow: 0 0 0 1.5px @color-25;
+      background-image: linear-gradient(@color-white, @color-white), linear-gradient(@color-25, @color-25);
+      background-clip: padding-box, border-box;
     }
   }
 
   &__label-name {
     display: inline-block;
-    margin-left: 3.01rem;
+    margin-top: 0.25rem;
+    margin-left: 3.15rem;
     font-size: 0.845rem;
     letter-spacing: 0.017rem;
     color: @color-75;
