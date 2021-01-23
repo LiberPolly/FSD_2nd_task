@@ -1,0 +1,60 @@
+.pagination .paginationjs {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.pagination .paginationjs .paginationjs-pages ul {
+  display: flex;
+  width: 100%;
+}
+.pagination .paginationjs-pages li {
+  display: flex;
+  width: 100%;
+  max-width: 2.5rem;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+.pagination .paginationjs-pages li:last-child {
+  border: none;
+}
+.pagination .paginationjs .paginationjs-pages li > a {
+  width: 100%;
+  font-size: 0.7rem;
+  line-height: 2.5rem;
+  color: #8F90A0;
+}
+.pagination .paginationjs .paginationjs-pages li > a:hover {
+  background: none;
+}
+.pagination .paginationjs .paginationjs-pages li.active > a {
+  width: 2.57rem;
+  height: 2.57rem;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-weight: bold;
+  color: #fff;
+}
+.pagination .paginationjs .paginationjs-pages li.paginationjs-next > a,
+.pagination .paginationjs .paginationjs-pages li.paginationjs-prev > a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  font-weight: bold;
+  color: #fff;
+}
+.pagination__arrow {
+  line-height: 2.5rem;
+  color: #fff;
+}
+.pagination__navigator {
+  font-size: 0.875rem;
+  letter-spacing: 0.6px;
+  color: #575871;
+}
+.pagination .paginationjs .paginationjs-nav {
+  margin-top: 5px;
+  margin-left: 3px;
+  font-size: 0.875rem;
+}

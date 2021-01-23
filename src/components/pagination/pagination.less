@@ -1,0 +1,75 @@
+@import '../../theme/variables.less';
+
+.pagination {
+
+  .paginationjs {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+  }
+
+  .paginationjs .paginationjs-pages ul {
+    display: flex;
+    width: 100%;
+  }
+  
+  .paginationjs-pages li {
+    display: flex;
+    width: 100%;
+    max-width: 2.5rem;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:last-child {
+      border: none;
+    }
+  }
+  
+  .paginationjs .paginationjs-pages li>a {
+    width: 100%;
+    font-size: 0.7rem;
+    line-height: 2.5rem;
+    color: @color-50;
+    &:hover {
+      background: none;
+    }
+  }
+
+  .paginationjs .paginationjs-pages li.active>a {
+    width: 2.57rem;
+    height: 2.57rem;
+    border-radius: 50%;
+    background: @color-purple-gradient;
+    font-weight: bold;
+    color: @color-white;
+  }
+
+  .paginationjs .paginationjs-pages li.paginationjs-next>a,
+  .paginationjs .paginationjs-pages li.paginationjs-prev>a {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: @color-green-gradient;
+    font-weight: bold;
+    color: @color-white;
+  }
+
+  &__arrow {
+    line-height: 2.5rem;
+    color: @color-white;
+  }
+
+  &__navigator {
+    font-size: 0.875rem;
+    letter-spacing: 0.6px;
+    color: @color-75;
+  }
+
+  .paginationjs .paginationjs-nav {
+    margin-top: 5px;
+    margin-left: 3px;
+    font-size: 0.875rem;
+}
+}
