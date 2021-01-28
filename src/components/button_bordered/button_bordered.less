@@ -10,9 +10,14 @@
   border: solid 0.125rem transparent;
   background-image: linear-gradient(@color-white, @color-white), @color-purple-gradient;
   background-clip: padding-box, border-box;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
   }
   
   &__message {

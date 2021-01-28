@@ -1,6 +1,7 @@
 @import '~material-design-icons/iconfont/material-icons.css';
 .like-button {
   position: relative;
+  cursor: pointer;
 }
 .like-button__checkbox {
   display: none;

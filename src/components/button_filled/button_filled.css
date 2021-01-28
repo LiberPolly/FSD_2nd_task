@@ -3,9 +3,13 @@
   min-width: 6.188rem;
   border-radius: 22px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  cursor: pointer;
 }
 .button_filled:hover {
   opacity: 0.5;
+}
+.button_filled:active {
+  opacity: 1;
 }
 .button_filled__message {
   margin-right: 0.05rem;

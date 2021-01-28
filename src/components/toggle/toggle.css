@@ -3,6 +3,16 @@
 }
 .toggle__label {
   position: relative;
+  cursor: pointer;
+}
+.toggle__label-name {
+  display: inline-block;
+  margin-top: 0.25rem;
+  margin-left: 3.15rem;
+  font-size: 0.845rem;
+  line-height: 0.2rem;
+  letter-spacing: 0.017rem;
+  color: #575871;
 }
 .toggle__checkbox {
   display: none;
@@ -11,7 +21,7 @@
   background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .toggle__checkbox:checked + .toggle__toggle:before {
-  transform: translateX(1.21rem);
+  transform: translateX(1.23rem);
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .toggle__toggle:before {
@@ -19,7 +29,7 @@
   position: absolute;
   z-index: 100;
   left: 0.25rem;
-  top: 0.28rem;
+  top: 0.32rem;
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
@@ -29,7 +39,7 @@
 .toggle__toggle:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0.06rem;
   left: 0;
   width: 2.34rem;
   height: 1.08rem;
@@ -37,12 +47,4 @@
   border-radius: 10px;
   background-image: linear-gradient(#fff, #fff), linear-gradient(#C7C7CF, #C7C7CF);
   background-clip: padding-box, border-box;
-}
-.toggle__label-name {
-  display: inline-block;
-  margin-top: 0.25rem;
-  margin-left: 3.15rem;
-  font-size: 0.845rem;
-  letter-spacing: 0.017rem;
-  color: #575871;
 }

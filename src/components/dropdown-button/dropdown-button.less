@@ -5,22 +5,24 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.713rem 0.838rem;
-  height: 2.52rem;
+  padding: 0rem 0.91rem;
+  height: 2.7rem;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid @color-50;
   border-radius: 4px 4px 0px 0px;
+  box-shadow: @box-shadow-dropdowns;
+  cursor: pointer;
 
   &_disabled {
     border: 1px solid @color-25;
     border-radius: 4px 4px 4px 4px;
+    box-shadow: none;
   }
 
-  
   &__message {
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     color: @color-75;
   }
 
@@ -39,10 +41,10 @@
       top: 52%;
       width: 36.95%;
       height: 36.95%;
-      border-left: 2px solid @color-75;;
+      border-left: 2px solid @color-75;
+      ;
       border-bottom: 2px solid @color-75;
       transform: translate(-50%, -75%) rotate(-45deg);
     }
   }
 }
-

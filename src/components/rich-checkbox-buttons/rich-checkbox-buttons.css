@@ -8,6 +8,7 @@
 .rich-checkbox-buttons .rich-checkbox-button {
   position: relative;
   margin-bottom: 0.4rem;
+  cursor: pointer;
 }
 .rich-checkbox-buttons .rich-checkbox-button__mark-square {
   position: absolute;

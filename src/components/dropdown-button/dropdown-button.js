@@ -3,10 +3,9 @@ import forEach from 'lodash/forEach';
 
 const dropdownButtons = document.querySelectorAll('.dropdown-button');
 
-function toggleDropdown(elem) {
-  const menu = elem.nextElementSibling;
-
-  elem.classList.toggle('dropdown-button_disabled');
+function toggleDropdown(button) {
+  const menu = button.nextElementSibling;
+  button.classList.toggle('dropdown-button_disabled');
   menu.classList.toggle('dropdown__menu_disabled');
 }
 

@@ -1,16 +1,46 @@
 .form-elements {
-  padding: 1.875rem 8.75rem 1.875rem 8.75rem;
+  padding: 2.02rem 8.8rem;
 }
 .form-elements__row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 6.25rem;
+  margin-bottom: 4.97rem;
+}
+.form-elements__row_no-wrap {
+  flex-wrap: nowrap;
+}
+@media (max-width: 767px) {
+  .form-elements__row_no-wrap {
+    flex-wrap: wrap;
+  }
+}
+.form-elements__row_margin-bottom-160 {
+  margin-bottom: 1.6rem;
+}
+.form-elements__row_margin-bottom-300 {
+  margin-bottom: 3rem;
 }
 .form-elements__column {
-  min-width: 20rem;
-  margin: 0 auto;
+  max-width: 20rem;
+}
+.form-elements__column_no-width {
+  margin-top: 1.1rem;
+  max-width: unset;
+  width: unset;
+}
+.form-elements__column_padding-left {
+  padding-left: 0.7rem;
+}
+.form-elements__column_no-margin {
+  width: 20rem;
+}
+.form-elements__column_margin-right {
+  margin-right: 3.5rem;
+}
+.form-elements__column_margin-left {
+  margin-left: 6rem;
 }
 @media (max-width: 991px) {
   .form-elements {
@@ -29,22 +59,64 @@
 }
 .form-element {
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.05rem;
 }
 .form-element__name {
   margin-bottom: 0.6rem;
 }
 .form-element__state {
   position: absolute;
-  top: 0;
+  top: -0.3rem;
   right: 0;
   text-transform: uppercase;
   font-size: 0.75rem;
   line-height: 1.5rem;
   color: #8F90A0;
 }
-.form-element_margin-bottom {
-  margin-bottom: 1.9rem;
+.form-element_margin-bottom-120 {
+  margin-bottom: 1.2rem;
+}
+.form-element_margin-bottom-130 {
+  margin-bottom: 1.3rem;
+}
+.form-element_margin-bottom-150 {
+  margin-bottom: 1.5rem;
+}
+.form-element_margin-bottom-160 {
+  margin-bottom: 1.6rem;
+}
+.form-element_margin-bottom-170 {
+  margin-bottom: 1.7rem;
+}
+.form-element_margin-bottom-195 {
+  margin-bottom: 1.95rem;
+}
+.form-element_margin-bottom-230 {
+  margin-bottom: 2.3rem;
+}
+.form-element_margin-bottom-245 {
+  margin-bottom: 2.45rem;
+}
+.form-element_margin-bottom-250 {
+  margin-bottom: 2.5rem;
+}
+.form-element_width-16 {
+  max-width: 16.625rem;
+}
+.form-element_width-20 {
+  width: 20rem;
+  margin-bottom: 11rem;
+}
+.form-element_width16-height12 {
+  width: 16.625rem;
+  height: 12rem;
+}
+.form-element_width16-height13 {
+  width: 16.625rem;
+  height: 13.8rem;
+}
+.form-element_margin-left {
+  margin-left: 1.65rem;
 }
 .form-element__container_column {
   display: flex;
@@ -80,4 +152,40 @@
 }
 .button-text-only_hovered .button_text-only {
   color: #8F90A0;
+}
+.dropdown-facilities_active .dropdown-button {
+  border: 1px solid #8F90A0;
+  border-radius: 4px 4px 0px 0px;
+}
+.dropdown-facilities_active .dropdown-facilities__menu {
+  display: block;
+  z-index: 0;
+}
+.dropdown-guests_active .dropdown-button {
+  border: 1px solid #8F90A0;
+  border-radius: 4px 4px 0px 0px;
+}
+.dropdown-guests_active .dropdown-guests__menu {
+  display: block;
+  z-index: 0;
+}
+.expandable-checkbox-list_active .expandable-checkbox-list__button:after {
+  transform: translate(-50%, -75%) rotate(135deg);
+  left: 15.28rem;
+  top: 1rem;
+}
+.expandable-checkbox-list_active .expandable-checkbox-list__menu {
+  display: flex;
+}
+.additional-room-info__list .additional-room-info__item {
+  display: none;
+}
+.additional-room-info__list .additional-room-info__item:nth-child(-n+2) {
+  display: flex;
+}
+.reviews__list .review {
+  display: none;
+}
+.reviews__list .review:first-child {
+  display: flex;
 }

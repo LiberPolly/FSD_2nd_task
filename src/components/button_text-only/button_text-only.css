@@ -6,7 +6,11 @@
   letter-spacing: 0.1px;
   text-transform: uppercase;
   color: #BD9CFF;
+  cursor: pointer;
 }
 .button_text-only:hover {
   color: #8F90A0;
+}
+.button_text-only:active {
+  color: #BD9CFF;
 }

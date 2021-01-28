@@ -113,3 +113,23 @@ forEach(dropdownsGuests, (dropdownGuests) => {
   resetButton.addEventListener('click', () => resetCounters(thisCounters, resetButton, thisMessage));
   submitButton.addEventListener('click', () => submitDropdownData(dropdownGuests, thisMessage));
 });
+
+// // Скрытие дропдауна по клику на документе
+// function hideDropdowns(event, dropdowns) {
+//   forEach(dropdowns, ((dropdown) => {
+//     const dropdownButton = dropdown.querySelector('.dropdown-button');
+//     //     if (dropdown !== event.target
+//     // && !dropdownButton.classList.contains('dropdown-button_disabled')) {
+//     //       dropdownButton.click();
+//     //       console.log(dropdown !== event.target);
+//     //       console.log(!dropdownButton.classList.contains('dropdown-button_disabled'));
+//     //     }
+//     if (
+//       dropdown !== event.target
+//       // && dropdown.has(event.target).length === 0
+//     ) {
+//       dropdownButton.click();
+//     }
+//   }));
+// }
+// document.addEventListener('click', (event) => hideDropdowns(event, dropdownsGuests));

@@ -3,20 +3,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.713rem 0.838rem;
-  height: 2.52rem;
+  padding: 0rem 0.91rem;
+  height: 2.7rem;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #8F90A0;
   border-radius: 4px 4px 0px 0px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  cursor: pointer;
 }
 .dropdown-button_disabled {
   border: 1px solid #C7C7CF;
   border-radius: 4px 4px 4px 4px;
+  box-shadow: none;
 }
 .dropdown-button__message {
   font-size: 0.875rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   color: #575871;
 }
 .dropdown-button__arrow {

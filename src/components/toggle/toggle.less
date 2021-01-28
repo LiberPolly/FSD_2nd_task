@@ -5,6 +5,17 @@
 
   &__label {
     position: relative;
+    cursor: pointer;
+
+    &-name {
+      display: inline-block;
+      margin-top: 0.25rem;
+      margin-left: 3.15rem;
+      font-size: 0.845rem;
+      line-height: 0.2rem;
+      letter-spacing: 0.017rem;
+      color: @color-75;
+    }
   }
 
   &__checkbox {
@@ -15,7 +26,7 @@
     }
 
     &:checked+.toggle__toggle:before {
-      transform: translateX(1.21rem);
+      transform: translateX(1.23rem);
       background: @color-purple-gradient;
     }
   }
@@ -26,7 +37,7 @@
       position: absolute;
       z-index: 100;
       left: 0.25rem;
-      top: 0.28rem;
+      top: 0.32rem;
       height: 0.75rem;
       width: 0.75rem;
       border-radius: 50%;
@@ -37,7 +48,7 @@
     &:after {
       content: "";
       position: absolute;
-      top: 0;
+      top: 0.06rem;
       left: 0;
       width: 2.34rem;
       height: 1.08rem;
@@ -46,14 +57,5 @@
       background-image: linear-gradient(@color-white, @color-white), linear-gradient(@color-25, @color-25);
       background-clip: padding-box, border-box;
     }
-  }
-
-  &__label-name {
-    display: inline-block;
-    margin-top: 0.25rem;
-    margin-left: 3.15rem;
-    font-size: 0.845rem;
-    letter-spacing: 0.017rem;
-    color: @color-75;
   }
 }

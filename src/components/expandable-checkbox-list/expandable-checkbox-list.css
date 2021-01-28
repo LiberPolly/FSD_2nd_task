@@ -6,6 +6,7 @@
   position: relative;
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 .expandable-checkbox-list__button:after {
   content: '';
@@ -36,6 +37,7 @@
 .expandable-checkbox-list .expandable-checkbox-item {
   position: relative;
   margin-bottom: 0.65rem;
+  cursor: pointer;
 }
 .expandable-checkbox-list .expandable-checkbox-item__mark-square {
   position: absolute;

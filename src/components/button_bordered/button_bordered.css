@@ -8,9 +8,13 @@
   border: solid 0.125rem transparent;
   background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   background-clip: padding-box, border-box;
+  cursor: pointer;
 }
 .button_bordered:hover {
   opacity: 0.5;
+}
+.button_bordered:active {
+  opacity: 1;
 }
 .button_bordered__message {
   font-size: 0.7rem;

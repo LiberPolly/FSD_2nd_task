@@ -4,9 +4,13 @@
   width: 20rem;
   border-radius: 22px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  cursor: pointer;
 }
 .button_with-arrow:hover {
   opacity: 0.5;
+}
+.button_with-arrow:active {
+  opacity: 1;
 }
 .button_with-arrow__message {
   font-size: 0.75rem;

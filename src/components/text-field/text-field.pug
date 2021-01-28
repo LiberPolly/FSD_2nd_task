@@ -1,3 +1,3 @@
-mixin text-field(typeName, placeholderName, labelName)
+mixin text-field(typeName, placeholderName, labelName, classes)
   label.text-field= labelName
-    input.text-field__input(type=typeName, placeholder=placeholderName)&attributes(attributes)
+    input(type=typeName, placeholder=placeholderName, class=`text-field__input ${classes}`)&attributes(attributes)
