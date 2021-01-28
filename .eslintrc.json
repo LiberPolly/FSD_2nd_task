@@ -15,6 +15,7 @@
     },
     "rules": {
         "linebreak-style": ["error", "windows"],
+        "lodash/prefer-lodash-method": [2, {"ignoreMethods": ["find"]}],
         "no-console": 0
     }
 }
