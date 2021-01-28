@@ -2,10 +2,17 @@
   position: relative;
   width: 16.625rem;
 }
+.filter-date-dropdown__range {
+  cursor: pointer;
+  text-transform: lowercase;
+}
+.filter-date-dropdown__range::placeholder {
+  text-transform: none;
+}
 .filter-date-dropdown__arrow {
   position: absolute;
-  right: 1%;
-  bottom: 0.3rem;
+  right: 0.3rem;
+  top: 2.95rem;
   display: block;
   width: 1.1rem;
   height: 1.1rem;
@@ -19,4 +26,137 @@
   border-left: 2px solid #575871;
   border-bottom: 2px solid #575871;
   transform: translate(-50%, -75%) rotate(-45deg);
+}
+.filter-date-dropdown .datepicker {
+  position: absolute;
+  margin-top: 0.2rem;
+  width: 19.85rem;
+  border-color: #C7C7CF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+.filter-date-dropdown .datepicker .active {
+  top: 0;
+  left: 0;
+}
+.filter-date-dropdown .datepicker_disabled {
+  display: none;
+}
+.filter-date-dropdown .datepicker--nav {
+  margin: 0.9rem 0 1.35rem;
+  border-bottom: none;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.188rem;
+  text-transform: capitalize;
+  color: #1F2041;
+}
+.filter-date-dropdown .datepicker--nav-title i {
+  color: #1F2041;
+}
+.filter-date-dropdown .datepicker--nav-action {
+  z-index: 150;
+  color: #BD9CFF;
+  margin: 0.05rem 0.73rem 0 0.68rem;
+}
+.filter-date-dropdown .datepicker--days-names {
+  margin: 0.5rem 0.95rem 0.188rem;
+}
+.filter-date-dropdown .datepicker--day-name {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.75rem;
+  color: #BD9CFF;
+  text-transform: capitalize;
+}
+.filter-date-dropdown .datepicker--cells {
+  margin: 0.6rem 0.95rem 0.4rem;
+  border-bottom: none;
+}
+.filter-date-dropdown .datepicker--cell {
+  padding-bottom: 0.06rem;
+  height: 2.432rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #8F90A0;
+  background-clip: border-box;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-current- {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  color: #fff;
+  font-weight: 700;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-selected- {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: #fff;
+  font-weight: 700;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-range-from- {
+  border: none;
+  border-radius: 50%;
+  background-color: none;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-range-to- {
+  border: none;
+  border-radius: 50%;
+  background-color: none;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-range-from-:after {
+  content: '';
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  opacity: 0.25;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 0 0 50%;
+  z-index: -1;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-range-to-::before {
+  content: '';
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  opacity: 0.25;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  z-index: -1;
+}
+.filter-date-dropdown .datepicker .datepicker--cell.-in-range- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  color: #8F90A0;
+}
+.filter-date-dropdown .datepicker--buttons {
+  display: flex;
+  justify-content: space-between;
+  border-top: none;
+  margin: 0.1rem 0.9rem 0.6rem 0.9rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.filter-date-dropdown .datepicker--button {
+  z-index: 150;
+  display: flex;
+  flex: none;
+  padding: 0;
+  height: unset;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: #BD9CFF;
+  cursor: pointer;
+}
+.filter-date-dropdown .datepicker--button:hover {
+  color: #8F90A0;
+  background: none;
+}
+.filter-date-dropdown .datepicker--button:active {
+  color: #BD9CFF;
+}
+.filter-date-dropdown .datepicker--submit-button {
+  z-index: 150;
+  line-height: 1.5rem;
+  font-size: 0.75rem;
 }
