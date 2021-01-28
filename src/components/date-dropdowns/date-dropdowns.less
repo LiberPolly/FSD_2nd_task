@@ -6,22 +6,26 @@
   justify-content: space-between;
   position: relative;
   width: 20rem;
-  
-  &__start {
-    max-width: 9.375rem;
+
+  &__from {
+    margin-top: 0.06rem;
+    cursor: pointer;
   }
-  &__end {
-    max-width: 9.375rem;
+
+  &__to {
+    margin-top: 0.07rem;
+    cursor: pointer;
   }
 
   &__item {
     position: relative;
+    max-width: 9.375rem;
   }
 
   &__arrow {
     position: absolute;
-    right: 1%;
-    top: 52%;
+    right: 0.3rem;
+    top: 2.95rem;
     display: block;
     width: 1.1rem;
     height: 1.1rem;
@@ -32,9 +36,166 @@
       display: block;
       width: 36.95%;
       height: 36.95%;
-      border-left: 2px solid @color-75;;
+      border-left: 2px solid @color-75;
       border-bottom: 2px solid @color-75;
       transform: translate(-50%, -75%) rotate(-45deg);
     }
+  }
+
+  .datepicker {
+    position: absolute;
+    margin-top: 0.2rem;
+    width: 19.85rem;
+    border-color: @color-25;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    .active {
+      top: 0;
+      left: 0;
+    }
+
+    &_disabled {
+      display: none;
+    }
+    
+    &--nav {
+      margin: 0.9rem 0 1.35rem;
+      border-bottom: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.188rem;
+      text-transform: capitalize;
+      color: @color-100;
+      
+      &-title i {
+        color: @color-100;
+      }
+      
+      &-action {
+        z-index: 150;
+        color: @color-purple;
+        margin: 0.05rem 0.73rem 0 0.68rem;
+      }
+    }
+
+    &--days-names {
+      margin: 0.5rem 0.95rem 0.188rem;
+
+    }
+
+    &--day-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 0.75rem;
+      color: @color-purple;
+      text-transform: capitalize;
+    }
+
+    &--cells {
+      margin: 0.6rem 0.95rem 0.4rem;
+      border-bottom: none;
+    }
+
+    &--cell {
+      padding-bottom: 0.06rem;
+      height: 2.432rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: @color-50;
+      background-clip: border-box;
+    }
+    .datepicker--cell.-current- {
+      border-radius: 50%;
+      background: @color-green-gradient;
+      color: @color-white;
+      font-weight: 700;
+    }
+
+    .datepicker--cell.-selected- {
+      border-radius: 50%;
+      background: @color-purple-gradient;
+      color: @color-white;
+      font-weight: 700;
+    }
+
+    .datepicker--cell.-range-from- {
+      border: none;
+      border-radius: 50%;
+      background-color: none;
+    }
+    .datepicker--cell.-range-to- {
+      border: none;
+      border-radius: 50%;
+      background-color: none;
+    }
+
+    .datepicker--cell.-range-from-:after {
+      content: '';
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      opacity: 0.25;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50% 0 0 50%;
+      z-index: -1;
+  }
+
+  .datepicker--cell.-range-to-::before {
+    content: '';
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    opacity: 0.25;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 50% 50% 0;
+    z-index: -1;
+}
+
+    .datepicker--cell.-in-range- {
+      background: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
+      color: @color-50;
+    }
+
+    &--buttons {
+      display: flex;
+      justify-content: space-between;
+      border-top: none;
+      margin: 0.1rem 0.9rem 0.6rem 0.9rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+
+    &--button {
+      z-index: 150;
+      display: flex;
+      flex: none;
+      padding: 0;
+      height: unset;
+      font-size: 0.75rem;
+      font-weight: bold;
+      line-height: 1.5rem;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+      color: @color-purple;
+      cursor: pointer;
+    
+      &:hover {
+        color: @color-50;
+        background: none;
+      }
+      
+      &:active {
+        color: @color-purple;
+      }
+    }
+
+    &--submit-button {
+      z-index: 150;
+      line-height: 1.5rem;
+      font-size: 0.75rem;
+    }
+
+
+
   }
 }

@@ -1,11 +1,10 @@
 include ../../components/text-field/text-field.pug
 
 mixin date-dropdowns(startDate, endDate)
-  //- .date-dropdowns.datepicker-double
   .date-dropdowns
     .date-dropdowns__item
-      +text-field('text', 'ДД.ММ.ГГГГ', startDate).datepicker-double.date-dropdowns__start(autocomplete='off')
+      +text-field('text', 'ДД.ММ.ГГГГ', startDate, 'js-datepicker date-dropdowns__from')
       .date-dropdowns__arrow
     .date-dropdowns__item
-      +text-field('text', 'ДД.ММ.ГГГГ', endDate).datepicker-double.date-dropdowns__end(autocomplete='off')
+      +text-field('text', 'ДД.ММ.ГГГГ', startDate, 'date-dropdowns__to')
       .date-dropdowns__arrow
