@@ -142,7 +142,7 @@
   margin: 0.1rem 0.9rem 0.6rem 0.9rem;
   font-family: 'Montserrat', Arial, sans-serif;
 }
-.date-dropdowns .datepicker--button {
+.date-dropdowns .datepicker--buttons span {
   z-index: 150;
   display: flex;
   flex: none;
@@ -156,15 +156,10 @@
   color: #BD9CFF;
   cursor: pointer;
 }
-.date-dropdowns .datepicker--button:hover {
+.date-dropdowns .datepicker--buttons span:hover {
   color: #8F90A0;
   background: none;
 }
-.date-dropdowns .datepicker--button:active {
+.date-dropdowns .datepicker--buttons span:active {
   color: #BD9CFF;
-}
-.date-dropdowns .datepicker--submit-button {
-  z-index: 150;
-  line-height: 1.5rem;
-  font-size: 0.75rem;
 }

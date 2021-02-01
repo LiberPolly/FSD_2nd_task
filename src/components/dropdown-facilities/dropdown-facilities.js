@@ -45,3 +45,15 @@ forEach(dropdownsFacilities, (dropdownFacilities) => {
   counterBeds.addEventListener('click', () => changeMessage(message, dropdownMessage, counterBeds, messageBeds, ', 2 кровати', 1));
   counterBathrooms.addEventListener('click', () => changeMessage(message, dropdownMessage, counterBathrooms, messageBathrooms, '...', 2));
 });
+
+// Скрытие дропдауна по клику на документе
+function hideDropdowns(event, dropdowns) {
+  forEach(dropdowns, (dropdown) => {
+    const dropdownButton = dropdown.querySelector('.dropdown-button');
+    if (!dropdown.contains(event.target)
+       && !dropdownButton.classList.contains('dropdown-button_disabled')) {
+      dropdownButton.click();
+    }
+  });
+}
+document.addEventListener('click', (event) => hideDropdowns(event, dropdownsFacilities));

@@ -27,7 +27,7 @@ $(() => {
     // DOM элемент календаря
     const thisDatepickerElement = thisDatepicker.$datepicker;
     // Cоздание и добавление кнопки "применить"
-    const submitButton = $('<span class="datepicker--submit-button button_text-only">Применить</span>');
+    const submitButton = $('<span class="button_text-only">Применить</span>');
     thisDatepickerElement.find('.datepicker--buttons').append(submitButton);
     // Показать/скрыть календарь
     function toggleDateDropdown() {
@@ -38,20 +38,18 @@ $(() => {
       console.log(`Sending data (${thisFilterDropdown.find('.js-datepicker').val() || '...'}) from the filter date dropdown to server...`);
       toggleDateDropdown();
     });
-    thisFilterDropdown.find('.text-field__input').click(() => toggleDateDropdown());
 
-    $(document).mouseup((e) => {
-      if (!thisDatepickerElement.find('.datepicker-inline').is(e.target)) {
-        // console.log('not target');
-        if (!thisFilterDropdown.find('.datepicker').hasClass('datepicker_disabled')) {
-          thisFilterDropdown.find('.datepicker').addClass('datepicker_disabled');
-        }
-      } else if (thisFilterDropdown.find('.date-dropdowns__arrow').is(e.target)) {
-        // console.log('target');
-        // if (!thisFilterDropdown.find('.datepicker').hasClass('datepicker_disabled')) {
-        //   thisFilterDropdown.find('.datepicker').addClass('datepicker_disabled');
-        // }
-      }
-    });
+    thisFilterDropdown.click(() => toggleDateDropdown());
   });
+  
+  // Скрытие календаря по клику на документе
+  function hideCalendar(event) {
+    const filterDateDropdowns = $('.filter-date-dropdown');
+    if (
+      filterDateDropdowns.has(event.target).length === 0
+    ) {
+      filterDateDropdowns.find('.datepicker').addClass('datepicker_disabled');
+    }
+  }
+  $(document).on('click', (event) => hideCalendar(event));
 });

@@ -11,7 +11,7 @@ $(() => {
     const dropdownFrom = thisDateDropdowns.find('.date-dropdowns__from');
     const dropdownTo = thisDateDropdowns.find('.date-dropdowns__to');
 
-    thisDateDropdowns.find('.js-datepicker').datepicker({
+    thisDateDropdowns.find('.date-dropdowns__datepicker').datepicker({
       range: true,
       clearButton: true,
       navTitles: {
@@ -29,11 +29,11 @@ $(() => {
     });
 
     // Доступ к экземпляру плагина осуществляется через data атрибут.
-    const thisDatepicker = thisDateDropdowns.find('.js-datepicker').data('datepicker');
+    const thisDatepicker = thisDateDropdowns.find('.date-dropdowns__datepicker').data('datepicker');
     // DOM элемент календаря
     const thisDatepickerElement = thisDatepicker.$datepicker;
     // Cоздание и добавление кнопки "применить"
-    const submitButton = $('<span class="datepicker--submit-button button_text-only">Применить</span>');
+    const submitButton = $('<span class="button_text-only">Применить</span>');
     thisDatepickerElement.find('.datepicker--buttons').append(submitButton);
 
     // Показать/скрыть календарь
@@ -47,24 +47,17 @@ $(() => {
       toggleDateDropdown();
     });
 
-    thisDateDropdowns.find('.text-field__input').click(() => toggleDateDropdown());
-
-    // dropdownTo.click(() => toggleDateDropdown());
-    // dropdownFrom.click(() => toggleDateDropdown());
-
-    // Скрытие календаря по клику на документе
-    $(document).mouseup((e) => {
-      if (
-        !thisDateDropdowns.is(e.target)
-        && thisDateDropdowns.has(e.target).length === 0
-      ) {
-        thisDateDropdowns.find('.datepicker').addClass('datepicker_disabled');
-      } else if (
-        thisDatepickerElement.is(e.target)
-        // && dep.has(e.target).length !== 0
-      ) {
-        console.log('not hiding');
-      }
-    });
+    thisDateDropdowns.find('.date-dropdowns__item').click(() => toggleDateDropdown());
   });
+
+  // Скрытие календаря по клику на документе
+  function hideCalendar(event) {
+    const dateDropdowns = $('.date-dropdowns');
+    if (
+      dateDropdowns.has(event.target).length === 0
+    ) {
+      dateDropdowns.find('.datepicker').addClass('datepicker_disabled');
+    }
+  }
+  $(document).on('click', (event) => hideCalendar(event));
 });
