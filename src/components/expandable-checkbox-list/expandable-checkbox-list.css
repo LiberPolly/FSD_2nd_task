@@ -7,6 +7,12 @@
   display: block;
   width: 100%;
   cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+.expandable-checkbox-list__button::-webkit-details-marker {
+  display: none;
+  outline: none;
 }
 .expandable-checkbox-list__button:after {
   content: '';
@@ -30,9 +36,6 @@
 .expandable-checkbox-list .expandable-checkbox-list__menu {
   display: flex;
   flex-direction: column;
-}
-.expandable-checkbox-list .expandable-checkbox-list__menu_disabled {
-  display: none;
 }
 .expandable-checkbox-list .expandable-checkbox-item {
   position: relative;

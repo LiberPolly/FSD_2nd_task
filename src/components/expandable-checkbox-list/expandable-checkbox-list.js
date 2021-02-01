@@ -3,13 +3,16 @@ import forEach from 'lodash/forEach';
 
 const expandableCheckboxListButtons = document.querySelectorAll('.expandable-checkbox-list__button');
 
-function togglExpandableCheckboxList(elem) {
-  const menu = elem.nextElementSibling;
+function togglExpandableCheckboxListArrow(button) {
+  const details = button.parentElement;
 
-  elem.classList.toggle('expandable-checkbox-list__button_disabled');
-  menu.classList.toggle('expandable-checkbox-list__menu_disabled');
+  if (!details.open) {
+    button.classList.remove('expandable-checkbox-list__button_disabled');
+  } else {
+    button.classList.add('expandable-checkbox-list__button_disabled');
+  }
 }
 
 forEach(expandableCheckboxListButtons, ((button) => {
-  button.addEventListener('click', () => togglExpandableCheckboxList(button));
+  button.addEventListener('click', () => togglExpandableCheckboxListArrow(button));
 }));

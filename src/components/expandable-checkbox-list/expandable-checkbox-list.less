@@ -11,6 +11,14 @@
     display: block;
     width: 100%;
     cursor: pointer;
+    list-style: none;
+    outline: none;
+
+    &::-webkit-details-marker {
+      display: none;
+      outline: none;
+
+    }
 
     &:after {
       content: '';
@@ -40,10 +48,6 @@
   .expandable-checkbox-list__menu {
     display: flex;
     flex-direction: column;
-  }
-
-  .expandable-checkbox-list__menu_disabled {
-    display: none;
   }
 
   .expandable-checkbox-item {
