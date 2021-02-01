@@ -8,7 +8,7 @@ forEach(reviews, (review) => {
   const template = `
     <div class="review">
       <div class="review__container-img">
-        <div style="background-image: url('src/components/reviews/images/${review.foto}.png')" alt="фотография пользователя" class="review__foto"></div>
+        <div style="background-image: url('src/components/reviews/images/${review.foto}.png')" class="review__foto"></div>
         <div class="review__likes">
           <label class="like-button">
             <input class="like-button__checkbox" type="checkbox"/>

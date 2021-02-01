@@ -1,6 +1,7 @@
 mixin additional-room-info(header, settings)
   .additional-room-info
-    h2.additional-room-info__header= header
+    if header
+      h2.additional-room-info__header= header
     ul.additional-room-info__list
       each key in settings
         li.additional-room-info__item
