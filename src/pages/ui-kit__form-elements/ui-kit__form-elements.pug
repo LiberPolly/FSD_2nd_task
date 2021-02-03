@@ -115,7 +115,7 @@ block main
         .form-element.form-element_width-16
           .expandable-checkbox-list_active
             - const expandableCheckboxListSettings_2 = {'Завтрак': false, 'Письменный стол': true, 'Стул для кормления': true, 'Кроватка': true, 'Телевизор': false, 'Шампунь': false}
-            +expandable-checkbox-list('expandable checkbox list', expandableCheckboxListSettings_2)
+            +expandable-checkbox-list('expandable checkbox list', expandableCheckboxListSettings_2)(open)
       .form-elements__column.form-elements__column_margin-left
         .form-element.form-element_width-16
           - const richCheckboxButtonsSettings = [['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', false], ['Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.', false]]

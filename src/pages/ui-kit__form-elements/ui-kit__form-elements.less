@@ -43,7 +43,7 @@
     &_no-margin {
       width: 20rem;
     }
-    
+
     &_margin-right {
       margin-right: 3.5rem;
     }
@@ -190,7 +190,7 @@
 
 .dropdown-facilities_active .dropdown-button {
   border: 1px solid @color-50;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0 0;
 }
 
 .dropdown-facilities_active .dropdown-facilities__menu {
@@ -200,7 +200,7 @@
 
 .dropdown-guests_active .dropdown-button {
   border: 1px solid @color-50;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0 0;
 }
 
 .dropdown-guests_active .dropdown-guests__menu {
@@ -208,14 +208,10 @@
   z-index: 0;
 }
 
-.expandable-checkbox-list_active .expandable-checkbox-list__button:after {
+.expandable-checkbox-list_active .expandable-checkbox-list__button::after {
   transform: translate(-50%, -75%) rotate(135deg);
   left: 15.28rem;
   top: 1rem;
-}
-
-.expandable-checkbox-list_active .expandable-checkbox-list__menu {
-  display: flex;
 }
 
 .additional-room-info__list .additional-room-info__item {

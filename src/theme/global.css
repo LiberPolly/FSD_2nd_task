@@ -19,7 +19,7 @@ body {
   }
   html ::-webkit-scrollbar,
   body ::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
     /* remove scrollbar space */
     background: transparent;
     /* optional: just make scrollbar invisible */
@@ -37,19 +37,19 @@ h1 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.875rem;
-  color: #1F2041;
+  color: #1f2041;
 }
 h2 {
   font-size: 1.1875rem;
   font-weight: 700;
   line-height: 1.687rem;
-  color: #1F2041;
+  color: #1f2041;
 }
 h3 {
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.687rem;
-  color: #1F2041;
+  color: #1f2041;
   text-transform: uppercase;
 }
 p {

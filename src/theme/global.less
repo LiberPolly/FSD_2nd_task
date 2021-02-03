@@ -7,7 +7,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   background-color: @color-background;
   height: 100%;
   width: 100%;
@@ -16,10 +17,14 @@ html, body {
   @media (max-width: @xxs) {
     overflow: scroll;
     overflow-x: hidden;
-    
+
     ::-webkit-scrollbar {
-      width: 0px;  /* remove scrollbar space */
-      background: transparent;  /* optional: just make scrollbar invisible */
+      width: 0;
+
+      /* remove scrollbar space */
+      background: transparent;
+
+      /* optional: just make scrollbar invisible */
     }
   }
 }
@@ -38,21 +43,21 @@ h1 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.875rem;
-  color: @color-100; 
+  color: @color-100;
 }
 
 h2 {
   font-size: 1.1875rem;
   font-weight: 700;
   line-height: 1.687rem;
-  color: @color-100; 
+  color: @color-100;
 }
 
 h3 {
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.687rem;
-  color: @color-100; 
+  color: @color-100;
   text-transform: uppercase;
 }
 

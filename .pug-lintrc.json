@@ -1,3 +1,4 @@
-{ "extends": "clock",
+{ 
+  "extends": "clock",
   "validateLineBreaks": "CRLF"
 }

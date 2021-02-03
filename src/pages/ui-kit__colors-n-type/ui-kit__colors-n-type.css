@@ -36,7 +36,7 @@
   font-weight: 700;
   font-size: 1.1875rem;
   line-height: 1.6rem;
-  color: #1F2041;
+  color: #1f2041;
 }
 .colors-n-type .color__code {
   margin-top: 0.1rem;
@@ -44,7 +44,7 @@
   font-size: 1.1875rem;
   line-height: 1.75rem;
   text-transform: uppercase;
-  color: #1F2041;
+  color: #1f2041;
 }
 .colors-n-type .types-list {
   display: flex;
@@ -59,7 +59,7 @@
 }
 .colors-n-type .type__tag {
   margin-right: 1.875rem;
-  color: #C7C7CF;
+  color: #c7c7cF;
 }
 .colors-n-type .type__description {
   margin-top: 0.2rem;
@@ -71,7 +71,7 @@
   }
 }
 .colors-n-type .type__description-text {
-  color: #1F2041;
+  color: #1f2041;
 }
 .colors-n-type .type_h1 .type__description-text {
   margin-bottom: 3.1875rem;
