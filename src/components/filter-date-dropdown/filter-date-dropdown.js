@@ -26,6 +26,13 @@ $(() => {
     const thisDatepicker = thisFilterDropdown.find('.js-datepicker').data('datepicker');
     // DOM элемент календаря
     const thisDatepickerElement = thisDatepicker.$datepicker;
+
+    // // Позиционирование календаря в отдельном диве,
+    // // т.к. иначе он позиционируется внутри <label>, что нарушает семантику
+    // const thisDatepickerInlineDiv = thisFilterDropdown.find('.datepicker-inline');
+    // console.log(thisDatepickerInlineDiv);
+    // thisFilterDropdown.find('.filter-date-dropdown__datepicker').append(thisDatepickerInlineDiv);
+
     // Cоздание и добавление кнопки "применить"
     const submitButton = $('<span class="button_text-only">Применить</span>');
     thisDatepickerElement.find('.datepicker--buttons').append(submitButton);

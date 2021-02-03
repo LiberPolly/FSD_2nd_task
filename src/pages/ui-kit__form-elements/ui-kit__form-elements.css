@@ -26,7 +26,7 @@
   max-width: 20rem;
 }
 .form-elements__column_no-width {
-  margin-top: 1.1rem;
+  margin: 1.1rem;
   max-width: unset;
   width: unset;
 }
