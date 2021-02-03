@@ -6,6 +6,18 @@
   cursor: pointer;
   text-transform: lowercase;
 }
+.filter-date-dropdown__range::-webkit-input-placeholder {
+  text-transform: none;
+}
+.filter-date-dropdown__range::-moz-placeholder {
+  text-transform: none;
+}
+.filter-date-dropdown__range:-ms-input-placeholder {
+  text-transform: none;
+}
+.filter-date-dropdown__range::-ms-input-placeholder {
+  text-transform: none;
+}
 .filter-date-dropdown__range::placeholder {
   text-transform: none;
 }
@@ -16,7 +28,7 @@
   display: block;
   width: 1.1rem;
   height: 1.1rem;
-  color: #8F90A0;
+  color: #8f90A0;
 }
 .filter-date-dropdown__arrow::after {
   content: '';
@@ -31,8 +43,8 @@
   position: absolute;
   margin-top: 0.2rem;
   width: 19.85rem;
-  border-color: #C7C7CF;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-color: #c7c7cF;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 }
 .filter-date-dropdown .datepicker .active {
   top: 0;
@@ -48,14 +60,14 @@
   font-weight: 700;
   font-size: 1.188rem;
   text-transform: capitalize;
-  color: #1F2041;
+  color: #1f2041;
 }
 .filter-date-dropdown .datepicker--nav-title i {
-  color: #1F2041;
+  color: #1f2041;
 }
 .filter-date-dropdown .datepicker--nav-action {
   z-index: 150;
-  color: #BD9CFF;
+  color: #bd9cff;
   margin: 0.05rem 0.73rem 0 0.68rem;
 }
 .filter-date-dropdown .datepicker--days-names {
@@ -64,7 +76,7 @@
 .filter-date-dropdown .datepicker--day-name {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 0.75rem;
-  color: #BD9CFF;
+  color: #bd9cff;
   text-transform: capitalize;
 }
 .filter-date-dropdown .datepicker--cells {
@@ -77,18 +89,18 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
-  color: #8F90A0;
+  color: #8f90A0;
   background-clip: border-box;
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-current- {
   border-radius: 50%;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   color: #fff;
   font-weight: 700;
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-selected- {
   border-radius: 50%;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   color: #fff;
   font-weight: 700;
 }
@@ -102,12 +114,12 @@
   border-radius: 50%;
   background-color: none;
 }
-.filter-date-dropdown .datepicker .datepicker--cell.-range-from-:after {
+.filter-date-dropdown .datepicker .datepicker--cell.-range-from-::after {
   content: '';
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   opacity: 0.25;
   position: absolute;
-  top: 0px;
+  top: 0;
   width: 100%;
   height: 100%;
   border-radius: 50% 0 0 50%;
@@ -125,7 +137,7 @@
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-in-range- {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-  color: #8F90A0;
+  color: #8f90A0;
 }
 .filter-date-dropdown .datepicker--buttons {
   display: flex;
@@ -145,13 +157,13 @@
   line-height: 1.5rem;
   letter-spacing: 0.1px;
   text-transform: uppercase;
-  color: #BD9CFF;
+  color: #bd9cff;
   cursor: pointer;
 }
 .filter-date-dropdown .datepicker--buttons span:hover {
-  color: #8F90A0;
+  color: #8f90A0;
   background: none;
 }
 .filter-date-dropdown .datepicker--buttons span:active {
-  color: #BD9CFF;
+  color: #bd9cff;
 }

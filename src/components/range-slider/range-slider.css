@@ -7,19 +7,19 @@
   top: 0.3rem;
   right: 0;
   font-size: 0.75rem;
-  color: #8F90A0;
+  color: #8f90A0;
 }
 .range-slider .irs--flat .irs-line {
   top: 16px;
   height: 0.38rem;
-  border: 0.1rem solid #C7C7CF;
+  border: 0.1rem solid #c7c7cF;
   background: #fff;
   cursor: pointer;
 }
 .range-slider .irs-bar {
   top: 16px;
   height: 0.33rem;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }
 .range-slider .irs-handle > i:first-child {
   left: 0;
@@ -28,6 +28,6 @@
   height: 1rem;
   border: 0.1429rem solid white;
   border-radius: 50%;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   cursor: pointer;
 }

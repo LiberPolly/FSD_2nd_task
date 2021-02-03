@@ -8,7 +8,7 @@
   line-height: 1.5rem;
   color: #575871;
 }
-.bullet-list__item:before {
+.bullet-list__item::before {
   content: '';
   position: absolute;
   top: 0.4rem;
@@ -16,5 +16,5 @@
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
-  background-color: #C7C7CF;
+  background-color: #c7c7cF;
 }

@@ -1,7 +1,7 @@
 include ../../components/text-field/text-field.pug
 
 mixin filter-date-dropdown(labelName)
-  //- .date-dropdowns.datepicker-double
-  .filter-date-dropdown
-    +text-field('text', 'Выберите даты', labelName, 'filter-date-dropdown__range js-datepicker')
+  .filter-date-dropdown  
+    label.text-field= labelName
+      input.text-field__input.filter-date-dropdown__range.js-datepicker(readonly='readonly', type='text', placeholder='Выберите даты')
     .filter-date-dropdown__arrow

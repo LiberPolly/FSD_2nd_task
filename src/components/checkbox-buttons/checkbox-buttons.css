@@ -18,20 +18,8 @@
   left: 0.05rem;
   height: 1.25rem;
   width: 1.25rem;
-  border: 0.0714rem solid #C7C7CF;
+  border: 0.0714rem solid #c7c7cF;
   border-radius: 0.2857rem;
-}
-.checkbox-buttons .checkbox-button__checkbox {
-  display: none;
-}
-.checkbox-buttons .checkbox-button__checkbox:checked + .checkbox-button__mark-tick:before {
-  display: block;
-}
-.checkbox-buttons .checkbox-button__checkbox:checked + .checkbox-button__mark-tick:after {
-  display: block;
-}
-.checkbox-buttons .checkbox-button__checkbox:checked ~ .checkbox-button__mark-square {
-  border: 0.0714rem solid #BD9CFF;
 }
 .checkbox-buttons .checkbox-button .checkbox-button__mark-tick.checkbox-button__label-name {
   display: inline-block;
@@ -39,9 +27,9 @@
   margin-left: 1.89rem;
   font-size: 0.875rem;
   line-height: 1.3rem;
-  color: #8F90A0;
+  color: #8f90A0;
 }
-.checkbox-buttons .checkbox-button__mark-tick:before {
+.checkbox-buttons .checkbox-button__mark-tick::before {
   content: '';
   position: absolute;
   display: none;
@@ -49,10 +37,10 @@
   left: 0.43rem;
   height: 0.38rem;
   width: 0.5rem;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   transform: rotate(-45deg);
 }
-.checkbox-buttons .checkbox-button__mark-tick:after {
+.checkbox-buttons .checkbox-button__mark-tick::after {
   content: '';
   position: absolute;
   display: none;
@@ -62,4 +50,16 @@
   width: 0.5rem;
   background-color: #fff;
   transform: rotate(-45deg);
+}
+.checkbox-buttons .checkbox-button__checkbox {
+  display: none;
+}
+.checkbox-buttons .checkbox-button__checkbox:checked + .checkbox-button__mark-tick::before {
+  display: block;
+}
+.checkbox-buttons .checkbox-button__checkbox:checked + .checkbox-button__mark-tick::after {
+  display: block;
+}
+.checkbox-buttons .checkbox-button__checkbox:checked ~ .checkbox-button__mark-square {
+  border: 0.0714rem solid #bd9cff;
 }

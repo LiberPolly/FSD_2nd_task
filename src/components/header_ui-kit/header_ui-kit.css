@@ -18,11 +18,11 @@
 .header_ui-kit__logo_grey {
   width: 3rem;
   height: 3rem;
-  fill: #1F2041;
+  fill: #1f2041;
 }
 .header_ui-kit__logo_grey:hover {
-  fill: #BD9CFF;
+  fill: #bd9cff;
 }
 .header_ui-kit__logo_grey:active {
-  fill: #70CF97;
+  fill: #70cf97;
 }

@@ -7,7 +7,7 @@
   font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: bold;
-  color: #1F2041;
+  color: #1f2041;
 }
 .dropdown-guests__menu {
   position: absolute;
@@ -15,9 +15,9 @@
   top: 2.45rem;
   left: 0;
   width: 100%;
-  border: 1px solid #8F90A0;
-  border-top-color: #C7C7CF;
-  border-radius: 0px 0px 4px 4px;
+  border: 1px solid #8f90A0;
+  border-top-color: #c7c7cF;
+  border-radius: 0 0 4px 4px;
   background-color: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 0.4rem 0rem 0.85rem;
+  padding: 0 0.4rem 0 0.85rem;
 }
 .dropdown-guests__reset {
   visibility: visible;

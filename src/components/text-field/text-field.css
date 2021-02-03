@@ -3,25 +3,37 @@
   font-size: 0.75rem;
   font-weight: bold;
   line-height: 1.45rem;
-  color: #1F2041;
+  color: #1f2041;
 }
 .text-field__input {
   padding: 0.55rem 0.88rem 0.6rem;
   width: 100%;
   height: 2.75rem;
   border-radius: 4px;
-  border: 1px solid #C7C7CF;
+  border: 1px solid #c7c7cF;
   font-size: 0.85rem;
   letter-spacing: 0.01rem;
   color: #575871;
 }
+.text-field__input::-webkit-input-placeholder {
+  color: #c7c7cF;
+}
+.text-field__input::-moz-placeholder {
+  color: #c7c7cF;
+}
+.text-field__input:-ms-input-placeholder {
+  color: #c7c7cF;
+}
+.text-field__input::-ms-input-placeholder {
+  color: #c7c7cF;
+}
 .text-field__input::placeholder {
-  color: #C7C7CF;
+  color: #c7c7cF;
 }
 .text-field__input:hover {
-  border: 1px solid #8F90A0;
+  border: 1px solid #8f90A0;
 }
 .text-field__input:focus {
-  border: 1px solid #8F90A0;
+  border: 1px solid #8f90A0;
   outline: none;
 }

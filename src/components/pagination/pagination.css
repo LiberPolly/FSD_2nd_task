@@ -12,6 +12,9 @@
   width: 100%;
   max-width: 2.5rem;
   border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
 }
@@ -22,7 +25,7 @@
   width: 100%;
   font-size: 0.7rem;
   line-height: 2.5rem;
-  color: #8F90A0;
+  color: #8f90A0;
 }
 .pagination .paginationjs .paginationjs-pages li > a:hover {
   background: none;
@@ -31,7 +34,7 @@
   width: 2.57rem;
   height: 2.57rem;
   border-radius: 50%;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   font-weight: bold;
   color: #fff;
 }
@@ -40,7 +43,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   font-weight: bold;
   color: #fff;
 }

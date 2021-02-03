@@ -14,17 +14,7 @@
   letter-spacing: 0.017rem;
   color: #575871;
 }
-.toggle__checkbox {
-  display: none;
-}
-.toggle__checkbox:checked + .toggle__toggle:after {
-  background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.toggle__checkbox:checked + .toggle__toggle:before {
-  transform: translateX(1.23rem);
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.toggle__toggle:before {
+.toggle__toggle::before {
   content: "";
   position: absolute;
   z-index: 100;
@@ -33,10 +23,10 @@
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
-  background: #C7C7CF;
+  background: #c7c7cF;
   transition: 0.2s;
 }
-.toggle__toggle:after {
+.toggle__toggle::after {
   content: "";
   position: absolute;
   top: 0.06rem;
@@ -45,6 +35,16 @@
   height: 1.08rem;
   border: solid 0.1rem transparent;
   border-radius: 10px;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#C7C7CF, #C7C7CF);
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#c7c7cF, #c7c7cF);
   background-clip: padding-box, border-box;
+}
+.toggle__checkbox {
+  display: none;
+}
+.toggle__checkbox:checked + .toggle__toggle::after {
+  background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+.toggle__checkbox:checked + .toggle__toggle::before {
+  transform: translateX(1.23rem);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }

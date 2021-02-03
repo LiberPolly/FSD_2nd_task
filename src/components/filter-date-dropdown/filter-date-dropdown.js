@@ -41,7 +41,7 @@ $(() => {
 
     thisFilterDropdown.click(() => toggleDateDropdown());
   });
-  
+
   // Скрытие календаря по клику на документе
   function hideCalendar(event) {
     const filterDateDropdowns = $('.filter-date-dropdown');

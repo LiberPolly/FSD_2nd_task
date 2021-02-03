@@ -3,8 +3,8 @@
 .rich-checkbox-buttons {
   display: flex;
   flex-direction: column;
-  
-  &__header{
+
+  &__header {
     margin-bottom: 0.62rem;
   }
 
@@ -22,20 +22,6 @@
       width: 1.25rem;
       border: 0.0714rem solid @color-25;
       border-radius: 0.2857rem;
-    }
-
-    &__checkbox {
-      display: none;
-
-      &:checked + .rich-checkbox-button__mark-tick:before {
-        display: block;
-      }
-      &:checked + .rich-checkbox-button__mark-tick:after {
-        display: block;
-      }
-      &:checked ~ .rich-checkbox-button__mark-square {
-        border: 0.0714rem solid @color-purple;
-      }
     }
 
     .rich-checkbox-button__mark-tick.rich-checkbox-button__label-name {
@@ -59,7 +45,7 @@
     }
 
     &__mark-tick {
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         display: none;
@@ -71,7 +57,7 @@
         transform: rotate(-45deg);
       }
 
-      &:after {
+      &::after {
         content: '';
         position: absolute;
         display: none;
@@ -81,6 +67,22 @@
         width: 0.5rem;
         background-color: @color-white;
         transform: rotate(-45deg);
+      }
+    }
+
+    &__checkbox {
+      display: none;
+
+      &:checked + .rich-checkbox-button__mark-tick::before {
+        display: block;
+      }
+
+      &:checked + .rich-checkbox-button__mark-tick::after {
+        display: block;
+      }
+
+      &:checked ~ .rich-checkbox-button__mark-square {
+        border: 0.0714rem solid @color-purple;
       }
     }
   }

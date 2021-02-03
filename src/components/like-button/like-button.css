@@ -3,16 +3,6 @@
   position: relative;
   cursor: pointer;
 }
-.like-button__checkbox {
-  display: none;
-}
-.like-button__checkbox:checked + .like-button__value {
-  background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: #BD9CFF;
-}
-.like-button__checkbox:checked + .like-button__value:before {
-  content: "favorite";
-}
 .like-button__value {
   position: relative;
   display: block;
@@ -21,18 +11,31 @@
   height: 1.2rem;
   border: solid 0.1rem transparent;
   border-radius: 10px;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#C7C7CF, #C7C7CF);
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#c7c7cF, #c7c7cF);
   background-clip: padding-box, border-box;
   text-align: right;
   font-size: 0.59rem;
   line-height: 1rem;
-  color: #C7C7CF;
+  color: #c7c7cF;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
-.like-button__value:before {
+.like-button__value::before {
   content: "favorite_border";
   position: absolute;
   left: 0.25rem;
   font-family: Material Icons;
   font-size: 0.63rem;
+}
+.like-button__checkbox {
+  display: none;
+}
+.like-button__checkbox:checked + .like-button__value {
+  background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #bd9cff;
+}
+.like-button__checkbox:checked + .like-button__value::before {
+  content: "favorite";
 }

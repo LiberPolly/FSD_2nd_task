@@ -12,27 +12,27 @@
 .dropdown-counter__button-minus {
   height: 1.875rem;
   width: 1.875rem;
-  border: 1px solid #8F90A0;
+  border: 1px solid #8f90A0;
   border-radius: 50%;
   cursor: pointer;
 }
 .dropdown-counter__button-plus {
   height: 1.875rem;
   width: 1.875rem;
-  border: 1px solid #8F90A0;
+  border: 1px solid #8f90A0;
   border-radius: 50%;
   cursor: pointer;
 }
 .dropdown-counter__button_disabled {
-  border: 1px solid #C7C7CF;
+  border: 1px solid #c7c7cF;
 }
 .dropdown-counter__minus {
-  color: #8F90A0;
+  color: #8f90A0;
   font-size: 1.125rem;
   line-height: 1.8rem;
 }
 .dropdown-counter__plus {
-  color: #8F90A0;
+  color: #8f90A0;
   font-size: 1.125rem;
   line-height: 1.95rem;
 }

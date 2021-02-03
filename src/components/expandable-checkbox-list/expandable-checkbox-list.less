@@ -1,7 +1,7 @@
 @import '../../theme/variables.less';
 
 .expandable-checkbox-list {
-  &__header{
+  &__header {
     margin-bottom: 0.6rem;
     text-align: left;
   }
@@ -17,34 +17,32 @@
     &::-webkit-details-marker {
       display: none;
       outline: none;
-
     }
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       display: block;
       left: 15.28rem;
       top: 1rem;
       width: 0.45rem;
-      height: 0.45em; 
-      border-left: 2px solid @color-50;;
+      height: 0.45em;
+      border-left: 2px solid @color-50;
       border-bottom: 2px solid @color-50;
       transform: translate(-50%, -75%) rotate(135deg);
       transition: 0.05s;
     }
-
   }
 
   .expandable-checkbox-list__button_disabled {
-    &:after {
+    &::after {
       left: 15rem;
       top: 0.4rem;
       transition: 0.05s;
       transform: rotate(-45deg);
     }
   }
-  
+
   .expandable-checkbox-list__menu {
     display: flex;
     flex-direction: column;
@@ -66,20 +64,6 @@
       border-radius: 0.2857rem;
     }
 
-    &__checkbox {
-      display: none;
-
-      &:checked + .expandable-checkbox-item__mark-tick:before {
-        display: block;
-      }
-      &:checked + .expandable-checkbox-item__mark-tick:after {
-        display: block;
-      }
-      &:checked ~ .expandable-checkbox-item__mark-square {
-        border: 0.0714rem solid @color-purple;
-      }
-    }
-
     .expandable-checkbox-item__mark-tick.expandable-checkbox-item__label-name {
       display: inline-block;
       width: 12rem;
@@ -90,7 +74,7 @@
     }
 
     &__mark-tick {
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         display: none;
@@ -102,7 +86,7 @@
         transform: rotate(-45deg);
       }
 
-      &:after {
+      &::after {
         content: '';
         position: absolute;
         display: none;
@@ -112,6 +96,22 @@
         width: 0.5rem;
         background-color: @color-white;
         transform: rotate(-45deg);
+      }
+    }
+
+    &__checkbox {
+      display: none;
+
+      &:checked + .expandable-checkbox-item__mark-tick::before {
+        display: block;
+      }
+
+      &:checked + .expandable-checkbox-item__mark-tick::after {
+        display: block;
+      }
+
+      &:checked ~ .expandable-checkbox-item__mark-square {
+        border: 0.0714rem solid @color-purple;
       }
     }
   }

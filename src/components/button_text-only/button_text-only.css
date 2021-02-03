@@ -5,12 +5,12 @@
   line-height: 2.2rem;
   letter-spacing: 0.1px;
   text-transform: uppercase;
-  color: #BD9CFF;
+  color: #bd9cff;
   cursor: pointer;
 }
 .button_text-only:hover {
-  color: #8F90A0;
+  color: #8f90A0;
 }
 .button_text-only:active {
-  color: #BD9CFF;
+  color: #bd9cff;
 }

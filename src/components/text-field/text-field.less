@@ -6,7 +6,7 @@
   font-weight: bold;
   line-height: 1.45rem;
   color: @color-100;
-  
+
   &__input {
     padding: 0.55rem 0.88rem 0.6rem;
     width: 100%;
@@ -16,7 +16,23 @@
     font-size: 0.85rem;
     letter-spacing: 0.01rem;
     color: @color-75;
-    
+
+    &::-webkit-input-placeholder {
+      color: @color-25;
+    }
+
+    &::-moz-placeholder {
+      color: @color-25;
+    }
+
+    &:-ms-input-placeholder {
+      color: @color-25;
+    }
+
+    &::-ms-input-placeholder {
+      color: @color-25;
+    }
+
     &::placeholder {
       color: @color-25;
     }

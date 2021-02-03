@@ -5,19 +5,6 @@
   position: relative;
   cursor: pointer;
 
-  &__checkbox {
-    display: none;
-
-    &:checked+.like-button__value {
-      background-image: linear-gradient(@color-white, @color-white), @color-purple-gradient;
-      color: @color-purple;
-      
-      &:before {
-        content: "favorite";
-      }
-    }
-  }
-
   &__value {
     position: relative;
     display: block;
@@ -32,14 +19,30 @@
     font-size: 0.59rem;
     line-height: 1rem;
     color: @color-25;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 
-    &:before {
+    &::before {
       content: "favorite_border";
       position: absolute;
       left: 0.25rem;
-      font-family: Material Icons;
+      font-family: @font-material-icons;
       font-size: 0.63rem;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .like-button__value {
+      background-image: linear-gradient(@color-white, @color-white), @color-purple-gradient;
+      color: @color-purple;
+
+      &::before {
+        content: "favorite";
+      }
     }
   }
 }

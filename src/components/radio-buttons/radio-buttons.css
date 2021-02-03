@@ -8,24 +8,15 @@
   margin-bottom: 0.65rem;
   cursor: pointer;
 }
-.radio-buttons .radio-button__radio {
-  display: none;
-}
-.radio-buttons .radio-button__radio:checked + .radio-button__label-name:before {
-  border: 0.0714rem solid #BD9CFF;
-}
-.radio-buttons .radio-button__radio:checked + .radio-button__label-name:after {
-  display: block;
-}
 .radio-buttons .radio-button .radio-button__label-name {
   display: block;
   margin: 0 1.25rem 0 1.89rem;
   font-size: 0.875rem;
   line-height: 1.3rem;
   text-transform: capitalize;
-  color: #8F90A0;
+  color: #8f90A0;
 }
-.radio-buttons .radio-button .radio-button__label-name:before {
+.radio-buttons .radio-button .radio-button__label-name::before {
   content: '';
   position: absolute;
   display: block;
@@ -33,10 +24,10 @@
   left: 0;
   height: 1.1rem;
   width: 1.12rem;
-  border: 0.0714rem solid #C7C7CF;
+  border: 0.0714rem solid #c7c7cF;
   border-radius: 50%;
 }
-.radio-buttons .radio-button .radio-button__label-name:after {
+.radio-buttons .radio-button .radio-button__label-name::after {
   content: '';
   position: absolute;
   display: none;
@@ -45,5 +36,14 @@
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+.radio-buttons .radio-button__radio {
+  display: none;
+}
+.radio-buttons .radio-button__radio:checked + .radio-button__label-name::before {
+  border: 0.0714rem solid #bd9cff;
+}
+.radio-buttons .radio-button__radio:checked + .radio-button__label-name::after {
+  display: block;
 }
