@@ -1,0 +1,16 @@
+include ../../components/text-field/text-field.pug
+include ../../components/button_with-arrow/button_with-arrow.pug
+include ../../components/button_bordered/button_bordered.pug
+
+.sign-in-card
+  h1 Войти
+  .sign-in-card__items-wrapper
+    .sign-in-card__item
+      +text-field('email', 'Email', '')
+    .registration-card__item
+      +text-field('password', 'Пароль', '')
+  .sign-in-card__button-wrapper
+    +button_with-arrow('войти')
+  .sign-in-card__footer
+    p.sign-in-card__footer-text Нет аккаунта на Toxin?
+    +button_bordered('создать') 

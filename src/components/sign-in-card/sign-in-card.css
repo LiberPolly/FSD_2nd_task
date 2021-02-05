@@ -1,0 +1,39 @@
+.sign-in-card {
+  display: flex;
+  flex-direction: column;
+  width: 23.6rem;
+  padding: 1.46rem 1.8rem 1.8rem;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+.sign-in-card__items-wrapper {
+  margin-bottom: 1.09rem;
+}
+.sign-in-card__items-wrapper:nth-child(2) {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.sign-in-card__items-wrapper:last-child {
+  margin-bottom: 0;
+}
+.sign-in-card__item {
+  margin-bottom: 0.625rem;
+}
+.sign-in-card__item:last-child {
+  margin-bottom: 0;
+}
+.sign-in-card__button-wrapper {
+  margin-top: 0.5rem;
+}
+.sign-in-card__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.875rem;
+  align-content: center;
+  align-items: center;
+}
+.sign-in-card__footer-text {
+  color: #1f2041;
+}
