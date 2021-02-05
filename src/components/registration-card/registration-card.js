@@ -1,0 +1,1 @@
+import './registration-card.css';

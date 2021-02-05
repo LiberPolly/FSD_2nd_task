@@ -1,0 +1,49 @@
+@import '../../theme/variables.less';
+
+.registration-card {
+  display: flex;
+  flex-direction: column;
+  width: 23.6rem;
+  padding: 1.46rem 1.8rem 1.8rem;
+  border-radius: @border-radius-card;
+  background-color: @color-white;
+  box-shadow: @box-shadow-card;
+
+  &__items-wrapper {
+    margin-bottom: 1.09rem;
+
+    &:nth-child(2) {
+      margin-top: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 0.625rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button-wrapper {
+    margin-top: 0.5rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.875rem;
+    align-content: center;
+    align-items: center;
+  }
+
+  &__footer-text {
+    color: @color-100;
+  }
+}
