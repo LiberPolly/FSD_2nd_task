@@ -1,0 +1,10 @@
+include ../../components/date-dropdowns/date-dropdowns.pug
+include ../../components/dropdown-guests/dropdown-guests.pug
+include ../../components/button_with-arrow/button_with-arrow.pug
+
+.searching-rooms-card
+  h1 Найдём номера под ваши пожелания
+  .searching-rooms-card__dropdowns-wrapper
+    +date-dropdowns('прибытие', 'выезд')
+    +dropdown-guests('гости')
+  +button_with-arrow('подобрать номер')
