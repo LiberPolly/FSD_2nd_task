@@ -21,10 +21,10 @@
 .text-field__input::-moz-placeholder {
   color: #c7c7cF;
 }
-.text-field__input:-ms-input-placeholder {
+.text-field__input::-ms-input-placeholder {
   color: #c7c7cF;
 }
-.text-field__input::-ms-input-placeholder {
+.text-field__input:-ms-input-placeholder {
   color: #c7c7cF;
 }
 .text-field__input::placeholder {

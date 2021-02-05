@@ -25,13 +25,16 @@ body {
     /* optional: just make scrollbar invisible */
   }
 }
+a {
+  text-decoration: none;
+}
 li {
   list-style-type: none;
 }
 button {
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: unset;
 }
 h1 {
   font-size: 1.5rem;

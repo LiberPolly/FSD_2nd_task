@@ -12,10 +12,10 @@
 .filter-date-dropdown__range::-moz-placeholder {
   text-transform: none;
 }
-.filter-date-dropdown__range:-ms-input-placeholder {
+.filter-date-dropdown__range::-ms-input-placeholder {
   text-transform: none;
 }
-.filter-date-dropdown__range::-ms-input-placeholder {
+.filter-date-dropdown__range:-ms-input-placeholder {
   text-transform: none;
 }
 .filter-date-dropdown__range::placeholder {
