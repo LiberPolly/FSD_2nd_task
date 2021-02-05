@@ -6,22 +6,31 @@ block title
 block header
 
 block main
-  h1 Start page
-  ul
-    li
-      a(rel='stylesheet', href='ui-kit__colors-n-type.html') UI-kit: Colors & Type
-    li
-      a(rel='stylesheet', href='ui-kit__form-elements.html') UI-kit: Form Elements
-    li
-      a(rel='stylesheet', href='#') UI-kit: Cards
-    li
-      a(rel='stylesheet', href='#') UI-kit: Headers & Footers
-  ul
-    li
-      a(rel='stylesheet', href='#') Landing page
-    li
-      a(rel='stylesheet', href='#') Search room
-    li
-      a(rel='stylesheet', href='#') Room details
-    li
-      a(rel='stylesheet', href='#') Registration
+  ul.pages-list
+    li.page.page__colors-n-type
+      a.page__link(rel='stylesheet', href='ui-kit__colors-n-type.html')
+        span.page__name UI-kit: Colors & Type
+    li.page.page__form-elements
+      a.page__link(rel='stylesheet', href='ui-kit__form-elements.html')
+        span.page__name UI-kit: Form Elements
+    li.page.page__cards
+      a.page__link(rel='stylesheet', href='ui-kit__cards.html')
+        span.page__name UI-kit: Cards
+    li.page.page__headers-n-footers
+      a.page__link(rel='stylesheet', href='ui-kit__headers-n-footers.html')
+        span.page__name UI-kit: Headers & Footers
+    li.page.page__landing-page
+      a.page__link(rel='stylesheet', href='#')
+        span.page__name Landing page
+    li.page.page__search-room
+      a.page__link(rel='stylesheet', href='#')
+        span.page__name Search room
+    li.page.page__room-details
+      a.page__link(rel='stylesheet', href='#')
+        span.page__name Room details
+    li.page.page__registration
+      a.page__link(rel='stylesheet', href='#')
+        span.page__name Registration
+    li.page.page__git
+      a.page__link(rel='stylesheet', target='blank', href='https://github.com/LiberPolly/FSD_2nd_task')
+        span.page__name Git Repository

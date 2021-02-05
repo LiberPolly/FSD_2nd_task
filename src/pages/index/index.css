@@ -1,0 +1,84 @@
+.pages-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 4rem;
+}
+.pages-list .page {
+  position: relative;
+  margin-bottom: 4rem;
+  width: 20rem;
+  height: 20rem;
+  border: 1rem solid #fff;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.pages-list .page__link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(184, 184, 184, 0.212);
+}
+.pages-list .page__name {
+  position: absolute;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: #8f90A0;
+  background: #fff;
+}
+.pages-list .page:hover {
+  box-shadow: inset 0 0 25px #bd9cff;
+}
+.pages-list .page:hover .page__name {
+  color: #bd9cff;
+}
+.pages-list .page:active {
+  box-shadow: inset 0 0 25px #70cf97;
+}
+.pages-list .page:active .page__name {
+  color: #70cf97;
+}
+.pages-list .page__colors-n-type {
+  background-image: url(images/colors-n-type.jpg);
+  background-size: contain;
+}
+.pages-list .page__form-elements {
+  background-image: url(images/form-elements.jpg);
+  background-size: contain;
+}
+.pages-list .page__cards {
+  background-image: url(images/cards.jpg);
+  background-size: contain;
+}
+.pages-list .page__headers-n-footers {
+  background-image: url(images/headers-n-footers.jpg);
+  background-size: contain;
+}
+.pages-list .page__landing-page {
+  background-image: url(images/landing-page.jpg);
+  background-size: contain;
+}
+.pages-list .page__search-room {
+  background-image: url(images/search-room.jpg);
+  background-size: contain;
+}
+.pages-list .page__room-details {
+  background-image: url(images/room-details.jpg);
+  background-size: contain;
+}
+.pages-list .page__registration {
+  background-image: url(images/registration.jpg);
+  background-size: contain;
+}
+.pages-list .page__git {
+  background-image: url(images/git.jpg);
+  background-size: contain;
+}
