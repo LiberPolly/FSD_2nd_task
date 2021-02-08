@@ -1,0 +1,39 @@
+@import '../../theme/variables.less';
+
+.room-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__room-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  &__room-number {
+    margin-left: 0.25rem;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+  }
+
+  &__room-category {
+    font-size: 0.75rem;
+    color: @color-purple;
+    text-transform: uppercase;
+  }
+
+  &__room-price {
+    line-height: 0.7rem;
+    color: @color-50;
+  }
+
+  &__per-day {
+    margin-left: 0.39rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: @color-50;
+  }
+}

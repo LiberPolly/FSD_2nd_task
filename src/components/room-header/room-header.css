@@ -1,0 +1,32 @@
+.room-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.room-header__room-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.room-header__room-number {
+  margin-left: 0.25rem;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+}
+.room-header__room-category {
+  font-size: 0.75rem;
+  color: #bd9cff;
+  text-transform: uppercase;
+}
+.room-header__room-price {
+  line-height: 0.7rem;
+  color: #8f90A0;
+}
+.room-header__per-day {
+  margin-left: 0.39rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #8f90A0;
+}
