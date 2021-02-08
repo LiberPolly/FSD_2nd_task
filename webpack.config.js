@@ -80,7 +80,7 @@ module.exports = {
   entry: './main.js',
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs')
   },
   resolve: {
     alias: {
@@ -105,7 +105,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{
         from: path.resolve(__dirname, 'src/theme/favicon.png'),
-        to: path.resolve(__dirname, 'dist')
+        to: path.resolve(__dirname, 'docs')
       }]
     }),
     new webpack.ProvidePlugin({
