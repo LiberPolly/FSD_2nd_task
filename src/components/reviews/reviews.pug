@@ -1,5 +1,17 @@
+include ../../components/like-button/like-button.pug
+
 mixin reviews(header)
   .reviews
     if header
       h2.reviews__header= header
     .reviews__list
+      template.reviews__template
+        .review
+          .review__container-img
+            .review__foto
+            .review__likes
+              +like-button()
+          .review__container-text
+            span.review__author
+            span.review__date
+            span.review__text
