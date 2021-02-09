@@ -1,0 +1,31 @@
+include ../../components/room-header/room-header.pug
+include ../../components/date-dropdowns/date-dropdowns.pug
+include ../../components/dropdown-guests/dropdown-guests.pug
+include ../../components/button_with-arrow/button_with-arrow.pug
+
+.booking-card
+  +room-header('888', 'люкс', '9 900₽')
+  .booking-card__dropdowns-wrapper
+    +date-dropdowns('прибытие', 'выезд')
+    +dropdown-guests('гости')
+  .booking-card__counter
+    .booking-card__price-per-period
+      span.price-per-period__price-per-day 9 990₽
+      span.price-per-period__multiplicate x
+      span.price-per-period__days 4 суток
+      span.price-per-period__amount 39 960₽
+    .booking-card__services-tax
+      span.services-tax__name Сбор за услуги:
+      span.services-tax__discount скидка 2 179₽
+      span.services-tax__info-icon.material-icons info_outline
+      span.services-tax__amount 0₽
+    .booking-card__add-services-tax
+      span.add-services-tax__name Сбор за дополнительные услуги:
+      span.add-services-tax__discount
+      span.add-services-tax__info-icon.material-icons info_outline
+      span.add-services-tax__amount 300₽
+    .booking-card__total-amount
+      span.total-amount__name Итого
+      .total-amount__spots
+      span.total-amount__amount 38 081₽
+  +button_with-arrow('забронировать')

@@ -1,0 +1,84 @@
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  width: 23.6rem;
+  padding: 2.8rem 1.7rem 1.8rem 1.9rem;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+.booking-card__dropdowns-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 9.5rem;
+  margin: 1.3rem 0 1.35rem;
+}
+.booking-card__counter {
+  font-size: 0.875rem;
+  color: #575871;
+}
+.booking-card__price-per-period .price-per-period__multiplicate {
+  margin: 0 0.2rem 0 0.45rem;
+}
+.booking-card__price-per-period span:last-of-type {
+  float: right;
+}
+.booking-card__services-tax {
+  position: relative;
+  margin: 1.15rem 0;
+}
+.booking-card__services-tax span:last-of-type {
+  float: right;
+}
+.booking-card__add-services-tax {
+  position: relative;
+  margin-bottom: 2.05rem;
+}
+.booking-card__add-services-tax .add-services-tax__name {
+  display: inline-block;
+  width: 12rem;
+}
+.booking-card__add-services-tax span:last-of-type {
+  float: right;
+}
+.booking-card__total-amount {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.35rem;
+  font-size: 1.188rem;
+  font-weight: 700;
+  color: #1f2041;
+}
+.booking-card__total-amount .total-amount__spots {
+  margin: 0 0.3rem 0.2rem;
+  width: 100%;
+  border: 0.06rem transparent;
+  border-bottom: 0.06rem #c7c7cF;
+  border-style: dotted double;
+}
+.booking-card__total-amount span:last-of-type {
+  float: right;
+  margin-right: -0.3rem;
+}
+.booking-card .services-tax__info-icon.material-icons,
+.booking-card .add-services-tax__info-icon.material-icons {
+  position: absolute;
+  top: -0.35rem;
+  right: 4.85rem;
+  font-size: 1.6rem;
+  color: #c7c7cF;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.booking-card .services-tax__info-icon.material-icons:hover,
+.booking-card .add-services-tax__info-icon.material-icons:hover {
+  color: #8f90A0;
+}
+.booking-card .services-tax__info-icon.material-icons:active,
+.booking-card .add-services-tax__info-icon.material-icons:active {
+  color: #c7c7cF;
+}
