@@ -1,0 +1,32 @@
+include ../../theme/svg-sprite.pug
+include ../../components/button_bordered/button_bordered.pug
+include ../../components/button_filled/button_filled.pug
+
+.header
+  a.header__logo(href = '/landing.html')    
+    +logo()
+  include ../../components/hamburger-menu/hamburger-menu.pug
+  .header__container
+    ul.header__menu
+      li.menu-item
+        a.menu-item__about-us(href= '/mock-address/change-me', target = 'blank')  О нас
+      li.menu-item
+        details.menu-item__services
+          summary.services__button Услуги
+          .services__list
+            a.services__item(href= '/mock-address/change-me', target = 'blank') Lorem
+            a.services__item(href= '/mock-address/change-me', target = 'blank') Lorem ipsum
+            a.services__item(href= '/mock-address/change-me', target = 'blank') Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      li.menu-item
+        a.menu-item__vacancies(href= '/mock-address/change-me', target = 'blank') Вакансии
+      li.menu-item 
+        a.menu-item__news(href= '/mock-address/change-me', target = 'blank') Новости
+      li.menu-item
+        details.menu-item__agreements
+          summary.agreements__button Соглашения
+          .agreements__list
+            a.agreements__item(href= '/mock-address/change-me', target = 'blank') Lorem
+            a.agreements__item(href= '/mock-address/change-me', target = 'blank') Lorem ipsum 
+            a.agreements__item(href= '/mock-address/change-me', target = 'blank') Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    +button_bordered('войти', 'header__button-log-in')
+    +button_filled('зарегистрироваться', 'header__button-register')

@@ -1,0 +1,15 @@
+.header_logged-in__profile-name {
+  padding-left: 1rem;
+  color: #8f90A0;
+  line-height: 1.5rem;
+  border-left: 1px solid #c7c7cF;
+}
+@media (max-width: 991px) {
+  .header_logged-in__profile-name {
+    margin: 0.5rem 0;
+    padding-right: 1rem;
+    align-self: center;
+    border-left: none;
+    border-top: 1px solid #c7c7cF;
+  }
+}

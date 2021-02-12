@@ -1,0 +1,18 @@
+@import '../../theme/variables.less';
+
+.header_logged-in {
+  &__profile-name {
+    padding-left: 1rem;
+    color: @color-50;
+    line-height: 1.5rem;
+    border-left: 1px solid @color-25;
+
+    @media (max-width: @md) {
+      margin: 0.5rem 0;
+      padding-right: 1rem;
+      align-self: center;
+      border-left: none;
+      border-top: 1px solid @color-25;
+    }
+  }
+}
