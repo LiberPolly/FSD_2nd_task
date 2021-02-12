@@ -10,7 +10,7 @@
   <body>
     <div class="layout">
       <header class="layout__header">
-        <div class="header_ui-kit"><a class="header_ui-kit__link" href="/index.html">   
+        <div class="header_ui-kit"><a class="header_ui-kit__link" href="index.html">   
             <svg class="header_ui-kit__logo_grey" width="48" height="48" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill-opacity="0.25"></path>
               <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill-opacity="0.25"></path>
@@ -137,6 +137,71 @@
           </div>
           <div class="cards__column">
             <div class="card">
+              <div class="booking-card">
+                      <div class="room-header">
+                        <div class="room-header__room-info"><span class="room-header__number">№</span><span class="room-header__room-number">888</span><span class="room-header__room-category">люкс</span></div>
+                        <div class="room-header__room-info"><span class="room-header__room-price">9 900₽</span><span class="room-header__per-day">в сутки</span></div>
+                      </div>
+                <div class="booking-card__dropdowns-wrapper">
+                        <div class="date-dropdowns">
+                          <div class="date-dropdowns__item">
+                                  <label class="text-field">прибытие
+                                    <input class="text-field__input date-dropdowns__datepicker date-dropdowns__from" type="text" placeholder="ДД.ММ.ГГГГ">
+                                  </label>
+                            <div class="date-dropdowns__arrow"></div>
+                          </div>
+                          <div class="date-dropdowns__item">
+                                  <label class="text-field">выезд
+                                    <input class="text-field__input date-dropdowns__to" type="text" placeholder="ДД.ММ.ГГГГ">
+                                  </label>
+                            <div class="date-dropdowns__arrow"></div>
+                          </div>
+                        </div>
+                        <div class="dropdown-guests__wrapper">
+                          <label class="dropdown-guests__label">гости
+                            <input class="dropdown-guests__value" type="hidden" value="0" name="number-of-guests">
+                          </label>
+                          <div class="dropdown-guests">
+                                  <button class="dropdown-button dropdown-button_disabled"><span class="dropdown-button__message"></span><span class="dropdown-button__arrow"></span></button>
+                            <div class="dropdown-guests__menu dropdown__menu_disabled">
+                              <ul class="dropdown-guests__menu-list">
+                                <li class="dropdown-guests__menu-item"><span class="dropdown-guests__menu-item-name">взрослые</span>
+                                        <div class="dropdown-counter" data-counter-value="0" data-min-value="0" data-max-value="4">
+                                          <button class="dropdown-counter__button-minus"><span class="dropdown-counter__minus">-</span></button><span class="dropdown-counter__value">0</span>
+                                          <button class="dropdown-counter__button-plus"><span class="dropdown-counter__plus">+</span></button>
+                                        </div>
+                                </li>
+                                <li class="dropdown-guests__menu-item"><span class="dropdown-guests__menu-item-name">дети</span>
+                                        <div class="dropdown-counter" data-counter-value="0" data-min-value="0" data-max-value="6">
+                                          <button class="dropdown-counter__button-minus"><span class="dropdown-counter__minus">-</span></button><span class="dropdown-counter__value">0</span>
+                                          <button class="dropdown-counter__button-plus"><span class="dropdown-counter__plus">+</span></button>
+                                        </div>
+                                </li>
+                                <li class="dropdown-guests__menu-item"><span class="dropdown-guests__menu-item-name">младенцы</span>
+                                        <div class="dropdown-counter" data-counter-value="0" data-min-value="0" data-max-value="2">
+                                          <button class="dropdown-counter__button-minus"><span class="dropdown-counter__minus">-</span></button><span class="dropdown-counter__value">0</span>
+                                          <button class="dropdown-counter__button-plus"><span class="dropdown-counter__plus">+</span></button>
+                                        </div>
+                                </li>
+                              </ul>
+                              <div class="dropdown-guests__footer">
+                                      <button class="button_text-only dropdown-guests__reset dropdown-guests__reset_disable">очистить</button>
+                                      <button class="button_text-only dropdown-guests__submit">применить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+                <div class="booking-card__counter">
+                  <div class="booking-card__price-per-period"><span class="price-per-period__price-per-day">9 990₽</span><span class="price-per-period__multiplicate">x</span><span class="price-per-period__days">4 суток</span><span class="price-per-period__amount">39 960₽</span></div>
+                  <div class="booking-card__services-tax"><span class="services-tax__name">Сбор за услуги:</span><span class="services-tax__discount">скидка 2 179₽</span><span class="services-tax__info-icon material-icons">info_outline</span><span class="services-tax__amount">0₽</span></div>
+                  <div class="booking-card__add-services-tax"><span class="add-services-tax__name">Сбор за дополнительные услуги:</span><span class="add-services-tax__discount"></span><span class="add-services-tax__info-icon material-icons">info_outline</span><span class="add-services-tax__amount">300₽</span></div>
+                  <div class="booking-card__total-amount"><span class="total-amount__name">Итого</span>
+                    <div class="total-amount__spots"></div><span class="total-amount__amount">38 081₽</span>
+                  </div>
+                </div>
+                      <button class="button_with-arrow undefined"><span class="button_with-arrow__message">забронировать</span><i class="material-icons arrow-forward_gradient">arrow_forward</i></button>
+              </div>
             </div>
             <div class="card">
               <div class="sign-in-card">

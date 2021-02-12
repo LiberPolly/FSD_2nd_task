@@ -594,33 +594,13 @@ document.addEventListener('click', function (event) {
   \*************************************************************************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _expandable_checkbox_list_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./expandable-checkbox-list.css */ "./components/expandable-checkbox-list/expandable-checkbox-list.css");
-/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
-/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_1__);
 
-
-var expandableCheckboxListButtons = document.querySelectorAll('.expandable-checkbox-list__button');
-
-function togglExpandableCheckboxListArrow(button) {
-  var details = button.parentElement;
-
-  if (!details.open) {
-    button.classList.remove('expandable-checkbox-list__button_disabled');
-  } else {
-    button.classList.add('expandable-checkbox-list__button_disabled');
-  }
-}
-
-lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(expandableCheckboxListButtons, function (button) {
-  button.addEventListener('click', function () {
-    return togglExpandableCheckboxListArrow(button);
-  });
-});
 
 /***/ }),
 
@@ -702,6 +682,73 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()(function () {
     return hideCalendar(event);
   });
 });
+
+/***/ }),
+
+/***/ "./components/hamburger-menu/hamburger-menu.js":
+/*!*****************************************************!*\
+  !*** ./components/hamburger-menu/hamburger-menu.js ***!
+  \*****************************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hamburger_menu_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hamburger-menu.css */ "./components/hamburger-menu/hamburger-menu.css");
+/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
+/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_1__);
+
+ // Показ и скрытие меню хедера по клику на бургер меню.
+// Код с расчетом на несколько хедеров, т.к. в ui-kit на странице располагается 2 хедера
+
+if (document.querySelector('.hamburger-menu')) {
+  var headers = document.querySelectorAll('.header');
+  lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(headers, function (header) {
+    var hamburgerMenu = header.querySelector('.hamburger-menu__checkbox');
+    var headerMenuContainer = header.querySelector('.header__container');
+    hamburgerMenu.addEventListener('click', function () {
+      if (hamburgerMenu.checked) {
+        headerMenuContainer.style.display = 'flex';
+      } else {
+        headerMenuContainer.style.display = 'none';
+      }
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./components/header/header.js":
+/*!*************************************!*\
+  !*** ./components/header/header.js ***!
+  \*************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.css */ "./components/header/header.css");
+
+
+/***/ }),
+
+/***/ "./components/header_logged-in/header_logged-in.js":
+/*!*********************************************************!*\
+  !*** ./components/header_logged-in/header_logged-in.js ***!
+  \*********************************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _header_logged_in_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header_logged-in.css */ "./components/header_logged-in/header_logged-in.css");
+
 
 /***/ }),
 
@@ -1038,13 +1085,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.onload = function () {
+if (document.querySelector('.reviews')) {
   var reviewsList = document.querySelector('.reviews__list');
+  var template = reviewsList.querySelector('.reviews__template'); // Для каждого свойства из объекта JSON (./reviews.json) создается шаблон отзыва
+
   lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(_reviews_json__WEBPACK_IMPORTED_MODULE_2__, function (review) {
-    var template = "\n      <div class=\"review\">\n        <div class=\"review__container-img\">\n          <div style=\"background-image: url('src/components/reviews/images/".concat(review.foto, ".png')\" class=\"review__foto\"></div>\n          <div class=\"review__likes\">\n            <label class=\"like-button\">\n              <input class=\"like-button__checkbox\" type=\"checkbox\"/>\n              <span class=\"like-button__value\">").concat(review.likes, "</span>\n            </label>\n          </div>\n        </div>\n        <div class=\"review__container-text\">\n          <span class=\"review__author\">").concat(review.name, "</span>\n          <span class=\"review__date\">").concat(review.date, "</span>\n          <span class=\"review__text\">").concat(review.review, "</span>\n        </div>\n      </div>\n    ");
-    reviewsList.insertAdjacentHTML('beforeend', template);
+    template.content.querySelector('.review__foto').style.backgroundImage = "url(src/components/reviews/images/".concat(review.foto, ".png)");
+    template.content.querySelector('.like-button__value').textContent = review.likes;
+    template.content.querySelector('.review__author').textContent = review.name;
+    template.content.querySelector('.review__date').textContent = review.date;
+    template.content.querySelector('.review__text').textContent = review.review; // Клонируется контент тега template с данными текущего отзыва и вставляется в конец списка
+
+    reviewsList.append(template.content.cloneNode(true));
   });
-};
+}
 
 /***/ }),
 
@@ -1060,6 +1114,22 @@ window.onload = function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rich_checkbox_buttons_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rich-checkbox-buttons.css */ "./components/rich-checkbox-buttons/rich-checkbox-buttons.css");
+
+
+/***/ }),
+
+/***/ "./components/room-header/room-header.js":
+/*!***********************************************!*\
+  !*** ./components/room-header/room-header.js ***!
+  \***********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _room_header_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room-header.css */ "./components/room-header/room-header.css");
 
 
 /***/ }),
@@ -1180,15 +1250,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme_fonts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme/fonts.css */ "./theme/fonts.css");
 /* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/map */ "../node_modules/lodash/map.js");
 /* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
+/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_4__);
 
 
- // import keys from 'lodash/keys';
 
- // import * as $ from 'jquery';
-// import json from './assets/p.json';
 
-console.log('smth'); // console.log(json);
-// $('pre').html(JSON.stringify(json));
+
 
 function requireAll(requireContext) {
   return lodash_map__WEBPACK_IMPORTED_MODULE_3___default()(requireContext.keys(), requireContext);
@@ -1196,7 +1264,42 @@ function requireAll(requireContext) {
 
 requireAll(__webpack_require__("./components sync recursive ^\\.\\/.*\\.js$")); // pattern to take each .js files
 
-requireAll(__webpack_require__("./pages sync recursive ^\\.\\/.*\\.js$"));
+requireAll(__webpack_require__("./pages sync recursive ^\\.\\/.*\\.js$")); // Поведение всех тегов details в проекте
+// Переключение стрелки у тега details
+
+function toggleDetailsArrow(button) {
+  var details = button.parentElement;
+
+  if (!details.open) {
+    button.classList.remove('summary__button_disabled');
+  } else {
+    button.classList.add('summary__button_disabled');
+  }
+} // Скрытие меню тегов details по клику вне элемента
+
+
+function hideDetails(event, details) {
+  lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(details, function (thisDetails) {
+    var detailsTag = thisDetails;
+
+    if (!detailsTag.contains(event.target) && detailsTag.open) {
+      detailsTag.open = false;
+    }
+  });
+}
+
+if (document.querySelector('details')) {
+  var detailsTags = document.querySelectorAll('details');
+  var summaryButtons = document.querySelectorAll('summary');
+  lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(summaryButtons, function (button) {
+    button.addEventListener('click', function () {
+      return toggleDetailsArrow(button);
+    });
+  });
+  document.addEventListener('click', function (event) {
+    return hideDetails(event, detailsTags);
+  });
+}
 
 /***/ }),
 
@@ -1536,6 +1639,54 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/hamburger-menu/hamburger-menu.css":
+/*!******************************************************!*\
+  !*** ./components/hamburger-menu/hamburger-menu.css ***!
+  \******************************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/header/header.css":
+/*!**************************************!*\
+  !*** ./components/header/header.css ***!
+  \**************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/header_logged-in/header_logged-in.css":
+/*!**********************************************************!*\
+  !*** ./components/header_logged-in/header_logged-in.css ***!
+  \**********************************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/header_ui-kit/header_ui-kit.css":
 /*!****************************************************!*\
   !*** ./components/header_ui-kit/header_ui-kit.css ***!
@@ -1684,6 +1835,22 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************************************!*\
   !*** ./components/rich-checkbox-buttons/rich-checkbox-buttons.css ***!
   \********************************************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/room-header/room-header.css":
+/*!************************************************!*\
+  !*** ./components/room-header/room-header.css ***!
+  \************************************************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
@@ -1974,6 +2141,9 @@ var map = {
 	"./dropdown-guests/dropdown-guests.js": "./components/dropdown-guests/dropdown-guests.js",
 	"./expandable-checkbox-list/expandable-checkbox-list.js": "./components/expandable-checkbox-list/expandable-checkbox-list.js",
 	"./filter-date-dropdown/filter-date-dropdown.js": "./components/filter-date-dropdown/filter-date-dropdown.js",
+	"./hamburger-menu/hamburger-menu.js": "./components/hamburger-menu/hamburger-menu.js",
+	"./header/header.js": "./components/header/header.js",
+	"./header_logged-in/header_logged-in.js": "./components/header_logged-in/header_logged-in.js",
 	"./header_ui-kit/header_ui-kit.js": "./components/header_ui-kit/header_ui-kit.js",
 	"./layout/layout.js": "./components/layout/layout.js",
 	"./like-button/like-button.js": "./components/like-button/like-button.js",
@@ -1986,6 +2156,7 @@ var map = {
 	"./registration-card/registration-card.js": "./components/registration-card/registration-card.js",
 	"./reviews/reviews.js": "./components/reviews/reviews.js",
 	"./rich-checkbox-buttons/rich-checkbox-buttons.js": "./components/rich-checkbox-buttons/rich-checkbox-buttons.js",
+	"./room-header/room-header.js": "./components/room-header/room-header.js",
 	"./searching-rooms-card/searching-rooms-card.js": "./components/searching-rooms-card/searching-rooms-card.js",
 	"./sign-in-card/sign-in-card.js": "./components/sign-in-card/sign-in-card.js",
 	"./social-icons/social-icons.js": "./components/social-icons/social-icons.js",
