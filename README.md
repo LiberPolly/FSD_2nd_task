@@ -1,21 +1,34 @@
-# FSD_2nd_task
-Задание на фронтенд разработчика -  верстка.
+# FSD company's practice task - hotel booking pages layout.
 
-* Run doiuse: doiuse C:/GeekBrains/Git/FSD/FSD_2nd_task/src/theme/style.css
+Static layout pages created with Webpack, Pug and Less.
 
-* Run stylelint: npx stylelint "**/*.less"
+There are 4 UI kit pages and 4 hotel booking pages.
 
-* Run autoprefixer: f1 -> Autoprefixer: Run
+Link: https://liberpolly.github.io/FSD_2nd_task/
 
-* Beautify: f1 -> Beautify
 
-* Lodash - to check lodash enforcing plugin
+### Requirements for layout:
 
-## Требования к верстке:
-* Вёрстка должна быть выложена в публичный репозиторий, опубликована через Github Pages, ссылка - в Readme проекта.
-* Ориентироваться на последние версии Chrome и Firefox. На Safari и старые IE можно забить.
-* PerfectPixel (расхождения допускаются в местах, где есть неточности в макете, напр. разная ширина у одинаковых блоков).
-* Все шрифты должны быть подключены и сгенерированы в форматах .ttf, .woff, .svg (https://google-webfonts-helper.herokuapp.com/fonts).
-* По максимуму - responsive. Можно максимальной ширину сделать 1920 (ширина макета 1440, по бокам пустое пространство с растянутым фоном), а минимальной 320 (карточки шириной 410 ужимать, в том числе, иногда, вынося некоторые подэлементы на новые строки. Тени лучше целиком не убирать, но можно уменьшать. Фоновое изображение ужимать).
-* Бегунки, календари и дропдауны должны быть сделаны через js, можно подключать jQuery-плагины, но стараться обходиться без изменений исходников библиотек, а пытаться из своего кода кастомизировать.
-* Удалить font awesome, если он не пригодится.
+* Last versions of Chrome and Firefox.
+
+* PerfectPixel (exept UI-kit).
+
+* Responsive - at most.
+
+* Calendars, dropdowns, pagination should be made with JS or jQuery plugins.
+
+
+### Project file structure:
+  src
+  |  main.js
+  └─── pages
+  └─── components
+  └─── theme
+
+* main.js is a main file that import every .js file in the src directory.
+
+* pages is a folder with all possible pages of the project.
+
+* components is a folder with all possible components shared between all pages.
+
+* theme is a folder with global styles, variables, fonts, etc.
