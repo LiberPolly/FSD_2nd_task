@@ -1,0 +1,28 @@
+.cards {
+  padding: 2.02rem 8.8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.cards__column {
+  margin-right: 2.6rem;
+}
+@media (max-width: 991px) {
+  .cards {
+    padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+  }
+}
+@media (max-width: 575px) {
+  .cards {
+    padding: 1.875rem 0.5rem 1.875rem 0.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .cards {
+    padding: 1.875rem 0 1.875rem 0;
+  }
+}
+.cards .card {
+  margin-bottom: 2.5rem;
+}
