@@ -18,11 +18,15 @@ Link: https://liberpolly.github.io/FSD_2nd_task/
 
 ### Project file structure:
 
-  src
-  |  main.js
-  └─── pages
-  └─── components
-  └─── theme
+<pre>
+  <code>
+src
+|  main.js
+└─── pages
+└─── components
+└─── theme
+  </code>
+</pre>
 
 * main.js is a main file that import every .js file in the src directory.
 
