@@ -11,19 +11,18 @@ Link: https://liberpolly.github.io/FSD_2nd_task/
 
 * Last versions of Chrome and Firefox.
 
-* PerfectPixel (exept UI-kit).
-
 * Responsive - at most.
 
 * Calendars, dropdowns, pagination should be made with JS or jQuery plugins.
 
 
 ### Project file structure:
+
   src
-    pages
-    components
-    theme
-    main.js
+  |  main.js
+  └─── pages
+  └─── components
+  └─── theme
 
 * main.js is a main file that import every .js file in the src directory.
 
