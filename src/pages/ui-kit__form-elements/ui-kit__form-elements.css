@@ -183,6 +183,6 @@
 .reviews__list .review {
   display: none;
 }
-.reviews__list .review:first-child {
+.reviews__list .review:nth-child(2) {
   display: flex;
 }
