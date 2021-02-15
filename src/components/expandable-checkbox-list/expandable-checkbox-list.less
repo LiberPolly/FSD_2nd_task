@@ -7,34 +7,14 @@
   }
 
   &__button {
-    position: relative;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    list-style: none;
-    outline: none;
-
-    &::-webkit-details-marker {
-      display: none;
-      outline: none;
-    }
-
     &::after {
-      content: '';
-      position: absolute;
-      display: block;
       left: 15.28rem;
       top: 1rem;
-      width: 0.45rem;
-      height: 0.45em;
-      border-left: 2px solid @color-50;
-      border-bottom: 2px solid @color-50;
       transform: translate(-50%, -75%) rotate(135deg);
-      transition: 0.05s;
     }
   }
 
-  .expandable-checkbox-list__button_disabled {
+  .summary__button_disabled {
     &::after {
       left: 15rem;
       top: 0.4rem;
