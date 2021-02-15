@@ -44,5 +44,3 @@ if (document.querySelector('details')) {
 
   document.addEventListener('click', (event) => hideDetails(event, detailsTags));
 }
-
-
