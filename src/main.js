@@ -1,13 +1,8 @@
 import './theme/global.css';
 import './theme/variables.css';
 import './theme/fonts.css';
-// import keys from 'lodash/keys';
 import map from 'lodash/map';
-// import * as $ from 'jquery';
-// import json from './assets/p.json';
-console.log('smth');
-// console.log(json);
-// $('pre').html(JSON.stringify(json));
+import forEach from 'lodash/forEach';
 
 function requireAll(requireContext) {
   return map(requireContext.keys(), requireContext);
@@ -15,3 +10,39 @@ function requireAll(requireContext) {
 
 requireAll(require.context('./components', true, /^\.\/.*\.js$/)); // pattern to take each .js files
 requireAll(require.context('./pages', true, /^\.\/.*\.js$/));
+
+// Поведение всех тегов details в проекте
+// Переключение стрелки у тега details
+function toggleDetailsArrow(button) {
+  const details = button.parentElement;
+
+  if (!details.open) {
+    button.classList.remove('summary__button_disabled');
+  } else {
+    button.classList.add('summary__button_disabled');
+  }
+}
+
+// Скрытие меню тегов details по клику вне элемента
+function hideDetails(event, details) {
+  forEach(details, (thisDetails) => {
+    const detailsTag = thisDetails;
+    if (!detailsTag.contains(event.target)
+      && detailsTag.open) {
+      detailsTag.open = false;
+    }
+  });
+}
+
+if (document.querySelector('details')) {
+  const detailsTags = document.querySelectorAll('details');
+  const summaryButtons = document.querySelectorAll('summary');
+
+  forEach(summaryButtons, ((button) => {
+    button.addEventListener('click', () => toggleDetailsArrow(button));
+  }));
+
+  document.addEventListener('click', (event) => hideDetails(event, detailsTags));
+}
+
+
