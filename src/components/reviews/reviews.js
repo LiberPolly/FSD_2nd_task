@@ -8,7 +8,7 @@ if (document.querySelector('.reviews')) {
     const template = reviewsList.querySelector('.reviews__template');
     // Для каждого свойства из объекта JSON (./reviews.json) создается шаблон отзыва
     forEach(reviews, (review) => {
-      template.content.querySelector('.review__foto').style.backgroundImage = `url(./images/${review.foto}.png)`;
+      template.content.querySelector('.review__foto').style.backgroundImage = `url(https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/reviews/images/${review.foto}.png?raw=true)`;
       template.content.querySelector('.like-button__value').textContent = review.likes;
       template.content.querySelector('.review__author').textContent = review.name;
       template.content.querySelector('.review__date').textContent = review.date;
