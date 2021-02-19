@@ -685,6 +685,22 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()(function () {
 
 /***/ }),
 
+/***/ "./components/footer/footer.js":
+/*!*************************************!*\
+  !*** ./components/footer/footer.js ***!
+  \*************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _footer_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.css */ "./components/footer/footer.css");
+
+
+/***/ }),
+
 /***/ "./components/hamburger-menu/hamburger-menu.js":
 /*!*****************************************************!*\
   !*** ./components/hamburger-menu/hamburger-menu.js ***!
@@ -1094,7 +1110,7 @@ if (document.querySelector('.reviews')) {
     var template = reviewsList.querySelector('.reviews__template'); // Для каждого свойства из объекта JSON (./reviews.json) создается шаблон отзыва
 
     lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(_reviews_json__WEBPACK_IMPORTED_MODULE_2__, function (review) {
-      template.content.querySelector('.review__foto').style.backgroundImage = "url(./images/".concat(review.foto, ".png)");
+      template.content.querySelector('.review__foto').style.backgroundImage = "url(https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/reviews/images/".concat(review.foto, ".png?raw=true)");
       template.content.querySelector('.like-button__value').textContent = review.likes;
       template.content.querySelector('.review__author').textContent = review.name;
       template.content.querySelector('.review__date').textContent = review.date;
@@ -1183,11 +1199,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _social_icons_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./social-icons.css */ "./components/social-icons/social-icons.css");
- // // import '@fortawesome/fontawesome-free/js/brands';
-// // import '@fortawesome/fontawesome-free/js/solid';
-// // import '@fortawesome/fontawesome-free/js/fontawesome';
-// import '@fortawesome/fontawesome-free/js/all';
-// import '@fortawesome/fontawesome-free/css/all.css';
+
 
 /***/ }),
 
@@ -1320,6 +1332,22 @@ if (document.querySelector('details')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ "./pages/index/index.css");
+
+
+/***/ }),
+
+/***/ "./pages/landing/landing.js":
+/*!**********************************!*\
+  !*** ./pages/landing/landing.js ***!
+  \**********************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _landing_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./landing.css */ "./pages/landing/landing.css");
 
 
 /***/ }),
@@ -1632,6 +1660,22 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************************!*\
   !*** ./components/filter-date-dropdown/filter-date-dropdown.css ***!
   \******************************************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/footer/footer.css":
+/*!**************************************!*\
+  !*** ./components/footer/footer.css ***!
+  \**************************************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
@@ -1980,6 +2024,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./pages/landing/landing.css":
+/*!***********************************!*\
+  !*** ./pages/landing/landing.css ***!
+  \***********************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./pages/ui-kit__cards/ui-kit__cards.css":
 /*!***********************************************!*\
   !*** ./pages/ui-kit__cards/ui-kit__cards.css ***!
@@ -2146,6 +2206,7 @@ var map = {
 	"./dropdown-guests/dropdown-guests.js": "./components/dropdown-guests/dropdown-guests.js",
 	"./expandable-checkbox-list/expandable-checkbox-list.js": "./components/expandable-checkbox-list/expandable-checkbox-list.js",
 	"./filter-date-dropdown/filter-date-dropdown.js": "./components/filter-date-dropdown/filter-date-dropdown.js",
+	"./footer/footer.js": "./components/footer/footer.js",
 	"./hamburger-menu/hamburger-menu.js": "./components/hamburger-menu/hamburger-menu.js",
 	"./header/header.js": "./components/header/header.js",
 	"./header_logged-in/header_logged-in.js": "./components/header_logged-in/header_logged-in.js",
@@ -2203,6 +2264,7 @@ webpackContext.id = "./components sync recursive ^\\.\\/.*\\.js$";
 
 var map = {
 	"./index/index.js": "./pages/index/index.js",
+	"./landing/landing.js": "./pages/landing/landing.js",
 	"./ui-kit__cards/ui-kit__cards.js": "./pages/ui-kit__cards/ui-kit__cards.js",
 	"./ui-kit__colors-n-type/ui-kit__colors-n-type.js": "./pages/ui-kit__colors-n-type/ui-kit__colors-n-type.js",
 	"./ui-kit__form-elements/ui-kit__form-elements.js": "./pages/ui-kit__form-elements/ui-kit__form-elements.js",
