@@ -1,0 +1,26 @@
+.sign-in {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10.75rem 0;
+  height: 43.875rem;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background-image: url(images/1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 767px) {
+  .sign-in {
+    padding: 4.4rem 4.4rem 1.3rem;
+  }
+}
+@media (max-width: 575px) {
+  .sign-in {
+    padding: 2rem 0.5rem 1.3rem;
+  }
+}
+@media (max-width: 410px) {
+  .sign-in {
+    padding: 1.5rem 0.1rem 1.3rem;
+  }
+}
