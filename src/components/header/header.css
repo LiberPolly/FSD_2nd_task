@@ -158,16 +158,16 @@
     align-self: center;
   }
 }
-.header__button-register {
+.header__button-registration {
   margin-top: 0.08rem;
   width: 12.25rem;
   height: 2.1rem;
 }
-.header__button-register .button_filled__message {
+.header__button-registration .button_filled__message {
   letter-spacing: 0.6px;
 }
 @media (max-width: 991px) {
-  .header__button-register {
+  .header__button-registration {
     margin: 0.5rem 0;
     align-self: center;
   }
