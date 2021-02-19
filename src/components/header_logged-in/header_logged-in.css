@@ -1,8 +1,12 @@
+.header_logged-in__logo {
+  margin-top: 0.3rem;
+}
 .header_logged-in__profile-name {
-  padding-left: 1rem;
-  color: #8f90A0;
-  line-height: 1.5rem;
+  padding-left: 1.28rem;
   border-left: 1px solid #c7c7cF;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #8f90A0;
 }
 @media (max-width: 991px) {
   .header_logged-in__profile-name {

@@ -9,6 +9,9 @@
   background-color: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
+.header__logo {
+  margin-top: 0.3rem;
+}
 .header__container {
   display: flex;
   flex-direction: row;
@@ -18,10 +21,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 1.25rem;
+  margin-right: 0.69rem;
 }
 .header__container .header__menu .menu-item {
-  margin-right: 1.25rem;
+  margin-right: 1.23rem;
+  font-size: 0.875rem;
   color: #8f90A0;
 }
 .header__container .header__menu .menu-item__about-us {
@@ -32,11 +36,11 @@
   position: relative;
 }
 .header__container .header__menu .menu-item__services .services__button {
-  padding-right: 1.25rem;
+  padding-right: 1.6rem;
 }
 .header__container .header__menu .menu-item__services .services__button::after {
-  left: 4.48rem;
-  top: 0.6rem;
+  left: 3.95rem;
+  top: 0.55rem;
 }
 @media (max-width: 991px) {
   .header__container .header__menu .menu-item__services .services__button {
@@ -71,15 +75,18 @@
     text-align: center;
   }
 }
+.header__container .header__menu .menu-item__vacancies {
+  margin-right: 0.1rem;
+}
 .header__container .header__menu .menu-item__agreements {
   position: relative;
 }
 .header__container .header__menu .menu-item__agreements .agreements__button {
-  padding-right: 1.25rem;
+  padding-right: 0.85rem;
 }
 .header__container .header__menu .menu-item__agreements .agreements__button::after {
-  left: 7.48rem;
-  top: 0.6rem;
+  left: 6.5rem;
+  top: 0.55rem;
 }
 @media (max-width: 991px) {
   .header__container .header__menu .menu-item__agreements .agreements__button {
@@ -136,7 +143,12 @@
   }
 }
 .header__button-log-in {
-  margin-right: 1.25rem;
+  margin: 0.08rem 1.25rem 0 0;
+  min-width: 5.45rem;
+  height: 2.1rem;
+}
+.header__button-log-in .button_bordered__message {
+  letter-spacing: 0.6px;
 }
 @media (max-width: 991px) {
   .header__button-log-in {
@@ -146,7 +158,12 @@
   }
 }
 .header__button-register {
+  margin-top: 0.08rem;
   width: 12.25rem;
+  height: 2.1rem;
+}
+.header__button-register .button_filled__message {
+  letter-spacing: 0.6px;
 }
 @media (max-width: 991px) {
   .header__button-register {

@@ -1,11 +1,16 @@
 @import '../../theme/variables.less';
 
 .header_logged-in {
+  &__logo {
+    margin-top: 0.3rem;
+  }
+
   &__profile-name {
-    padding-left: 1rem;
-    color: @color-50;
-    line-height: 1.5rem;
+    padding-left: 1.28rem;
     border-left: 1px solid @color-25;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: @color-50;
 
     @media (max-width: @md) {
       margin: 0.5rem 0;

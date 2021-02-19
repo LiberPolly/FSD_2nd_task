@@ -11,6 +11,10 @@
   background-color: @color-white;
   box-shadow: @box-shadow-header;
 
+  &__logo {
+    margin-top: 0.3rem;
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -20,10 +24,11 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-left: 1.25rem;
+      margin-right: 0.69rem;
 
       .menu-item {
-        margin-right: 1.25rem;
+        margin-right: 1.23rem;
+        font-size: 0.875rem;
         color: @color-50;
 
         &__about-us {
@@ -35,11 +40,11 @@
           position: relative;
 
           .services__button {
-            padding-right: 1.25rem;
+            padding-right: 1.6rem;
 
             &::after {
-              left: 4.48rem;
-              top: 0.6rem;
+              left: 3.95rem;
+              top: 0.55rem;
             }
 
             @media (max-width: @md) {
@@ -76,15 +81,19 @@
           }
         }
 
+        &__vacancies {
+          margin-right: 0.1rem;
+        }
+
         &__agreements {
           position: relative;
 
           .agreements__button {
-            padding-right: 1.25rem;
+            padding-right: 0.85rem;
 
             &::after {
-              left: 7.48rem;
-              top: 0.6rem;
+              left: 6.5rem;
+              top: 0.55rem;
             }
 
             @media (max-width: @md) {
@@ -143,7 +152,13 @@
   }
 
   &__button-log-in {
-    margin-right: 1.25rem;
+    margin: 0.08rem 1.25rem 0 0;
+    min-width: 5.45rem;
+    height: 2.1rem;
+
+    .button_bordered__message {
+      letter-spacing: 0.6px;
+    }
 
     @media (max-width: @md) {
       width: 6.188rem;
@@ -153,7 +168,13 @@
   }
 
   &__button-register {
+    margin-top: 0.08rem;
     width: 12.25rem;
+    height: 2.1rem;
+
+    .button_filled__message {
+      letter-spacing: 0.6px;
+    }
 
     @media (max-width: @md) {
       margin: 0.5rem 0;

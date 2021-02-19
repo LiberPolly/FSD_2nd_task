@@ -1,7 +1,61 @@
 @import '../../theme/variables.less';
 
 .headers-n-footers {
+  margin-top: 2rem;
+
   &__item {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+
+    &_mobile-version {
+      width: 48rem;
+      margin: 0 auto;
+      margin-top: -1rem;
+      margin-bottom: 9.75rem;
+
+      .footer {
+        &__main {
+          padding-top: 8.6rem;
+          padding-bottom: 0;
+        }
+
+        &__column {
+          display: none;
+
+          &:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0.2rem;
+            margin: 0 auto;
+          }
+        }
+
+        &__logo {
+          align-self: center;
+        }
+
+        &__about-us {
+          display: none;
+        }
+
+        &__footer {
+          flex-direction: column;
+          border-top: none;
+          justify-content: center;
+          padding: 0 0 6.5rem;
+
+          .footer__copyright {
+            margin: 0 auto;
+            margin-bottom: 1.25rem;
+            padding-left: 0.5rem;
+            line-height: 1.7rem;
+          }
+
+          .social-icons {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
   }
 }
