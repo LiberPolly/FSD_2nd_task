@@ -1,9 +1,6 @@
-//- include ./base-data
 block variables
 
 include ../../components/layout/layout.pug
-//- include ../../components/header/header
-//- include ../../components/footer/footer
 
 doctype html
 html(lang='ru')
@@ -17,10 +14,10 @@ html(lang='ru')
     +layout()
       +layout__header()
         block header
-          //- +header({menuItems: locals.menuItems})
+          include ../../components/header/header.pug
       +layout__main()
         block main
       +layout__footer()
         block footer
-        //- +footer({items: locals.menuItems})
+          include ../../components/footer/footer.pug
     block scripts
