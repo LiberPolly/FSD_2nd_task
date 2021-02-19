@@ -62,6 +62,64 @@
         </div>
       </header>
       <main class="layout__main">
+        <div class="registration">
+          <div class="registration-card">
+            <h1>Регистрация аккаунта</h1>
+            <div class="registration-card__items-wrapper">
+              <div class="registration-card__item">
+                  <label class="text-field">
+                    <input class="text-field__input undefined" type="text" placeholder="Имя">
+                  </label>
+              </div>
+              <div class="registration-card__item">
+                  <label class="text-field">
+                    <input class="text-field__input undefined" type="text" placeholder="Фамилия">
+                  </label>
+              </div>
+              <div class="registration-card__item">
+                  <div class="radio-buttons">
+                    <label class="radio-button">
+                      <input class="radio-button__radio" type="radio" value="мужчина" checked="checked" name="sex"><span class="radio-button__label-name">мужчина</span>
+                    </label>
+                    <label class="radio-button">
+                      <input class="radio-button__radio" type="radio" value="женщина" checked="checked" name="sex"><span class="radio-button__label-name">женщина</span>
+                    </label>
+                  </div>
+              </div>
+            </div>
+            <div class="registration-card__items-wrapper">
+                <label class="text-field">Дата рождения
+                  <input class="text-field__input masked-text-field" type="text" placeholder="ДД.ММ.ГГГГ">
+                </label>
+            </div>
+            <div class="registration-card__items-wrapper">
+              <div class="registration-card__item">
+                  <label class="text-field">данные для входа в сервис
+                    <input class="text-field__input undefined" type="email" placeholder="Email">
+                  </label>
+              </div>
+              <div class="registration-card__item">
+                  <label class="text-field">
+                    <input class="text-field__input undefined" type="password" placeholder="Пароль">
+                  </label>
+              </div>
+              <div class="registration-card__item">
+                  <div class="toggle">
+                    <label class="toggle__label">
+                      <input class="toggle__checkbox" type="checkbox" value="Получать спецпредложения"><span class="toggle__toggle toggle__label-name">Получать спецпредложения</span>
+                    </label>
+                  </div>
+              </div>
+            </div>
+            <div class="registration-card__button-wrapper">
+                <button class="button_with-arrow undefined"><span class="button_with-arrow__message">перейти к оплате</span><i class="material-icons arrow-forward_gradient">arrow_forward</i></button>
+            </div>
+            <div class="registration-card__footer">
+              <p class="registration-card__footer-text">Уже есть аккаунт на Toxin</p>
+                <button class="button_bordered undefined"><span class="button_bordered__message">войти</span></button>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="layout__footer">
         <div class="footer"> 

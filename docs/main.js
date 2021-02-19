@@ -1352,6 +1352,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./pages/registration/registration.js":
+/*!********************************************!*\
+  !*** ./pages/registration/registration.js ***!
+  \********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _registration_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./registration.css */ "./pages/registration/registration.css");
+
+
+/***/ }),
+
+/***/ "./pages/sign-in/sign-in.js":
+/*!**********************************!*\
+  !*** ./pages/sign-in/sign-in.js ***!
+  \**********************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sign_in_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sign-in.css */ "./pages/sign-in/sign-in.css");
+
+
+/***/ }),
+
 /***/ "./pages/ui-kit__cards/ui-kit__cards.js":
 /*!**********************************************!*\
   !*** ./pages/ui-kit__cards/ui-kit__cards.js ***!
@@ -2040,6 +2072,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./pages/registration/registration.css":
+/*!*********************************************!*\
+  !*** ./pages/registration/registration.css ***!
+  \*********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./pages/sign-in/sign-in.css":
+/*!***********************************!*\
+  !*** ./pages/sign-in/sign-in.css ***!
+  \***********************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./pages/ui-kit__cards/ui-kit__cards.css":
 /*!***********************************************!*\
   !*** ./pages/ui-kit__cards/ui-kit__cards.css ***!
@@ -2265,6 +2329,8 @@ webpackContext.id = "./components sync recursive ^\\.\\/.*\\.js$";
 var map = {
 	"./index/index.js": "./pages/index/index.js",
 	"./landing/landing.js": "./pages/landing/landing.js",
+	"./registration/registration.js": "./pages/registration/registration.js",
+	"./sign-in/sign-in.js": "./pages/sign-in/sign-in.js",
 	"./ui-kit__cards/ui-kit__cards.js": "./pages/ui-kit__cards/ui-kit__cards.js",
 	"./ui-kit__colors-n-type/ui-kit__colors-n-type.js": "./pages/ui-kit__colors-n-type/ui-kit__colors-n-type.js",
 	"./ui-kit__form-elements/ui-kit__form-elements.js": "./pages/ui-kit__form-elements/ui-kit__form-elements.js",
