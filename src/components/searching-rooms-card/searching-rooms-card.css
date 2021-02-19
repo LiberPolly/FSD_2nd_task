@@ -8,6 +8,12 @@
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 410px) {
+  .searching-rooms-card {
+    padding: 0.46rem 0.8rem 0.8rem;
+    width: 19.6rem;
+  }
+}
 .searching-rooms-card__dropdowns-wrapper {
   display: flex;
   flex-direction: column;

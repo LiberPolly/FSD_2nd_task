@@ -6,6 +6,11 @@
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   cursor: pointer;
 }
+@media (max-width: 410px) {
+  .button_with-arrow {
+    width: 18rem;
+  }
+}
 .button_with-arrow:hover {
   opacity: 0.5;
 }

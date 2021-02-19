@@ -7,6 +7,10 @@
   position: relative;
   width: 20rem;
 
+  @media (max-width: @xxs) {
+    width: 18rem;
+  }
+
   &__from {
     margin-top: 0.06rem;
     cursor: pointer;
@@ -20,6 +24,14 @@
   &__item {
     position: relative;
     max-width: 9.375rem;
+
+    @media (max-width: @xxs) {
+      width: 45%;
+    }
+
+    &:first-child {
+      margin-right: 0.3rem;
+    }
   }
 
   &__arrow {

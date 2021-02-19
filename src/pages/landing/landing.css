@@ -15,6 +15,21 @@
   line-height: 1.5rem;
   color: #575871;
 }
+@media (max-width: 767px) {
+  .landing {
+    padding: 4.4rem 4.4rem 1.3rem;
+  }
+}
+@media (max-width: 575px) {
+  .landing {
+    padding: 2rem 0.5rem 1.3rem;
+  }
+}
+@media (max-width: 410px) {
+  .landing {
+    padding: 1.5rem 0.1rem 1.3rem;
+  }
+}
 @keyframes slideFotos {
   0% {
     background-image: url(images/1.jpg);

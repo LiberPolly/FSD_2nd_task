@@ -5,6 +5,11 @@
   position: relative;
   width: 20rem;
 }
+@media (max-width: 410px) {
+  .date-dropdowns {
+    width: 18rem;
+  }
+}
 .date-dropdowns__from {
   margin-top: 0.06rem;
   cursor: pointer;
@@ -16,6 +21,14 @@
 .date-dropdowns__item {
   position: relative;
   max-width: 9.375rem;
+}
+@media (max-width: 410px) {
+  .date-dropdowns__item {
+    width: 45%;
+  }
+}
+.date-dropdowns__item:first-child {
+  margin-right: 0.3rem;
 }
 .date-dropdowns__arrow {
   position: absolute;
