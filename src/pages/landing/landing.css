@@ -1,0 +1,39 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4.4rem 8.355rem 1.3rem 8.85rem;
+  height: 51.875rem;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  animation: slideFotos 60s infinite;
+}
+.landing__slogan {
+  width: 18.563rem;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #575871;
+}
+@keyframes slideFotos {
+  0% {
+    background-image: url(images/1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  35% {
+    background-image: url(images/2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  70% {
+    background-image: url(images/3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background-image: url(images/1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
