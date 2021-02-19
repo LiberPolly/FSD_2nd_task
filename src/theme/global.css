@@ -11,7 +11,7 @@ body {
   width: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
 }
-@media (max-width: 320px) {
+@media (max-width: 410px) {
   html,
   body {
     overflow: scroll;
@@ -28,6 +28,7 @@ body {
 a {
   text-decoration: none;
   color: unset;
+  outline: none;
   cursor: pointer;
 }
 li {
