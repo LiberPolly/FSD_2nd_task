@@ -1,0 +1,114 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+.footer__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6.6rem 8.75rem 4.85rem;
+}
+@media (max-width: 1199px) {
+  .footer__main {
+    padding-top: 8.6rem;
+    padding-bottom: 0;
+  }
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 16.25rem;
+}
+@media (max-width: 1199px) {
+  .footer__column {
+    display: none;
+  }
+}
+.footer__column:first-child {
+  margin-right: 2.5rem;
+}
+@media (max-width: 1199px) {
+  .footer__column:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.2rem;
+    margin: 0 auto;
+  }
+}
+.footer__logo {
+  margin-top: -0.35rem;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 1199px) {
+  .footer__logo {
+    align-self: center;
+  }
+}
+.footer__about-us {
+  width: 16.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #575871;
+  line-height: 1.5rem;
+}
+@media (max-width: 1199px) {
+  .footer__about-us {
+    display: none;
+  }
+}
+.footer__link {
+  font-size: 0.875rem;
+  color: #8f90A0;
+  margin-bottom: 1.4rem;
+}
+.footer__link:first-child {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1f2041;
+  text-transform: uppercase;
+}
+.footer__subscribe {
+  margin: -0.2rem 0 1.52rem;
+  font-size: 0.875rem;
+  color: #575871;
+  line-height: 1.5rem;
+}
+.footer__subscribe .subscription-text-field {
+  width: 16.2rem;
+}
+.footer__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.625rem 8.75rem 1.25rem;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  color: #575871;
+}
+.footer__footer .social-icons {
+  margin-top: -0.2rem;
+}
+@media (max-width: 1199px) {
+  .footer__footer {
+    flex-direction: column;
+    border-top: none;
+    justify-content: center;
+    padding: 0 0 6.5rem;
+  }
+  .footer__footer .footer__copyright {
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+  }
+  .footer__footer .social-icons {
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    padding-left: 0.5rem;
+    line-height: 1.7rem;
+  }
+}
