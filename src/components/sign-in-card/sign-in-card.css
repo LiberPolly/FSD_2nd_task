@@ -1,8 +1,8 @@
 .sign-in-card {
   display: flex;
   flex-direction: column;
-  width: 23.6rem;
-  padding: 1.46rem 1.8rem 1.8rem;
+  width: 23.7rem;
+  padding: 1.46rem 1.8rem 2rem;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -24,7 +24,7 @@
   margin-bottom: 0;
 }
 .sign-in-card__button-wrapper {
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
 }
 .sign-in-card__footer {
   display: flex;
