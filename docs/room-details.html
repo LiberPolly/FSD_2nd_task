@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Toxin
+    </title>
+  <link href="vendors-node_modules_air-datepicker_src_js_air-datepicker_js-node_modules_inputmask_index_js--92510d.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="layout">
+      <header class="layout__header">
+        <div class="header"><a class="header__logo" href="index.html">   
+            <svg width="106" height="40" viewbox="0 0 106 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M62.335 13.3683C62.5567 13.3683 62.7375 13.4442 62.8775 13.5958C63.0292 13.7358 63.105 13.9167 63.105 14.1383C63.105 14.3483 63.0292 14.5292 62.8775 14.6808C62.7375 14.8325 62.5567 14.9083 62.335 14.9083H58.5725V25.4083C58.5725 25.63 58.4967 25.8167 58.345 25.9683C58.205 26.1083 58.0242 26.1783 57.8025 26.1783C57.5925 26.1783 57.4117 26.1083 57.26 25.9683C57.1083 25.8167 57.0325 25.63 57.0325 25.4083V14.9083H53.27C53.06 14.9083 52.8792 14.8325 52.7275 14.6808C52.5758 14.5292 52.5 14.3483 52.5 14.1383C52.5 13.9167 52.5758 13.7358 52.7275 13.5958C52.8792 13.4442 53.06 13.3683 53.27 13.3683H62.335Z" fill="#1F2041"></path>
+              <path d="M68.9076 13.3683C69.7943 13.3683 70.6285 13.5375 71.4101 13.8758C72.2034 14.2142 72.8918 14.675 73.4751 15.2583C74.0701 15.8417 74.5368 16.53 74.8751 17.3233C75.2134 18.105 75.3826 18.9392 75.3826 19.8258C75.3826 20.8642 75.1609 21.8208 74.7176 22.6958C74.2743 23.5708 73.6735 24.3058 72.9151 24.9008C72.9151 24.9008 72.9035 24.9125 72.8801 24.9358C72.3201 25.3558 71.7076 25.6883 71.0426 25.9333C70.3776 26.1667 69.6659 26.2833 68.9076 26.2833C68.0209 26.2833 67.1868 26.1142 66.4051 25.7758C65.6234 25.4375 64.9351 24.9767 64.3401 24.3933C63.7568 23.81 63.2959 23.1275 62.9576 22.3458C62.6193 21.5642 62.4501 20.7242 62.4501 19.8258C62.4501 18.8458 62.6484 17.9417 63.0451 17.1133C63.4418 16.2733 63.9843 15.5558 64.6726 14.9608L64.7426 14.8908C64.7543 14.8908 64.7718 14.8792 64.7951 14.8558C65.3551 14.3892 65.9851 14.0275 66.6851 13.7708C67.3851 13.5025 68.1259 13.3683 68.9076 13.3683ZM68.9076 24.7433C69.3509 24.7433 69.771 24.6908 70.1676 24.5858C70.576 24.4692 70.9609 24.3117 71.3226 24.1133L65.1801 16.6408C64.8068 17.0725 64.5151 17.5625 64.3051 18.1108C64.0951 18.6475 63.9901 19.2192 63.9901 19.8258C63.9901 20.5025 64.1185 21.1383 64.3751 21.7333C64.6318 22.3283 64.9818 22.8533 65.4251 23.3083C65.8801 23.7517 66.4051 24.1017 67.0001 24.3583C67.5951 24.615 68.2309 24.7433 68.9076 24.7433ZM72.5301 23.1508C72.9384 22.7075 73.2535 22.2058 73.4751 21.6458C73.7085 21.0742 73.8251 20.4675 73.8251 19.8258C73.8251 19.1492 73.6968 18.5133 73.4401 17.9183C73.1834 17.3233 72.8276 16.8042 72.3726 16.3608C71.9293 15.9058 71.4101 15.55 70.8151 15.2933C70.2201 15.0367 69.5843 14.9083 68.9076 14.9083C68.4409 14.9083 67.9918 14.9725 67.5601 15.1008C67.1284 15.2175 66.7259 15.3925 66.3526 15.6258L72.5301 23.1508Z" fill="#1F2041"></path>
+              <path d="M82.351 20.6308C82.1177 20.6308 81.9194 20.5375 81.756 20.3508L77.2585 14.5758C77.1302 14.4125 77.0777 14.2317 77.101 14.0333C77.1244 13.8233 77.2177 13.6542 77.381 13.5258C77.5444 13.3975 77.7252 13.3508 77.9235 13.3858C78.1335 13.4092 78.3027 13.5025 78.431 13.6658L82.351 18.6708L86.1835 13.7533C86.3119 13.59 86.4752 13.4967 86.6735 13.4733C86.8835 13.45 87.0702 13.5025 87.2335 13.6308C87.3969 13.7592 87.4902 13.9283 87.5135 14.1383C87.5369 14.3367 87.4844 14.5175 87.356 14.6808L82.946 20.3508C82.7944 20.5375 82.596 20.6308 82.351 20.6308ZM87.2685 26.2658C87.2219 26.2658 87.146 26.26 87.041 26.2483C86.9477 26.2367 86.8369 26.2075 86.7085 26.1608C86.5802 26.1025 86.4402 26.0267 86.2885 25.9333C86.1485 25.8283 86.0085 25.6883 85.8685 25.5133L82.351 20.9808L78.5185 25.9158C78.3902 26.0792 78.221 26.1725 78.011 26.1958C77.8127 26.2192 77.6319 26.1667 77.4685 26.0383C77.3052 25.91 77.2119 25.7467 77.1885 25.5483C77.1652 25.3383 77.2177 25.1517 77.346 24.9883L81.756 19.3183C81.896 19.1317 82.0885 19.0383 82.3335 19.0383C82.5902 19.0383 82.7944 19.1317 82.946 19.3183L87.041 24.5683C87.0994 24.65 87.1519 24.7025 87.1985 24.7258C87.2452 24.7492 87.2802 24.7667 87.3035 24.7783C87.5019 24.7783 87.6652 24.8483 87.7935 24.9883C87.9335 25.1167 88.0094 25.28 88.021 25.4783C88.0444 25.6883 87.986 25.8692 87.846 26.0208C87.706 26.1725 87.531 26.2542 87.321 26.2658H87.2685Z" fill="#1F2041"></path>
+              <path d="M91.7343 26.2658C91.5126 26.2658 91.326 26.19 91.1743 26.0383C91.0226 25.8867 90.9468 25.7 90.9468 25.4783V14.1033C90.9468 13.8933 91.0226 13.7125 91.1743 13.5608C91.326 13.4092 91.5126 13.3333 91.7343 13.3333C91.9443 13.3333 92.1251 13.4092 92.2768 13.5608C92.4285 13.7125 92.5043 13.8933 92.5043 14.1033V25.4783C92.5043 25.7 92.4285 25.8867 92.2768 26.0383C92.1251 26.19 91.9443 26.2658 91.7343 26.2658Z" fill="#1F2041"></path>
+              <path d="M104.938 26.2308C104.681 26.2308 104.483 26.1317 104.343 25.9333L97.0452 16.3433V25.4783C97.0452 25.6883 96.9693 25.8692 96.8177 26.0208C96.6777 26.1608 96.5027 26.2308 96.2927 26.2308C96.0943 26.2308 95.9193 26.1608 95.7677 26.0208C95.616 25.8692 95.5402 25.6883 95.5402 25.4783V14.1208C95.5402 13.9575 95.5868 13.8117 95.6802 13.6833C95.7735 13.555 95.9018 13.4675 96.0652 13.4208C96.2168 13.3625 96.3685 13.3567 96.5202 13.4033C96.6718 13.45 96.8002 13.5375 96.9052 13.6658L104.185 23.2733V14.1208C104.185 13.9225 104.255 13.7475 104.395 13.5958C104.547 13.4442 104.728 13.3683 104.938 13.3683C105.148 13.3683 105.323 13.4442 105.463 13.5958C105.614 13.7475 105.69 13.9225 105.69 14.1208V25.4783C105.69 25.6417 105.643 25.7875 105.55 25.9158C105.457 26.0442 105.334 26.1375 105.183 26.1958C105.066 26.2192 104.984 26.2308 104.938 26.2308Z" fill="#1F2041"></path>
+              <path d="M19.9999 27.0589C19.3528 27.0589 18.8234 26.5295 18.8234 25.8824C18.8234 21.353 15.1175 17.6471 10.5881 17.6471C9.94103 17.6471 9.41162 17.1177 9.41162 16.4707C9.41162 15.8236 9.94103 15.2942 10.5881 15.2942C16.441 15.2942 21.1763 20.0295 21.1763 25.8824C21.1763 26.5295 20.6469 27.0589 19.9999 27.0589Z" fill="url(#paint0_linear)"></path>
+              <path d="M30.5882 16.4707C30.5882 17.1177 30.0588 17.6471 29.4117 17.6471C26.6176 17.6471 24.1176 19.0589 22.647 21.206C22.3235 20.3824 21.9411 19.6177 21.4705 18.9118C23.4117 16.6765 26.2646 15.2942 29.4117 15.2942C30.0588 15.2942 30.5882 15.8236 30.5882 16.4707Z" fill="url(#paint1_linear)"></path>
+              <path d="M20 40C8.97059 40 0 31.0294 0 20C0 8.97059 8.97059 0 20 0C31.0294 0 40 8.97059 40 20C40 31.0294 31.0294 40 20 40ZM20 2.35294C10.2647 2.35294 2.35294 10.2647 2.35294 20C2.35294 29.7353 10.2647 37.6471 20 37.6471C29.7353 37.6471 37.6471 29.7353 37.6471 20C37.6471 10.2647 29.7353 2.35294 20 2.35294Z" fill="url(#paint2_linear)"></path>
+              <defs>
+                <lineargradient id="paint0_linear" x1="15.294" y1="15.2942" x2="15.294" y2="27.0589" gradientunits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#BC9CFF"></stop>
+                  <stop offset="1" stop-color="#8BA4F9"></stop>
+                </lineargradient>
+                <lineargradient id="paint1_linear" x1="26.0293" y1="15.2942" x2="26.0293" y2="21.206" gradientunits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#6FCF97"></stop>
+                  <stop offset="1" stop-color="#66D2EA"></stop>
+                </lineargradient>
+                <lineargradient id="paint2_linear" x1="20" y1="0" x2="20" y2="40" gradientunits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#BC9CFF"></stop>
+                  <stop offset="1" stop-color="#8BA4F9"></stop>
+                </lineargradient>
+              </defs>
+            </svg></a>
+<label class="hamburger-menu">
+  <input class="hamburger-menu__checkbox" type="checkbox"><span class="hamburger-menu__line-1"></span><span class="hamburger-menu__line-2"></span><span class="hamburger-menu__line-3"></span>
+</label>
+          <div class="header__container">
+            <ul class="header__menu">
+              <li class="menu-item"><a class="menu-item__about-us" href="/mock-address/change-me" target="blank"> О нас</a></li>
+              <li class="menu-item">
+                <details class="menu-item__services">
+                  <summary class="services__button">Услуги</summary>
+                  <div class="services__list"><a class="services__item" href="/mock-address/change-me" target="blank">Lorem</a><a class="services__item" href="/mock-address/change-me" target="blank">Lorem ipsum</a><a class="services__item" href="/mock-address/change-me" target="blank">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></div>
+                </details>
+              </li>
+              <li class="menu-item"><a class="menu-item__vacancies" href="/mock-address/change-me" target="blank">Вакансии</a></li>
+              <li class="menu-item"> <a class="menu-item__news" href="/mock-address/change-me" target="blank">Новости</a></li>
+              <li class="menu-item">
+                <details class="menu-item__agreements">
+                  <summary class="agreements__button">Соглашения</summary>
+                  <div class="agreements__list"><a class="agreements__item" href="/mock-address/change-me" target="blank">Lorem</a><a class="agreements__item" href="/mock-address/change-me" target="blank">Lorem ipsum </a><a class="agreements__item" href="/mock-address/change-me" target="blank">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></div>
+                </details>
+              </li>
+            </ul>
+            <button class="button_bordered header__button-log-in"><span class="button_bordered__message">войти</span></button>
+            <button class="button_filled header__button-registration"><span class="button_filled__message">зарегистрироваться</span></button>
+          </div>
+        </div>
+      </header>
+      <main class="layout__main">
+        <div class="room-details">
+          <div class="room-details__background-wrapper"></div>
+          <div class="room-details__content-wrapper">
+            <div class="room-details__content">
+              <div class="room-details__additional-room-info">
+                <div class="additional-room-info">
+                  <h2 class="additional-room-info__header">Сведения о номере</h2>
+                  <ul class="additional-room-info__list">
+                    <li class="additional-room-info__item"><i class="additional-room-info__item-icon material-icons">insert_emoticon</i>
+                      <div class="additional-room-info__item-text-wrapper"><span class="additional-room-info__item-name">Комфорт</span><span class="additional-room-info__item-description">Шумопоглощающие стены</span></div>
+                    </li>
+                    <li class="additional-room-info__item"><i class="additional-room-info__item-icon material-icons">location_city</i>
+                      <div class="additional-room-info__item-text-wrapper"><span class="additional-room-info__item-name">Удобство</span><span class="additional-room-info__item-description">Окно в каждой из спален</span></div>
+                    </li>
+                    <li class="additional-room-info__item"><i class="additional-room-info__item-icon material-icons">whatshot</i>
+                      <div class="additional-room-info__item-text-wrapper"><span class="additional-room-info__item-name">Уют</span><span class="additional-room-info__item-description">Номер оснащён камином</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="room-details__diagram">
+                <div class="canvas-container">
+                  <div class="canvas-container__pie">
+                    <div class="canvas-container__items">
+                      <div class="canvas-container__number">260</div>
+                      <div class="canvas-container__text">голосов</div>
+                    </div>
+                    <svg class="chart" viewbox="0 0 32.3 33.3">
+                      <circle class="unit" stroke="url(#paint5_linear)" r="15.9" cx="50%" cy="50%"></circle>
+                      <circle class="unit" stroke="url(#paint4_linear)" r="15.9" cx="50%" cy="50%"></circle>
+                      <circle class="unit" stroke="url(#paint3_linear)" r="15.9" cx="50%" cy="50%"></circle>
+                      <defs>
+                        <lineargradient id="paint5_linear" x1=".5" x2=".5" y2="1">
+                          <stop stop-color="#ffe39c"></stop>
+                          <stop offset="1" stop-color="#ffba9c"></stop>
+                        </lineargradient>
+                        <lineargradient id="paint4_linear" x1="100%" y1="0%" x2="0%" y2="0%">
+                          <stop offset="0" stop-color="#6FCF97"></stop>
+                          <stop offset="100%" stop-color="#66D2EA"></stop>
+                        </lineargradient>
+                        <lineargradient id="paint3_linear" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0" stop-color="#BC9CFF"></stop>
+                          <stop offset="100%" stop-color="#8BA4F9"></stop>
+                        </lineargradient>
+                      </defs>
+                    </svg>
+                    <div class="legend">
+                      <ul class="caption-list">
+                        <li class="caption-item">Великолепно</li>
+                        <li class="caption-item">Хорошо</li>
+                        <li class="caption-item">Удовлетворительно</li>
+                        <li class="caption-item">Разочарован    </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="room-details__reviews">
+                <div class="reviews"><span class="reviews__amount">2 отзыва</span>
+                  <h2 class="reviews__header">Отзывы посетителей номера</h2>
+                  <div class="reviews__list">
+                    <template class="reviews__template">
+                      <div class="review">
+                        <div class="review__container-img">
+                          <div class="review__foto"></div>
+                          <div class="review__likes">
+                            <label class="like-button">
+                              <input class="like-button__checkbox" type="checkbox"><span class="like-button__value"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="review__container-text"><span class="review__author"></span><span class="review__date"></span><span class="review__text"></span></div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+              <div class="room-details__bullet-list">
+                <div class="bullet-list">
+                  <h2 class="bullet-list__header">Правила</h2>
+                  <ul class="bullet-list__list">
+                    <li class="bullet-list__item">Нельзя с питомцами</li>
+                    <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+                    <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="room-details__cancellation">
+                <h2 class="cancellation__header">Отмена</h2>
+                <p class="cancellation__description">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</p>
+              </div>
+            </div>
+            <div class="room-details__card">
+              <div class="booking-card">
+                      <div class="room-header">
+                        <div class="room-header__room-info"><span class="room-header__number">№</span><span class="room-header__room-number">888</span><span class="room-header__room-category">люкс</span></div>
+                        <div class="room-header__room-info"><span class="room-header__room-price">9 900₽</span><span class="room-header__per-day">в сутки</span></div>
+                      </div>
+                <div class="booking-card__dropdowns-wrapper">
+                        <div class="date-dropdowns">
+                          <div class="date-dropdowns__item">
+                                  <label class="text-field">прибытие
+                                    <input class="text-field__input date-dropdowns__datepicker date-dropdowns__from" type="text" placeholder="ДД.ММ.ГГГГ">
+                                  </label>
+                            <div class="date-dropdowns__arrow"></div>
+                          </div>
+                          <div class="date-dropdowns__item">
+                                  <label class="text-field">выезд
+                                    <input class="text-field__input date-dropdowns__to" type="text" placeholder="ДД.ММ.ГГГГ">
+                                  </label>
+                            <div class="date-dropdowns__arrow"></div>
+                          </div>
+                        </div>
+                        <div class="dropdown-guests__wrapper">
+                          <label class="dropdown-guests__label">гости
+                            <input class="dropdown-guests__value" type="hidden" value="0" name="number-of-guests">
+                          </label>
+                          <div class="dropdown-guests">
+                                  <button class="dropdown-button dropdown-button_disabled"><span class="dropdown-button__message"></span><span class="dropdown-button__arrow"></span></button>
+                            <div class="dropdown-guests__menu dropdown__menu_disabled">
+                              <ul class="dropdown-guests__menu-list">
+                                <li class="dropdown-guests__menu-item"><span class="dropdown-guests__menu-item-name">взрослые</span>
+                                        <div class="dropdown-counter" data-counter-value="0" data-min-value="0" data-max-value="4">
+                                          <button class="dropdown-counter__button-minus"><span class="dropdown-counter__minus">-</span></button><span class="dropdown-counter__value">0</span>
+                                          <button class="dropdown-counter__button-plus"><span class="dropdown-counter__plus">+</span></button>
+                                        </div>
+                                </li>
+                                <li class="dropdown-guests__menu-item"><span class="dropdown-guests__menu-item-name">дети</span>
+                                        <div class="dropdown-counter" data-counter-value="0" data-min-value="0" data-max-value="6">
+                                          <button class="dropdown-counter__button-minus"><span class="dropdown-counter__minus">-</span></button><span class="dropdown-counter__value">0</span>
+                                          <button class="dropdown-counter__button-plus"><span class="dropdown-counter__plus">+</span></button>
+                                        </div>
+                                </li>
+                                <li class="dropdown-guests__menu-item"><span class="dropdown-guests__menu-item-name">младенцы</span>
+                                        <div class="dropdown-counter" data-counter-value="0" data-min-value="0" data-max-value="2">
+                                          <button class="dropdown-counter__button-minus"><span class="dropdown-counter__minus">-</span></button><span class="dropdown-counter__value">0</span>
+                                          <button class="dropdown-counter__button-plus"><span class="dropdown-counter__plus">+</span></button>
+                                        </div>
+                                </li>
+                              </ul>
+                              <div class="dropdown-guests__footer">
+                                      <button class="button_text-only dropdown-guests__reset dropdown-guests__reset_disable">очистить</button>
+                                      <button class="button_text-only dropdown-guests__submit">применить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+                <div class="booking-card__counter">
+                  <div class="booking-card__price-per-period"><span class="price-per-period__price-per-day">9 990₽</span><span class="price-per-period__multiplicate">x</span><span class="price-per-period__days">4 суток</span><span class="price-per-period__amount">39 960₽</span></div>
+                  <div class="booking-card__services-tax"><span class="services-tax__name">Сбор за услуги:</span><span class="services-tax__discount">скидка 2 179₽</span><span class="services-tax__info-icon material-icons">info_outline</span><span class="services-tax__amount">0₽</span></div>
+                  <div class="booking-card__add-services-tax"><span class="add-services-tax__name">Сбор за дополнительные услуги:</span><span class="add-services-tax__discount"></span><span class="add-services-tax__info-icon material-icons">info_outline</span><span class="add-services-tax__amount">300₽</span></div>
+                  <div class="booking-card__total-amount"><span class="total-amount__name">Итого</span>
+                    <div class="total-amount__spots"></div><span class="total-amount__amount">38 081₽</span>
+                  </div>
+                </div>
+                      <button class="button_with-arrow undefined"><span class="button_with-arrow__message">забронировать</span><i class="material-icons arrow-forward_gradient">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="layout__footer">
+        <div class="footer"> 
+          <div class="footer__main">
+            <div class="footer__column"><a class="footer__logo" href="index.html">   
+                <svg width="106" height="40" viewbox="0 0 106 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M62.335 13.3683C62.5567 13.3683 62.7375 13.4442 62.8775 13.5958C63.0292 13.7358 63.105 13.9167 63.105 14.1383C63.105 14.3483 63.0292 14.5292 62.8775 14.6808C62.7375 14.8325 62.5567 14.9083 62.335 14.9083H58.5725V25.4083C58.5725 25.63 58.4967 25.8167 58.345 25.9683C58.205 26.1083 58.0242 26.1783 57.8025 26.1783C57.5925 26.1783 57.4117 26.1083 57.26 25.9683C57.1083 25.8167 57.0325 25.63 57.0325 25.4083V14.9083H53.27C53.06 14.9083 52.8792 14.8325 52.7275 14.6808C52.5758 14.5292 52.5 14.3483 52.5 14.1383C52.5 13.9167 52.5758 13.7358 52.7275 13.5958C52.8792 13.4442 53.06 13.3683 53.27 13.3683H62.335Z" fill="#1F2041"></path>
+                  <path d="M68.9076 13.3683C69.7943 13.3683 70.6285 13.5375 71.4101 13.8758C72.2034 14.2142 72.8918 14.675 73.4751 15.2583C74.0701 15.8417 74.5368 16.53 74.8751 17.3233C75.2134 18.105 75.3826 18.9392 75.3826 19.8258C75.3826 20.8642 75.1609 21.8208 74.7176 22.6958C74.2743 23.5708 73.6735 24.3058 72.9151 24.9008C72.9151 24.9008 72.9035 24.9125 72.8801 24.9358C72.3201 25.3558 71.7076 25.6883 71.0426 25.9333C70.3776 26.1667 69.6659 26.2833 68.9076 26.2833C68.0209 26.2833 67.1868 26.1142 66.4051 25.7758C65.6234 25.4375 64.9351 24.9767 64.3401 24.3933C63.7568 23.81 63.2959 23.1275 62.9576 22.3458C62.6193 21.5642 62.4501 20.7242 62.4501 19.8258C62.4501 18.8458 62.6484 17.9417 63.0451 17.1133C63.4418 16.2733 63.9843 15.5558 64.6726 14.9608L64.7426 14.8908C64.7543 14.8908 64.7718 14.8792 64.7951 14.8558C65.3551 14.3892 65.9851 14.0275 66.6851 13.7708C67.3851 13.5025 68.1259 13.3683 68.9076 13.3683ZM68.9076 24.7433C69.3509 24.7433 69.771 24.6908 70.1676 24.5858C70.576 24.4692 70.9609 24.3117 71.3226 24.1133L65.1801 16.6408C64.8068 17.0725 64.5151 17.5625 64.3051 18.1108C64.0951 18.6475 63.9901 19.2192 63.9901 19.8258C63.9901 20.5025 64.1185 21.1383 64.3751 21.7333C64.6318 22.3283 64.9818 22.8533 65.4251 23.3083C65.8801 23.7517 66.4051 24.1017 67.0001 24.3583C67.5951 24.615 68.2309 24.7433 68.9076 24.7433ZM72.5301 23.1508C72.9384 22.7075 73.2535 22.2058 73.4751 21.6458C73.7085 21.0742 73.8251 20.4675 73.8251 19.8258C73.8251 19.1492 73.6968 18.5133 73.4401 17.9183C73.1834 17.3233 72.8276 16.8042 72.3726 16.3608C71.9293 15.9058 71.4101 15.55 70.8151 15.2933C70.2201 15.0367 69.5843 14.9083 68.9076 14.9083C68.4409 14.9083 67.9918 14.9725 67.5601 15.1008C67.1284 15.2175 66.7259 15.3925 66.3526 15.6258L72.5301 23.1508Z" fill="#1F2041"></path>
+                  <path d="M82.351 20.6308C82.1177 20.6308 81.9194 20.5375 81.756 20.3508L77.2585 14.5758C77.1302 14.4125 77.0777 14.2317 77.101 14.0333C77.1244 13.8233 77.2177 13.6542 77.381 13.5258C77.5444 13.3975 77.7252 13.3508 77.9235 13.3858C78.1335 13.4092 78.3027 13.5025 78.431 13.6658L82.351 18.6708L86.1835 13.7533C86.3119 13.59 86.4752 13.4967 86.6735 13.4733C86.8835 13.45 87.0702 13.5025 87.2335 13.6308C87.3969 13.7592 87.4902 13.9283 87.5135 14.1383C87.5369 14.3367 87.4844 14.5175 87.356 14.6808L82.946 20.3508C82.7944 20.5375 82.596 20.6308 82.351 20.6308ZM87.2685 26.2658C87.2219 26.2658 87.146 26.26 87.041 26.2483C86.9477 26.2367 86.8369 26.2075 86.7085 26.1608C86.5802 26.1025 86.4402 26.0267 86.2885 25.9333C86.1485 25.8283 86.0085 25.6883 85.8685 25.5133L82.351 20.9808L78.5185 25.9158C78.3902 26.0792 78.221 26.1725 78.011 26.1958C77.8127 26.2192 77.6319 26.1667 77.4685 26.0383C77.3052 25.91 77.2119 25.7467 77.1885 25.5483C77.1652 25.3383 77.2177 25.1517 77.346 24.9883L81.756 19.3183C81.896 19.1317 82.0885 19.0383 82.3335 19.0383C82.5902 19.0383 82.7944 19.1317 82.946 19.3183L87.041 24.5683C87.0994 24.65 87.1519 24.7025 87.1985 24.7258C87.2452 24.7492 87.2802 24.7667 87.3035 24.7783C87.5019 24.7783 87.6652 24.8483 87.7935 24.9883C87.9335 25.1167 88.0094 25.28 88.021 25.4783C88.0444 25.6883 87.986 25.8692 87.846 26.0208C87.706 26.1725 87.531 26.2542 87.321 26.2658H87.2685Z" fill="#1F2041"></path>
+                  <path d="M91.7343 26.2658C91.5126 26.2658 91.326 26.19 91.1743 26.0383C91.0226 25.8867 90.9468 25.7 90.9468 25.4783V14.1033C90.9468 13.8933 91.0226 13.7125 91.1743 13.5608C91.326 13.4092 91.5126 13.3333 91.7343 13.3333C91.9443 13.3333 92.1251 13.4092 92.2768 13.5608C92.4285 13.7125 92.5043 13.8933 92.5043 14.1033V25.4783C92.5043 25.7 92.4285 25.8867 92.2768 26.0383C92.1251 26.19 91.9443 26.2658 91.7343 26.2658Z" fill="#1F2041"></path>
+                  <path d="M104.938 26.2308C104.681 26.2308 104.483 26.1317 104.343 25.9333L97.0452 16.3433V25.4783C97.0452 25.6883 96.9693 25.8692 96.8177 26.0208C96.6777 26.1608 96.5027 26.2308 96.2927 26.2308C96.0943 26.2308 95.9193 26.1608 95.7677 26.0208C95.616 25.8692 95.5402 25.6883 95.5402 25.4783V14.1208C95.5402 13.9575 95.5868 13.8117 95.6802 13.6833C95.7735 13.555 95.9018 13.4675 96.0652 13.4208C96.2168 13.3625 96.3685 13.3567 96.5202 13.4033C96.6718 13.45 96.8002 13.5375 96.9052 13.6658L104.185 23.2733V14.1208C104.185 13.9225 104.255 13.7475 104.395 13.5958C104.547 13.4442 104.728 13.3683 104.938 13.3683C105.148 13.3683 105.323 13.4442 105.463 13.5958C105.614 13.7475 105.69 13.9225 105.69 14.1208V25.4783C105.69 25.6417 105.643 25.7875 105.55 25.9158C105.457 26.0442 105.334 26.1375 105.183 26.1958C105.066 26.2192 104.984 26.2308 104.938 26.2308Z" fill="#1F2041"></path>
+                  <path d="M19.9999 27.0589C19.3528 27.0589 18.8234 26.5295 18.8234 25.8824C18.8234 21.353 15.1175 17.6471 10.5881 17.6471C9.94103 17.6471 9.41162 17.1177 9.41162 16.4707C9.41162 15.8236 9.94103 15.2942 10.5881 15.2942C16.441 15.2942 21.1763 20.0295 21.1763 25.8824C21.1763 26.5295 20.6469 27.0589 19.9999 27.0589Z" fill="url(#paint6_linear)"></path>
+                  <path d="M30.5882 16.4707C30.5882 17.1177 30.0588 17.6471 29.4117 17.6471C26.6176 17.6471 24.1176 19.0589 22.647 21.206C22.3235 20.3824 21.9411 19.6177 21.4705 18.9118C23.4117 16.6765 26.2646 15.2942 29.4117 15.2942C30.0588 15.2942 30.5882 15.8236 30.5882 16.4707Z" fill="url(#paint7_linear)"></path>
+                  <path d="M20 40C8.97059 40 0 31.0294 0 20C0 8.97059 8.97059 0 20 0C31.0294 0 40 8.97059 40 20C40 31.0294 31.0294 40 20 40ZM20 2.35294C10.2647 2.35294 2.35294 10.2647 2.35294 20C2.35294 29.7353 10.2647 37.6471 20 37.6471C29.7353 37.6471 37.6471 29.7353 37.6471 20C37.6471 10.2647 29.7353 2.35294 20 2.35294Z" fill="url(#paint8_linear)"></path>
+                  <defs>
+                    <lineargradient id="paint6_linear" x1="15.294" y1="15.2942" x2="15.294" y2="27.0589" gradientunits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#BC9CFF"></stop>
+                      <stop offset="1" stop-color="#8BA4F9"></stop>
+                    </lineargradient>
+                    <lineargradient id="paint7_linear" x1="26.0293" y1="15.2942" x2="26.0293" y2="21.206" gradientunits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#6FCF97"></stop>
+                      <stop offset="1" stop-color="#66D2EA"></stop>
+                    </lineargradient>
+                    <lineargradient id="paint8_linear" x1="20" y1="0" x2="20" y2="40" gradientunits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#BC9CFF"></stop>
+                      <stop offset="1" stop-color="#8BA4F9"></stop>
+                    </lineargradient>
+                  </defs>
+                </svg></a><span class="footer__about-us">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</span></div>
+            <ul class="footer__column">
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Навигация</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">О нас</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Новости</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Служба поддержки</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Услуги</a></li>
+            </ul>
+            <ul class="footer__column">
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">О нас</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">О сервисе</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Наша команда</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Вакансии</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Инвесторы</a></li>
+            </ul>
+            <ul class="footer__column">
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Служба поддержки</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Соглашения</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Сообщества</a></li>
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Связь с нами</a></li>
+            </ul>
+            <ul class="footer__column">
+              <li class="footer__link"><a href="/mock-address/change-me" target="blank">Подписка</a></li>
+              <li class="footer__subscribe">Получайте специальные предложения и новости сервиса</li>
+              <li class="footer__subscribe"> 
+                <div class="subscription-text-field">
+                  <label class="text-field">
+                    <input class="text-field__input undefined" type="email" placeholder="Email">
+                  </label>
+                  <button class="subscription-text-field__button"><i class="material-icons arrow-forward_gradient">arrow_forward</i></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__footer"><span class="footer__copyright">Copyright © 2018 Toxin отель. Все права защищены.</span>
+            <div class="social-icons"> <a class="social-icons__twitter" href="/mock-address/change-me/twitter" target="blank" rel="noopener noreferrer">
+                    <svg width="24" height="20" viewbox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.5156 5.125C22.4531 4.42188 23.2969 3.57812 23.9531 2.59375C23.1094 2.96875 22.125 3.25 21.1406 3.34375C22.1719 2.73438 22.9219 1.79688 23.2969 0.625C22.3594 1.1875 21.2812 1.60938 20.2031 1.84375C19.2656 0.859375 18 0.296875 16.5938 0.296875C13.875 0.296875 11.6719 2.5 11.6719 5.21875C11.6719 5.59375 11.7188 5.96875 11.8125 6.34375C7.73438 6.10938 4.07812 4.14062 1.64062 1.1875C1.21875 1.89062 0.984375 2.73438 0.984375 3.67188C0.984375 5.35938 1.82812 6.85938 3.1875 7.75C2.39062 7.70312 1.59375 7.51562 0.9375 7.14062V7.1875C0.9375 9.57812 2.625 11.5469 4.875 12.0156C4.5 12.1094 4.03125 12.2031 3.60938 12.2031C3.28125 12.2031 3 12.1562 2.67188 12.1094C3.28125 14.0781 5.10938 15.4844 7.26562 15.5312C5.57812 16.8438 3.46875 17.6406 1.17188 17.6406C0.75 17.6406 0.375 17.5938 0 17.5469C2.15625 18.9531 4.73438 19.75 7.54688 19.75C16.5938 19.75 21.5156 12.2969 21.5156 5.78125C21.5156 5.54688 21.5156 5.35938 21.5156 5.125Z" fill="url(#paint3_linear)"></path>
+                      <defs>
+                        <lineargradient id="paint3_linear" x1="12" y1="0" x2="12" y2="24" gradientunits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#BC9CFF"></stop>
+                          <stop offset="1" stop-color="#8BA4F9"></stop>
+                        </lineargradient>
+                      </defs>
+                    </svg></a><a class="social-icons__facebook" href="/mock-address/change-me/facebook" target="blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.25 0.5H2.75C1.48438 0.5 0.5 1.53125 0.5 2.75V19.25C0.5 20.5156 1.48438 21.5 2.75 21.5H9.17188V14.375H6.21875V11H9.17188V8.46875C9.17188 5.5625 10.9062 3.92188 13.5312 3.92188C14.8438 3.92188 16.1562 4.15625 16.1562 4.15625V7.01562H14.7031C13.25 7.01562 12.7812 7.90625 12.7812 8.84375V11H16.0156L15.5 14.375H12.7812V21.5H19.25C20.4688 21.5 21.5 20.5156 21.5 19.25V2.75C21.5 1.53125 20.4688 0.5 19.25 0.5Z" fill="url(#paint4_linear)"></path>
+                      <defs>
+                        <lineargradient id="paint4_linear" x1="11" y1="1" x2="11" y2="25" gradientunits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#BC9CFF"></stop>
+                          <stop offset="1" stop-color="#8BA4F9"></stop>
+                        </lineargradient>
+                      </defs>
+                    </svg></a><a class="social-icons__instagram" href="/mock-address/change-me/instagram" target="blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 5.60938C8 5.60938 5.60938 8.04688 5.60938 11C5.60938 14 8 16.3906 11 16.3906C13.9531 16.3906 16.3906 14 16.3906 11C16.3906 8.04688 13.9531 5.60938 11 5.60938ZM11 14.5156C9.07812 14.5156 7.48438 12.9688 7.48438 11C7.48438 9.07812 9.03125 7.53125 11 7.53125C12.9219 7.53125 14.4688 9.07812 14.4688 11C14.4688 12.9688 12.9219 14.5156 11 14.5156ZM17.8438 5.42188C17.8438 4.71875 17.2812 4.15625 16.5781 4.15625C15.875 4.15625 15.3125 4.71875 15.3125 5.42188C15.3125 6.125 15.875 6.6875 16.5781 6.6875C17.2812 6.6875 17.8438 6.125 17.8438 5.42188ZM21.4062 6.6875C21.3125 5 20.9375 3.5 19.7188 2.28125C18.5 1.0625 17 0.6875 15.3125 0.59375C13.5781 0.5 8.375 0.5 6.64062 0.59375C4.95312 0.6875 3.5 1.0625 2.23438 2.28125C1.01562 3.5 0.640625 5 0.546875 6.6875C0.453125 8.42188 0.453125 13.625 0.546875 15.3594C0.640625 17.0469 1.01562 18.5 2.23438 19.7656C3.5 20.9844 4.95312 21.3594 6.64062 21.4531C8.375 21.5469 13.5781 21.5469 15.3125 21.4531C17 21.3594 18.5 20.9844 19.7188 19.7656C20.9375 18.5 21.3125 17.0469 21.4062 15.3594C21.5 13.625 21.5 8.42188 21.4062 6.6875ZM19.1562 17.1875C18.8281 18.125 18.0781 18.8281 17.1875 19.2031C15.7812 19.7656 12.5 19.625 11 19.625C9.45312 19.625 6.17188 19.7656 4.8125 19.2031C3.875 18.8281 3.17188 18.125 2.79688 17.1875C2.23438 15.8281 2.375 12.5469 2.375 11C2.375 9.5 2.23438 6.21875 2.79688 4.8125C3.17188 3.92188 3.875 3.21875 4.8125 2.84375C6.17188 2.28125 9.45312 2.42188 11 2.42188C12.5 2.42188 15.7812 2.28125 17.1875 2.84375C18.0781 3.17188 18.7812 3.92188 19.1562 4.8125C19.7188 6.21875 19.5781 9.5 19.5781 11C19.5781 12.5469 19.7188 15.8281 19.1562 17.1875Z" fill="url(#paint5_linear)"></path>
+                      <defs>
+                        <lineargradient id="paint5_linear" x1="11" y1="1" x2="11" y2="25" gradientunits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#BC9CFF"></stop>
+                          <stop offset="1" stop-color="#8BA4F9"></stop>
+                        </lineargradient>
+                      </defs>
+                    </svg></a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  <script src="vendors-node_modules_air-datepicker_src_js_air-datepicker_js-node_modules_inputmask_index_js--92510d.js"></script><script src="main.js"></script></body>
+</html>

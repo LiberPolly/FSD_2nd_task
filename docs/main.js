@@ -219,23 +219,13 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   \***************************************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _diagram_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./diagram.css */ "./components/diagram/diagram.css");
-/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
-/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_1__);
 
-
-var captionsList = document.querySelectorAll('.caption-item');
-var unitsList = document.querySelectorAll('.unit');
-lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(captionsList, function (item, index) {
-  item.addEventListener('mouseover', function () {
-    unitsList[index].classList.add('hovered');
-  });
-});
 
 /***/ }),
 
@@ -1368,6 +1358,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./pages/room-details/room-details.js":
+/*!********************************************!*\
+  !*** ./pages/room-details/room-details.js ***!
+  \********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _room_details_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room-details.css */ "./pages/room-details/room-details.css");
+
+
+/***/ }),
+
+/***/ "./pages/search-room/search-room.js":
+/*!******************************************!*\
+  !*** ./pages/search-room/search-room.js ***!
+  \******************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _search_room_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-room.css */ "./pages/search-room/search-room.css");
+
+
+/***/ }),
+
 /***/ "./pages/sign-in/sign-in.js":
 /*!**********************************!*\
   !*** ./pages/sign-in/sign-in.js ***!
@@ -2088,6 +2110,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./pages/room-details/room-details.css":
+/*!*********************************************!*\
+  !*** ./pages/room-details/room-details.css ***!
+  \*********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./pages/search-room/search-room.css":
+/*!*******************************************!*\
+  !*** ./pages/search-room/search-room.css ***!
+  \*******************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./pages/sign-in/sign-in.css":
 /*!***********************************!*\
   !*** ./pages/sign-in/sign-in.css ***!
@@ -2330,6 +2384,8 @@ var map = {
 	"./index/index.js": "./pages/index/index.js",
 	"./landing/landing.js": "./pages/landing/landing.js",
 	"./registration/registration.js": "./pages/registration/registration.js",
+	"./room-details/room-details.js": "./pages/room-details/room-details.js",
+	"./search-room/search-room.js": "./pages/search-room/search-room.js",
 	"./sign-in/sign-in.js": "./pages/sign-in/sign-in.js",
 	"./ui-kit__cards/ui-kit__cards.js": "./pages/ui-kit__cards/ui-kit__cards.js",
 	"./ui-kit__colors-n-type/ui-kit__colors-n-type.js": "./pages/ui-kit__colors-n-type/ui-kit__colors-n-type.js",
