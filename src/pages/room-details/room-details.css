@@ -1,0 +1,99 @@
+.room-details {
+  display: flex;
+  flex-direction: column;
+}
+.room-details__background-wrapper {
+  height: 30.313rem;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background: url(images/2.jpg) top right no-repeat, url(images/3.jpg) bottom right no-repeat, url(images/1.jpg) left no-repeat;
+}
+@media (max-width: 991px) {
+  .room-details__background-wrapper {
+    background: url(images/1.jpg) left no-repeat, url(images/2.jpg) top right no-repeat, url(images/3.jpg) bottom right no-repeat;
+  }
+}
+.room-details__content-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4.4rem 8.355rem 1.3rem 8.85rem;
+  background-color: #fff;
+}
+@media (max-width: 1199px) {
+  .room-details__content-wrapper {
+    padding: 4.4rem 2rem 1.3rem;
+  }
+}
+@media (max-width: 767px) {
+  .room-details__content-wrapper {
+    padding: 4.4rem 0 1.3rem 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .room-details__content-wrapper {
+    padding: 2rem 0 1.3rem 0;
+  }
+}
+.room-details__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.room-details__content > div {
+  margin: 0 4.375rem 1.875rem 0;
+}
+@media (max-width: 767px) {
+  .room-details__content > div {
+    margin: 0 2.5rem 1.5rem 0;
+  }
+}
+@media (max-width: 575px) {
+  .room-details__content > div {
+    margin: 0 1rem 1.5rem;
+  }
+}
+@media (max-width: 1199px) {
+  .room-details__content .room-details__additional-room-info {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .room-details__content .room-details__additional-room-info {
+    width: unset;
+  }
+}
+.room-details__card {
+  height: 100%;
+}
+@media (max-width: 1199px) {
+  .room-details__card {
+    position: absolute;
+    right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .room-details__card {
+    position: unset;
+    order: -1;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    height: unset;
+  }
+}
+.room-details__cancellation {
+  max-width: 21.313rem;
+}
+@media (max-width: 767px) {
+  .room-details__cancellation {
+    max-width: 20rem;
+  }
+}
+.room-details__cancellation__header {
+  margin-bottom: 0.45rem;
+}
+.room-details__cancellation__description {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #575871;
+}

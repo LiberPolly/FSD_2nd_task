@@ -1,0 +1,109 @@
+@import '../../theme/variables.less';
+
+.room-details {
+  display: flex;
+  flex-direction: column;
+
+  &__background-wrapper {
+    height: 30.313rem;
+    background: @color-green-gradient;
+    background:
+      url(./images/2.jpg) top right no-repeat,
+      url(./images/3.jpg) bottom right no-repeat,
+      url(./images/1.jpg) left no-repeat;
+    @media (max-width: @md) {
+      background:
+      url(./images/1.jpg) left no-repeat,
+      url(./images/2.jpg) top right no-repeat,
+      url(./images/3.jpg) bottom right no-repeat;
+    }
+  }
+
+  &__content-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 4.4rem 8.355rem 1.3rem 8.85rem;
+    background-color: @color-white;
+
+    @media (max-width: @lg) {
+      padding: 4.4rem 2rem 1.3rem;
+    }
+
+    @media (max-width: @sm) {
+      padding: 4.4rem 0 1.3rem 2rem;
+    }
+
+    @media (max-width: @xs) {
+      padding: 2rem 0 1.3rem 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & > div {
+      margin: 0 4.375rem 1.875rem 0;
+
+      @media (max-width: @sm) {
+        margin: 0 2.5rem 1.5rem 0;
+      }
+
+      @media (max-width: @xs) {
+        margin: 0 1rem 1.5rem;
+      }
+    }
+
+    .room-details__additional-room-info {
+      @media (max-width: @lg) {
+        width: 100%;
+      }
+      @media (max-width: @sm) {
+        width: unset;
+      }
+    }
+
+    .room-details__diagram {
+      // @media (max-width: @xs) {
+      //   margin: 0 auto;
+      // }
+    }
+  }
+  
+  &__card {
+    height: 100%;
+
+    @media (max-width: @lg) {
+      position: absolute;
+      right: 2rem;
+    }
+
+    @media (max-width: @sm) {
+      position: unset;
+      order: -1;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      height: unset;
+    }
+  }
+
+  &__cancellation {
+    max-width: 21.313rem;
+
+    @media (max-width: @sm) {
+      max-width: 20rem;
+    }
+    &__header {
+      margin-bottom: 0.45rem;
+     }
+
+    &__description {
+       font-size: 0.875rem;
+       line-height: 1.5rem;
+       color: @color-75;
+     }
+  }
+}

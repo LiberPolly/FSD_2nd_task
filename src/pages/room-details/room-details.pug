@@ -1,0 +1,25 @@
+extends ../base/base.pug
+include ../../components/additional-room-info/additional-room-info.pug
+include ../../components/diagram/diagram.pug
+include ../../components/reviews/reviews.pug
+include ../../components/bullet-list/bullet-list.pug
+
+block main
+  .room-details
+    .room-details__background-wrapper
+    .room-details__content-wrapper
+      .room-details__content
+        .room-details__additional-room-info
+          - const additionalRoomInfo = [['Комфорт', 'Шумопоглощающие стены', 'material-icons', 'insert_emoticon'], ['Удобство', 'Окно в каждой из спален', 'material-icons', 'location_city'], ['Уют', 'Номер оснащён камином', 'material-icons', 'whatshot']]
+          +additional-room-info('Сведения о номере', additionalRoomInfo)
+        .room-details__diagram
+          +diagram()
+        .room-details__reviews
+          +reviews('Отзывы посетителей номера')
+        .room-details__bullet-list
+          +bullet-list('Правила', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+        .room-details__cancellation
+          h2.cancellation__header Отмена
+          p.cancellation__description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      .room-details__card
+        include ../../components/booking-card/booking-card.pug
