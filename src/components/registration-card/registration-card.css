@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 23.6rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1.46rem 1.8rem 1.8rem;
   border-radius: 4px;
   background-color: #fff;

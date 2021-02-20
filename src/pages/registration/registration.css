@@ -9,18 +9,8 @@
   background-size: cover;
   background-position: center;
 }
-@media (max-width: 767px) {
-  .registration {
-    padding: 4.4rem 4.4rem 1.3rem;
-  }
-}
-@media (max-width: 575px) {
-  .registration {
-    padding: 2rem 0.5rem 1.3rem;
-  }
-}
 @media (max-width: 410px) {
   .registration {
-    padding: 1.5rem 0.1rem 1.3rem;
+    height: 44.75rem;
   }
 }

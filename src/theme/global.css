@@ -28,8 +28,10 @@ body {
 a {
   text-decoration: none;
   color: unset;
-  outline: none;
   cursor: pointer;
+}
+a:active {
+  outline: none;
 }
 li {
   list-style-type: none;

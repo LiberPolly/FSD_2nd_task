@@ -17,16 +17,19 @@
 }
 @media (max-width: 767px) {
   .landing {
+    align-items: center;
     padding: 4.4rem 4.4rem 1.3rem;
   }
 }
 @media (max-width: 575px) {
   .landing {
+    align-items: center;
     padding: 2rem 0.5rem 1.3rem;
   }
 }
 @media (max-width: 410px) {
   .landing {
+    align-items: center;
     padding: 1.5rem 0.1rem 1.3rem;
   }
 }

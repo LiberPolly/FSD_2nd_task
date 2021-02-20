@@ -7,6 +7,11 @@
   background-color: @color-white;
   box-shadow: @box-shadow-header;
 
+  @media (max-width: @lg) {
+    display: flex;
+    align-items: center;
+  }
+
   &__main {
     display: flex;
     flex-direction: row;
@@ -34,9 +39,6 @@
 
       @media (max-width: @lg) {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0.2rem;
         margin: 0 auto;
       }
     }
@@ -110,6 +112,7 @@
       .footer__copyright {
         margin: 0 auto;
         margin-bottom: 1.25rem;
+        text-align: center;
       }
 
       .social-icons {
