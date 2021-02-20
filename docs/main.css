@@ -27,8 +27,10 @@ body {
 a {
   text-decoration: none;
   color: unset;
-  outline: none;
   cursor: pointer;
+}
+a:active {
+  outline: none;
 }
 li {
   list-style-type: none;
@@ -1169,6 +1171,12 @@ body {
   background-color: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
+@media (max-width: 1199px) {
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+}
 .footer__main {
   display: flex;
   flex-direction: row;
@@ -1198,9 +1206,6 @@ body {
 @media (max-width: 1199px) {
   .footer__column:first-child {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0.2rem;
     margin: 0 auto;
   }
 }
@@ -1268,6 +1273,7 @@ body {
   .footer__footer .footer__copyright {
     margin: 0 auto;
     margin-bottom: 1.25rem;
+    text-align: center;
   }
   .footer__footer .social-icons {
     margin: 0 auto;
@@ -1814,6 +1820,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 23.6rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1.46rem 1.8rem 1.8rem;
   border-radius: 4px;
   background-color: #fff;
@@ -2029,6 +2038,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 23.7rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1.46rem 1.8rem 2rem;
   border-radius: 4px;
   background-color: #fff;
@@ -2285,16 +2297,19 @@ body {
 }
 @media (max-width: 767px) {
   .landing {
+    align-items: center;
     padding: 4.4rem 4.4rem 1.3rem;
   }
 }
 @media (max-width: 575px) {
   .landing {
+    align-items: center;
     padding: 2rem 0.5rem 1.3rem;
   }
 }
 @media (max-width: 410px) {
   .landing {
+    align-items: center;
     padding: 1.5rem 0.1rem 1.3rem;
   }
 }
@@ -2332,19 +2347,9 @@ body {
   background-size: cover;
   background-position: center;
 }
-@media (max-width: 767px) {
-  .registration {
-    padding: 4.4rem 4.4rem 1.3rem;
-  }
-}
-@media (max-width: 575px) {
-  .registration {
-    padding: 2rem 0.5rem 1.3rem;
-  }
-}
 @media (max-width: 410px) {
   .registration {
-    padding: 1.5rem 0.1rem 1.3rem;
+    height: 44.75rem;
   }
 }
 
