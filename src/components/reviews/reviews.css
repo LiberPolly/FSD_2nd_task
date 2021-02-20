@@ -1,5 +1,16 @@
+.reviews {
+  position: relative;
+}
 .reviews__header {
   margin-bottom: 1.25rem;
+}
+.reviews__amount {
+  position: absolute;
+  top: -0.3rem;
+  right: 0;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  color: #8f90A0;
 }
 .reviews .review {
   display: flex;
