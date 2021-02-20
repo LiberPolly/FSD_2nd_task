@@ -52,7 +52,7 @@
     padding: 1.875rem 0.5rem 1.875rem 0.5rem;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 410px) {
   .form-elements {
     padding: 1.875rem 0 1.875rem 0;
   }
@@ -174,15 +174,15 @@
   left: 15.28rem;
   top: 1rem;
 }
-.additional-room-info__list .additional-room-info__item {
+.form-elements__column.additional-room-info__list .additional-room-info__item {
   display: none;
 }
-.additional-room-info__list .additional-room-info__item:nth-child(-n+2) {
+.form-elements__column.additional-room-info__list .additional-room-info__item:nth-child(-n+2) {
   display: flex;
 }
-.reviews__list .review {
+.form-elements__column.form-elements__column_no-width.reviews__list .review {
   display: none;
 }
-.reviews__list .review:nth-child(2) {
+.form-elements__column.form-elements__column_no-width.reviews__list .review:nth-child(2) {
   display: flex;
 }

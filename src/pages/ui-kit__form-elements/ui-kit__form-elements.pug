@@ -122,7 +122,8 @@ block main
           +rich-checkbox-buttons('rich checkbox buttons', richCheckboxButtonsSettings)
       .form-elements__column.form-elements__column_margin-right
         .form-element.form-element_width-16
-          +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+          h3.form-element__name bullet list
+          +bullet-list('', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
     .form-elements__row.form-elements__row_no-wrap
       .form-elements__column
         - const additionalRoomInfo = [['Комфорт', 'Шумопоглощающие стены', 'material-icons', 'insert_emoticon'], ['Удобство', 'Окно в каждой из спален', 'material-icons', 'location_city'], ['Уют', 'Номер оснащён камином', 'material-icons', 'whatshot']]
