@@ -1,3 +1,6 @@
+.bullet-list {
+  max-width: 16.625rem;
+}
 .bullet-list__header {
   margin-bottom: 0.45rem;
 }
