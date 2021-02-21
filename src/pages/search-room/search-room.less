@@ -1,0 +1,61 @@
+@import '../../theme/variables.less';
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4.4rem 8.355rem 1.3rem 8.85rem;
+  height: 51.875rem;
+  background: @color-green-gradient;
+  animation: slideFotos 60s infinite;
+
+  &__slogan {
+    width: 18.563rem;
+    align-self: flex-end;
+    text-align: right;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: @color-75;
+  }
+
+  @media (max-width: @sm) {
+    align-items: center;
+    padding: 4.4rem 4.4rem 1.3rem;
+  }
+
+  @media (max-width: @xs) {
+    align-items: center;
+    padding: 2rem 0.5rem 1.3rem;
+  }
+
+  @media (max-width: @xxs) {
+    align-items: center;
+    padding: 1.5rem 0.1rem 1.3rem;
+  }
+}
+
+@keyframes slideFotos {
+  0% {
+    background-image: url(./images/1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  35% {
+    background-image: url(./images/2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  70% {
+    background-image: url(./images/3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  100% {
+    background-image: url(./images/1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
