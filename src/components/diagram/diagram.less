@@ -1,0 +1,98 @@
+@import '../../theme/variables.less';
+
+.diagram {
+  &__header {
+    margin-bottom: 1.25rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    .diagram__votes {
+      position: absolute;
+      top: 36.5px;
+      left: 28.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: @color-purple;
+    }
+
+    .diagram__votes-amount {
+      font-size: 24px;
+    }
+
+    .diagram__votes-text {
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__diagram {
+    width: 7.5rem;
+    height: 7.5rem;
+
+    .unit {
+      fill: none;
+      stroke-width: 1;
+      cursor: pointer;
+    }
+
+    .unit.unit_green {
+      stroke-dasharray: 24 100;
+    }
+
+    .unit.unit_orange {
+      stroke-dasharray: 49 100;
+      stroke-dashoffset: -25;
+    }
+
+    .unit.unit_violet {
+      stroke-dasharray: 24 100;
+      stroke-dashoffset: -75;
+    }
+  }
+
+  &__legend {
+    align-self: flex-end;
+  }
+
+  &__legend-item {
+    position: relative;
+    margin-left: 30.5px;
+    padding-left: 15px;
+    font-size: 0.875rem;
+    line-height: 24px;
+    color: @color-75;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 50%;
+    }
+
+    &:nth-child(1)::before {
+      background: @color-yellow-gradient;
+    }
+
+    &:nth-child(2)::before {
+      background: @color-green-gradient;
+    }
+
+    &:nth-child(3)::before {
+      background: @color-purple-gradient;
+    }
+
+    &:nth-child(4)::before {
+      background: @color-grey-gradient;
+    }
+  }
+}

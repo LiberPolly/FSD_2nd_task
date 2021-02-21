@@ -1,0 +1,25 @@
+.diagram
+  h2.diagram__header Впечатления от номера
+  .diagram__wrapper
+    .diagram__votes
+      span.diagram__votes-amount 260
+      span.diagram__votes-text голосов     
+    svg.diagram__diagram(viewbox='0 0 32.3 33.3')
+      circle.unit.unit_orange(stroke='url(#paint-orange_linear)', r='15.9', cx='50%', cy='50%')
+      circle.unit.unit_green(stroke='url(#paint-green_linear)', r='15.9', cx='50%', cy='50%')
+      circle.unit.unit_violet(stroke='url(#paint-violet_linear)', r='15.9', cx='50%', cy='50%')
+      defs
+        lineargradient(id='paint-orange_linear', x1='.5', x2='.5', y2='1')
+          stop(offset='0', stop-color='#ffe39c')
+          stop(offset='1', stop-color='#ffba9c')
+        lineargradient(id='paint-green_linear', x1='100%', y1='0%', x2='0%', y2='0%')
+          stop(offset='0', stop-color='#6FCF97')
+          stop(offset='100%', stop-color='#66D2EA')
+        lineargradient(id='paint-violet_linear', x1='0%', y1='0%', x2='0%', y2='100%')
+          stop(offset='0', stop-color='#BC9CFF')
+          stop(offset='100%', stop-color='#8BA4F9')
+    ul.diagram__legend
+      li.diagram__legend-item Великолепно
+      li.diagram__legend-item Хорошо
+      li.diagram__legend-item Удовлетворительно
+      li.diagram__legend-item Разочарован    

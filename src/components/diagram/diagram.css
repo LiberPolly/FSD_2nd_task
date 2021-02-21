@@ -1,0 +1,78 @@
+.diagram__header {
+  margin-bottom: 1.25rem;
+}
+.diagram__wrapper {
+  position: relative;
+  display: flex;
+}
+.diagram__wrapper .diagram__votes {
+  position: absolute;
+  top: 36.5px;
+  left: 28.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #bd9cff;
+}
+.diagram__wrapper .diagram__votes-amount {
+  font-size: 24px;
+}
+.diagram__wrapper .diagram__votes-text {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.diagram__diagram {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.diagram__diagram .unit {
+  fill: none;
+  stroke-width: 1;
+  cursor: pointer;
+}
+.diagram__diagram .unit.unit_green {
+  stroke-dasharray: 24 100;
+}
+.diagram__diagram .unit.unit_orange {
+  stroke-dasharray: 49 100;
+  stroke-dashoffset: -25;
+}
+.diagram__diagram .unit.unit_violet {
+  stroke-dasharray: 24 100;
+  stroke-dashoffset: -75;
+}
+.diagram__legend {
+  align-self: flex-end;
+}
+.diagram__legend-item {
+  position: relative;
+  margin-left: 30.5px;
+  padding-left: 15px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  color: #575871;
+}
+.diagram__legend-item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}
+.diagram__legend-item:nth-child(1)::before {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.diagram__legend-item:nth-child(2)::before {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+.diagram__legend-item:nth-child(3)::before {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+.diagram__legend-item:nth-child(4)::before {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
