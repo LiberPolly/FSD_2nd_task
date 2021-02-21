@@ -9,9 +9,10 @@
   background-color: @color-white;
   box-shadow: @box-shadow-card;
 
-  // @media (max-width: @xxs) {
-  //   padding: 1.8rem 0.7rem 0.8rem 0.9rem;
-  // }
+  @media (max-width: @xxs) {
+    padding: 1.8rem 0.7rem 0.8rem 0.9rem;
+    width: 20rem;
+  }
 
   &__dropdowns-wrapper {
     display: flex;
@@ -93,6 +94,11 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    @media (max-width: @xxs) {
+      right: 3.5rem;
+      font-size: 1.3rem;
+    }
 
     &:hover {
       color: @color-50;
