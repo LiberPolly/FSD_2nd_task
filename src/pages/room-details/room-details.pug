@@ -1,6 +1,5 @@
 extends ../base/base.pug
 include ../../components/additional-room-info/additional-room-info.pug
-include ../../components/diagram/diagram.pug
 include ../../components/reviews/reviews.pug
 include ../../components/bullet-list/bullet-list.pug
 
@@ -13,7 +12,7 @@ block main
           - const additionalRoomInfo = [['Комфорт', 'Шумопоглощающие стены', 'material-icons', 'insert_emoticon'], ['Удобство', 'Окно в каждой из спален', 'material-icons', 'location_city'], ['Уют', 'Номер оснащён камином', 'material-icons', 'whatshot']]
           +additional-room-info('Сведения о номере', additionalRoomInfo)
         .room-details__diagram
-          +diagram()
+          include ../../components/diagram/diagram.pug
         .room-details__reviews
           +reviews('Отзывы посетителей номера')
         .room-details__bullet-list
