@@ -83,45 +83,41 @@
                 </div>
               </div>
               <div class="room-details__diagram">
-                <div class="canvas-container">
-                  <div class="canvas-container__pie">
-                    <div class="canvas-container__items">
-                      <div class="canvas-container__number">260</div>
-                      <div class="canvas-container__text">голосов</div>
-                    </div>
-                    <svg class="chart" viewbox="0 0 32.3 33.3">
-                      <circle class="unit" stroke="url(#paint5_linear)" r="15.9" cx="50%" cy="50%"></circle>
-                      <circle class="unit" stroke="url(#paint4_linear)" r="15.9" cx="50%" cy="50%"></circle>
-                      <circle class="unit" stroke="url(#paint3_linear)" r="15.9" cx="50%" cy="50%"></circle>
-                      <defs>
-                        <lineargradient id="paint5_linear" x1=".5" x2=".5" y2="1">
-                          <stop stop-color="#ffe39c"></stop>
-                          <stop offset="1" stop-color="#ffba9c"></stop>
-                        </lineargradient>
-                        <lineargradient id="paint4_linear" x1="100%" y1="0%" x2="0%" y2="0%">
-                          <stop offset="0" stop-color="#6FCF97"></stop>
-                          <stop offset="100%" stop-color="#66D2EA"></stop>
-                        </lineargradient>
-                        <lineargradient id="paint3_linear" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0" stop-color="#BC9CFF"></stop>
-                          <stop offset="100%" stop-color="#8BA4F9"></stop>
-                        </lineargradient>
-                      </defs>
-                    </svg>
-                    <div class="legend">
-                      <ul class="caption-list">
-                        <li class="caption-item">Великолепно</li>
-                        <li class="caption-item">Хорошо</li>
-                        <li class="caption-item">Удовлетворительно</li>
-                        <li class="caption-item">Разочарован    </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+<div class="diagram">
+  <h2 class="diagram__header">Впечатления от номера</h2>
+  <div class="diagram__wrapper">
+    <div class="diagram__votes"><span class="diagram__votes-amount">260</span><span class="diagram__votes-text">голосов     </span></div>
+    <svg class="diagram__diagram" viewbox="0 0 32.3 33.3">
+      <circle class="unit unit_orange" stroke="url(#paint-orange_linear)" r="15.9" cx="50%" cy="50%"></circle>
+      <circle class="unit unit_green" stroke="url(#paint-green_linear)" r="15.9" cx="50%" cy="50%"></circle>
+      <circle class="unit unit_violet" stroke="url(#paint-violet_linear)" r="15.9" cx="50%" cy="50%"></circle>
+      <defs>
+        <lineargradient id="paint-orange_linear" x1=".5" x2=".5" y2="1">
+          <stop offset="0" stop-color="#ffe39c"></stop>
+          <stop offset="1" stop-color="#ffba9c"></stop>
+        </lineargradient>
+        <lineargradient id="paint-green_linear" x1="100%" y1="0%" x2="0%" y2="0%">
+          <stop offset="0" stop-color="#6FCF97"></stop>
+          <stop offset="100%" stop-color="#66D2EA"></stop>
+        </lineargradient>
+        <lineargradient id="paint-violet_linear" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0" stop-color="#BC9CFF"></stop>
+          <stop offset="100%" stop-color="#8BA4F9"></stop>
+        </lineargradient>
+      </defs>
+    </svg>
+    <ul class="diagram__legend">
+      <li class="diagram__legend-item">Великолепно</li>
+      <li class="diagram__legend-item">Хорошо</li>
+      <li class="diagram__legend-item">Удовлетворительно</li>
+      <li class="diagram__legend-item">Разочарован    </li>
+    </ul>
+  </div>
+</div>
               </div>
               <div class="room-details__reviews">
-                <div class="reviews"><span class="reviews__amount">2 отзыва</span>
-                  <h2 class="reviews__header">Отзывы посетителей номера</h2>
+                <div class="reviews">
+                  <h2 class="reviews__header">Отзывы посетителей номера</h2><span class="reviews__amount">2 отзыва</span>
                   <div class="reviews__list">
                     <template class="reviews__template">
                       <div class="review">
@@ -305,7 +301,7 @@
                         </lineargradient>
                       </defs>
                     </svg></a><a class="social-icons__instagram" href="/mock-address/change-me/instagram" target="blank" rel="noopener noreferrer">
-                    <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11 5.60938C8 5.60938 5.60938 8.04688 5.60938 11C5.60938 14 8 16.3906 11 16.3906C13.9531 16.3906 16.3906 14 16.3906 11C16.3906 8.04688 13.9531 5.60938 11 5.60938ZM11 14.5156C9.07812 14.5156 7.48438 12.9688 7.48438 11C7.48438 9.07812 9.03125 7.53125 11 7.53125C12.9219 7.53125 14.4688 9.07812 14.4688 11C14.4688 12.9688 12.9219 14.5156 11 14.5156ZM17.8438 5.42188C17.8438 4.71875 17.2812 4.15625 16.5781 4.15625C15.875 4.15625 15.3125 4.71875 15.3125 5.42188C15.3125 6.125 15.875 6.6875 16.5781 6.6875C17.2812 6.6875 17.8438 6.125 17.8438 5.42188ZM21.4062 6.6875C21.3125 5 20.9375 3.5 19.7188 2.28125C18.5 1.0625 17 0.6875 15.3125 0.59375C13.5781 0.5 8.375 0.5 6.64062 0.59375C4.95312 0.6875 3.5 1.0625 2.23438 2.28125C1.01562 3.5 0.640625 5 0.546875 6.6875C0.453125 8.42188 0.453125 13.625 0.546875 15.3594C0.640625 17.0469 1.01562 18.5 2.23438 19.7656C3.5 20.9844 4.95312 21.3594 6.64062 21.4531C8.375 21.5469 13.5781 21.5469 15.3125 21.4531C17 21.3594 18.5 20.9844 19.7188 19.7656C20.9375 18.5 21.3125 17.0469 21.4062 15.3594C21.5 13.625 21.5 8.42188 21.4062 6.6875ZM19.1562 17.1875C18.8281 18.125 18.0781 18.8281 17.1875 19.2031C15.7812 19.7656 12.5 19.625 11 19.625C9.45312 19.625 6.17188 19.7656 4.8125 19.2031C3.875 18.8281 3.17188 18.125 2.79688 17.1875C2.23438 15.8281 2.375 12.5469 2.375 11C2.375 9.5 2.23438 6.21875 2.79688 4.8125C3.17188 3.92188 3.875 3.21875 4.8125 2.84375C6.17188 2.28125 9.45312 2.42188 11 2.42188C12.5 2.42188 15.7812 2.28125 17.1875 2.84375C18.0781 3.17188 18.7812 3.92188 19.1562 4.8125C19.7188 6.21875 19.5781 9.5 19.5781 11C19.5781 12.5469 19.7188 15.8281 19.1562 17.1875Z" fill="url(#paint5_linear)"></path>
                       <defs>
                         <lineargradient id="paint5_linear" x1="11" y1="1" x2="11" y2="25" gradientunits="userSpaceOnUse">
