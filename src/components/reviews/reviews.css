@@ -4,6 +4,11 @@
 .reviews__header {
   margin-bottom: 1.25rem;
 }
+@media (max-width: 575px) {
+  .reviews__header {
+    margin-bottom: 0.2rem;
+  }
+}
 .reviews__amount {
   position: absolute;
   top: -0.3rem;
@@ -11,6 +16,13 @@
   font-size: 0.75rem;
   line-height: 1.5rem;
   color: #8f90A0;
+}
+@media (max-width: 575px) {
+  .reviews__amount {
+    position: unset;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
 }
 .reviews .review {
   display: flex;

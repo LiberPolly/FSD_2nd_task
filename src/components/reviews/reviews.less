@@ -5,7 +5,12 @@
 
   &__header {
     margin-bottom: 1.25rem;
+
+    @media (max-width: @xs) {
+      margin-bottom: 0.2rem;
+    }
   }
+
 
   &__amount {
     position: absolute;
@@ -14,6 +19,12 @@
     font-size: 0.75rem;
     line-height: 1.5rem;
     color: @color-50;
+
+    @media (max-width: @xs) {
+      position: unset;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
   }
 
   .review {

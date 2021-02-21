@@ -2,9 +2,9 @@ include ../../components/like-button/like-button.pug
 
 mixin reviews(header)
   .reviews
-    span.reviews__amount 2 отзыва
     if header
       h2.reviews__header= header
+    span.reviews__amount 2 отзыва
     .reviews__list
       template.reviews__template
         .review
