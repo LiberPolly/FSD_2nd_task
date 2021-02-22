@@ -16,7 +16,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  padding: 4.4rem 8.355rem 1.3rem 8.85rem;
+  padding: 4.45rem 8.8rem 0 8.8rem;
   background-color: #fff;
 }
 @media (max-width: 1199px) {
@@ -39,9 +39,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: -0.15rem;
+  margin-bottom: -0.75rem;
 }
 .room-details__content > div {
-  margin: 0 4.375rem 1.875rem 0;
+  margin: 0 6.65rem 1.875rem 0;
+}
+.room-details__content > div:last-child {
+  margin-right: 0;
 }
 @media (max-width: 767px) {
   .room-details__content > div {
