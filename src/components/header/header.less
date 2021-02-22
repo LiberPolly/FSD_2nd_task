@@ -92,8 +92,12 @@
             padding-right: 0.85rem;
 
             &::after {
-              left: 7.1rem;
               top: 0.55rem;
+              left: 6.5rem;
+
+              @media (max-width: @md) {
+                left: 7.1rem;
+              }
             }
 
             @media (max-width: @md) {

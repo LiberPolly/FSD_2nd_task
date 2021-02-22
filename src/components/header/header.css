@@ -85,8 +85,13 @@
   padding-right: 0.85rem;
 }
 .header__container .header__menu .menu-item__agreements .agreements__button::after {
-  left: 7.1rem;
   top: 0.55rem;
+  left: 6.5rem;
+}
+@media (max-width: 991px) {
+  .header__container .header__menu .menu-item__agreements .agreements__button::after {
+    left: 7.1rem;
+  }
 }
 @media (max-width: 991px) {
   .header__container .header__menu .menu-item__agreements .agreements__button {
