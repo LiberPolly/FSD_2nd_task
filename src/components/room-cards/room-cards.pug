@@ -1,0 +1,35 @@
+include ../../components/room-header/room-header.pug
+include ../../components/rate-button/rate-button.pug
+
+mixin room-cards()
+  .room-cards
+    template.room-cards__template
+      .room-card
+        .room-card__carousel.carousel.slide(id='carouselExample')
+          ol.carousel-indicators
+            li.active(data-target='#carouselExample', data-slide-to='0')
+            li(data-target='#carouselExample', data-slide-to='1')
+            li(data-target='#carouselExample', data-slide-to='2')
+            li(data-target='#carouselExample', data-slide-to='3')
+          .carousel-inner
+            .carousel-item.active
+              img.room-card__carousel-photo-1.d-block.w-100(src='src/components/room-cards/images/350-1.jpg', alt='Room photo')
+            .carousel-item
+              img.room-card__carousel-photo-2.d-block.w-100(src='src/components/room-cards/images/350-2.jpg', alt='Room photo')
+            .carousel-item
+              img.room-card__carousel-photo-3.d-block.w-100(src='src/components/room-cards/images/350-3.jpg', alt='Room photo')
+            .carousel-item
+              img.room-card__carousel-photo-4.d-block.w-100(src='src/components/room-cards/images/350-4.jpg', alt='Room photo')
+          a.carousel-control-prev(href='#carouselExample', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control-next(href='#carouselExample', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true') 
+            span.sr-only Next
+        .room-card__header
+          +room-header('', '', '')
+        .room-card__footer
+          +rate-button(0, 5)
+          .room-card__reviews-wrapper
+            span.room-card__reviews-amount
+            span.room-card__reviews
