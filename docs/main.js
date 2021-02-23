@@ -1129,6 +1129,100 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/room-cards/room-cards.js":
+/*!*********************************************!*\
+  !*** ./components/room-cards/room-cards.js ***!
+  \*********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "../node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _room_cards_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./room-cards.css */ "./components/room-cards/room-cards.css");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/src/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var bootstrap_js_src_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/js/src/carousel */ "../node_modules/bootstrap/js/src/carousel.js");
+/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
+/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _room_cards_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./room-cards.json */ "./components/room-cards/room-cards.json");
+/* harmony import */ var _noun_declension_noun_declension__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../noun-declension/noun-declension */ "./components/noun-declension/noun-declension.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+
+
+
+
+ // Если на странице присутствует контейнер для карточек комнат
+
+if (document.querySelector('.room-cards')) {
+  // То при загрузке страницы находим контейнер для карточек и шаблон карточки комнаты
+  window.onload = function createRoomCardsList() {
+    var roomCardsList = document.querySelector('.room-cards');
+    var template = roomCardsList.querySelector('.room-cards__template'); // Для каждого свойства из объекта JSON (./room-cards.json) создаем карточку комнаты
+
+    lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(_room_cards_json__WEBPACK_IMPORTED_MODULE_5__, function (roomCard) {
+      // Присваиваем id карусели с фотографиями номера для её дальнейшей инициализации
+      template.content.querySelector('.room-card__carousel').id = "carousel".concat(roomCard.id); // Указываем этот id в индикаторах карусели (круглые переключатели снизу)
+
+      var carouselIndicators = template.content.querySelectorAll('.carousel-indicators li');
+      lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(carouselIndicators, function (indicator) {
+        var carouselIndicator = indicator;
+        carouselIndicator.dataTarget = "#carousel".concat(roomCard.id);
+      }); // Указываем этот id в переключателях-стрелках по бокам карусели
+
+      template.content.querySelector('.carousel-control-prev').href = "#carousel".concat(roomCard.id);
+      template.content.querySelector('.carousel-control-next').href = "#carousel".concat(roomCard.id); // Указываем пути к фотографиям номера
+      // template.content.querySelector('.room-card__carousel-photo-1').src = `${roomCard.id}`;
+      // template.content.querySelector('.room-card__carousel-photo-2').src = `${roomCard.id}`;
+      // template.content.querySelector('.room-card__carousel-photo-3').src = `${roomCard.id}`;
+      // template.content.querySelector('.room-card__carousel-photo-4').src = `${roomCard.id}`;
+      // Заполняем шапку карточки данными номера
+
+      template.content.querySelector('.room-header__room-number').textContent = roomCard.id;
+      template.content.querySelector('.room-header__room-category').textContent = roomCard.category;
+      template.content.querySelector('.room-header__room-price').textContent = roomCard.price; // Указываем количество отзывов и добавляем, соответственно склоненное слово "отзыв"
+
+      template.content.querySelector('.room-card__reviews-amount').textContent = roomCard.reviews;
+      template.content.querySelector('.room-card__reviews').textContent = (0,_noun_declension_noun_declension__WEBPACK_IMPORTED_MODULE_6__.default)(roomCard.reviews, 'отзыв', 'отзыва', 'отзывов'); // Создаем массив элементов всех звезд рейтинга
+
+      var rateStars = _toConsumableArray(template.content.querySelectorAll('.material-icons.rate-button__star')); // Создаем массив элементов в количестве, соответствующем количеству полных звезд рейтинга
+
+
+      var fullStars = rateStars.splice(0, +roomCard.rate);
+      console.log(fullStars); // Для каждой полной звезды указываем соответствующее наименование из шрифта material icons
+
+      lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(fullStars, function (star) {
+        console.log(1);
+        var rateStar = star;
+        rateStar.textContent = 'star';
+      }); // Клонируем контент тега template с данными текущей карты и вставляем его в конец списка
+
+      roomCardsList.append(template.content.cloneNode(true)); // В созданной и добавленной на страницу карточке инициализируем карусель
+
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()("#carousel".concat(roomCard.id)).carousel({
+        interval: 4000
+      });
+    });
+  };
+}
+
+/***/ }),
+
 /***/ "./components/room-header/room-header.js":
 /*!***********************************************!*\
   !*** ./components/room-header/room-header.js ***!
@@ -1950,6 +2044,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/room-cards/room-cards.css":
+/*!**********************************************!*\
+  !*** ./components/room-cards/room-cards.css ***!
+  \**********************************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/room-header/room-header.css":
 /*!************************************************!*\
   !*** ./components/room-header/room-header.css ***!
@@ -2298,6 +2408,104 @@ module.exports = JSON.parse("{\"1\":{\"date\":\"5 дней назад\",\"name\"
 
 /***/ }),
 
+/***/ "./components/room-cards/room-cards.json":
+/*!***********************************************!*\
+  !*** ./components/room-cards/room-cards.json ***!
+  \***********************************************/
+/*! default exports */
+/*! export 1 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 10 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 11 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 12 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 2 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 3 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 4 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 5 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 6 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 7 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 8 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! export 9 [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export category [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export id [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export price [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export rate [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   export reviews [provided] [no usage info] [missing usage info prevents renaming] */
+/*!   other exports [not provided] [no usage info] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: module */
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse("{\"1\":{\"id\":\"888\",\"category\":\"люкс\",\"price\":\"9 990\",\"rate\":\"5\",\"reviews\":\"145\"},\"2\":{\"id\":\"840\",\"category\":\"\",\"price\":\"9 990\",\"rate\":\"4\",\"reviews\":\"65\"},\"3\":{\"id\":\"980\",\"category\":\"люкс\",\"price\":\"8 500\",\"rate\":\"3\",\"reviews\":\"35\"},\"4\":{\"id\":\"856\",\"category\":\"\",\"price\":\"7 300\",\"rate\":\"5\",\"reviews\":\"19\"},\"5\":{\"id\":\"740\",\"category\":\"\",\"price\":\"6 000\",\"rate\":\"4\",\"reviews\":\"44\"},\"6\":{\"id\":\"982\",\"category\":\"\",\"price\":\"5 800\",\"rate\":\"3\",\"reviews\":\"56\"},\"7\":{\"id\":\"678\",\"category\":\"\",\"price\":\"5 500\",\"rate\":\"5\",\"reviews\":\"45\"},\"8\":{\"id\":\"450\",\"category\":\"\",\"price\":\"5 300\",\"rate\":\"4\",\"reviews\":\"39\"},\"9\":{\"id\":\"350\",\"category\":\"\",\"price\":\"5 000\",\"rate\":\"3\",\"reviews\":\"77\"},\"10\":{\"id\":\"666\",\"category\":\"\",\"price\":\"5 000\",\"rate\":\"5\",\"reviews\":\"25\"},\"11\":{\"id\":\"444\",\"category\":\"\",\"price\":\"5 000\",\"rate\":\"4\",\"reviews\":\"15\"},\"12\":{\"id\":\"352\",\"category\":\"\",\"price\":\"5 000\",\"rate\":\"3\",\"reviews\":\"55\"}}");
+
+/***/ }),
+
 /***/ "./components sync recursive ^\\.\\/.*\\.js$":
 /*!***************************************!*\
   !*** ./components/ sync ^\.\/.*\.js$ ***!
@@ -2340,6 +2548,7 @@ var map = {
 	"./registration-card/registration-card.js": "./components/registration-card/registration-card.js",
 	"./reviews/reviews.js": "./components/reviews/reviews.js",
 	"./rich-checkbox-buttons/rich-checkbox-buttons.js": "./components/rich-checkbox-buttons/rich-checkbox-buttons.js",
+	"./room-cards/room-cards.js": "./components/room-cards/room-cards.js",
 	"./room-header/room-header.js": "./components/room-header/room-header.js",
 	"./searching-rooms-card/searching-rooms-card.js": "./components/searching-rooms-card/searching-rooms-card.js",
 	"./sign-in-card/sign-in-card.js": "./components/sign-in-card/sign-in-card.js",
@@ -2525,7 +2734,7 @@ webpackContext.id = "./pages sync recursive ^\\.\\/.*\\.js$";
 /******/ 		};
 /******/ 		
 /******/ 		var deferredModules = [
-/******/ 			["./main.js","vendors-node_modules_air-datepicker_src_js_air-datepicker_js-node_modules_inputmask_index_js--92510d"]
+/******/ 			["./main.js","vendors-node_modules_air-datepicker_src_js_air-datepicker_js-node_modules_bootstrap_js_src_ca-af703f"]
 /******/ 		];
 /******/ 		// no chunk on demand loading
 /******/ 		
