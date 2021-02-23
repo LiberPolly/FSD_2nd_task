@@ -38,6 +38,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-lodash": "^7.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "exports-loader": "^2.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "html-webpack-pug-plugin": "^2.0.0",
@@ -64,12 +65,14 @@
     "@babel/polyfill": "^7.12.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "air-datepicker": "^2.2.3",
+    "bootstrap": "^4.5.1",
     "inputmask": "^5.0.5",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "material-design-icons": "^3.0.1",
     "normalize.css": "^8.0.1",
-    "paginationjs": "^2.1.5"
+    "paginationjs": "^2.1.5",
+    "popper.js": "^1.16.1"
   }
 }
