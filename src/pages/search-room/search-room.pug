@@ -1,6 +1,39 @@
 extends ../base/base.pug
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/dropdown-guests/dropdown-guests.pug
+include ../../components/range-slider/range-slider.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug
+include ../../components/dropdown-facilities/dropdown-facilities.pug
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../components/room-cards/room-cards.pug
+include ../../components/pagination/pagination.pug
 
 block main
-  .landing
-    include ../../components/searching-rooms-card/searching-rooms-card.pug
-    span.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+  .search-room
+    aside.search-room__bar
+      ul.search-room__filter-list
+        li.search-room__filter-item
+          +filter-date-dropdown('даты пребывания в отеле')
+        li.search-room__filter-item
+          +dropdown-guests('гости')
+        li.search-room__filter-item
+          +range-slider('диапазон цены')
+          span.filter-item__description Стоимость за сутки пребывания в номере
+        li.search-room__filter-item
+          - const rulesCheckboxSettings = {'Можно курить': false, 'Можно с питомцами': true, 'Можно пригласить гостей (до 10 человек)': true}
+          +checkbox-buttons('правила дома', rulesCheckboxSettings)
+        li.search-room__filter-item
+          - const accessibilityCheckboxSettings = [['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', false], ['Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.', false]]
+          +rich-checkbox-buttons('доступность', accessibilityCheckboxSettings)
+        li.search-room__filter-item
+          +dropdown-facilities('удобства номера')
+        li.search-room__filter-item
+          - const additionalFacilitiesCheckboxSettings = {'Завтрак': false, 'Письменный стол': false, 'Стул для кормления': false, 'Кроватка': false, 'Телевизор': false, 'Шампунь': false}
+          +expandable-checkbox-list('дополнительные удобства', additionalFacilitiesCheckboxSettings)
+    .search-room__content-wrapper
+      h1.search-room__header Номера, которые мы для вас подобрали
+      .search-room__content
+        +room-cards()
+      .search-room__pagination
+        +pagination()
