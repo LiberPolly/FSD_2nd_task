@@ -42,6 +42,9 @@ button {
   background-color: unset;
   cursor: pointer;
 }
+button:focus {
+  outline: none;
+}
 h1 {
   font-size: 1.5rem;
   font-weight: 700;

@@ -12,7 +12,10 @@ include ../../components/pagination/pagination.pug
 block main
   .search-room
     aside.search-room__bar
-      ul.search-room__filter-list
+      label.search-room__mob-menu
+        input.search-room__mob-menu-checkbox(type= 'checkbox', checked= true)
+        span.search-room__mob-menu-mark
+      ul.search-room__filters-list
         li.search-room__filter-item
           +filter-date-dropdown('даты пребывания в отеле')
         li.search-room__filter-item

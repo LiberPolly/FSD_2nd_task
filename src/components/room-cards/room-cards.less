@@ -6,8 +6,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: @xl) {
+    justify-content: space-evenly;
+  }
+
+  // @media (max-width: @lg) {
+  //   justify-content: space-evenly;
+  // }
+
   .room-card {
     width: 16.875rem;
+    margin-right: 0.5rem;
     margin-bottom: 1.25rem;
     border-radius: @border-radius-card;
     box-shadow: @box-shadow-room-card;
@@ -17,6 +26,22 @@
 
       .carousel-control-next,
       .carousel-control-prev {
+        opacity: 0;
+      }
+
+      &:hover .carousel-control-next {
+        opacity: 1;
+      }
+
+      &:hover .carousel-control-prev {
+        opacity: 1;
+      }
+
+      &:active .carousel-control-next {
+        opacity: 1;
+      }
+
+      &:active .carousel-control-prev {
         opacity: 1;
       }
 

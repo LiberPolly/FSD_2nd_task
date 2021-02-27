@@ -12,6 +12,7 @@ if (document.querySelector('.room-cards')) {
   window.onload = function createRoomCardsList() {
     const roomCardsList = document.querySelector('.room-cards');
     const template = roomCardsList.querySelector('.room-cards__template');
+
     // Для каждого свойства из объекта JSON (./room-cards.json) создаем карточку комнаты
     forEach(roomCards, (roomCard) => {
       // Присваиваем id карусели с фотографиями номера для её дальнейшей инициализации
@@ -27,10 +28,10 @@ if (document.querySelector('.room-cards')) {
       template.content.querySelector('.carousel-control-next').href = `#carousel${roomCard.id}`;
 
       // Указываем пути к фотографиям номера
-      // template.content.querySelector('.room-card__carousel-photo-1').src = `${roomCard.id}`;
-      // template.content.querySelector('.room-card__carousel-photo-2').src = `${roomCard.id}`;
-      // template.content.querySelector('.room-card__carousel-photo-3').src = `${roomCard.id}`;
-      // template.content.querySelector('.room-card__carousel-photo-4').src = `${roomCard.id}`;
+      template.content.querySelector('.room-card__carousel-photo-1').src = `https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/${roomCard.id}-1.jpg?raw=true`;
+      template.content.querySelector('.room-card__carousel-photo-2').src = `https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/${roomCard.id}-2.jpg?raw=true`;
+      template.content.querySelector('.room-card__carousel-photo-3').src = `https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/${roomCard.id}-3.jpg?raw=true`;
+      template.content.querySelector('.room-card__carousel-photo-4').src = `https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/${roomCard.id}-4.jpg?raw=true`;
 
       // Заполняем шапку карточки данными номера
       template.content.querySelector('.room-header__room-number').textContent = roomCard.id;
@@ -41,16 +42,19 @@ if (document.querySelector('.room-cards')) {
       template.content.querySelector('.room-card__reviews-amount').textContent = roomCard.reviews;
       template.content.querySelector('.room-card__reviews').textContent = nounDeclension(roomCard.reviews, 'отзыв', 'отзыва', 'отзывов');
 
-      // Создаем массив элементов всех звезд рейтинга
+      // // Создаем массив элементов всех звезд рейтинга
       const rateStars = [...template.content.querySelectorAll('.material-icons.rate-button__star')];
-      // Создаем массив элементов в количестве, соответствующем количеству полных звезд рейтинга
-      const fullStars = rateStars.splice(0, +roomCard.rate);
-      console.log(fullStars);
+
       // Для каждой полной звезды указываем соответствующее наименование из шрифта material icons
-      forEach(fullStars, (star) => {
-        console.log(1);
-        const rateStar = star;
-        rateStar.textContent = 'star';
+      forEach(rateStars, (rateStar, starIndex) => {
+        const star = rateStar;
+        const index = starIndex;
+
+        if (index < +roomCard.rate) {
+          star.textContent = 'star';
+        } else {
+          star.textContent = 'star_border';
+        }
       });
 
       // Клонируем контент тега template с данными текущей карты и вставляем его в конец списка
@@ -58,7 +62,7 @@ if (document.querySelector('.room-cards')) {
 
       // В созданной и добавленной на страницу карточке инициализируем карусель
       $(`#carousel${roomCard.id}`).carousel({
-        interval: 4000,
+        interval: 8000,
       });
     });
   };
