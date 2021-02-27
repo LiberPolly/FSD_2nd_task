@@ -1187,35 +1187,37 @@ if (document.querySelector('.room-cards')) {
 
       template.content.querySelector('.carousel-control-prev').href = "#carousel".concat(roomCard.id);
       template.content.querySelector('.carousel-control-next').href = "#carousel".concat(roomCard.id); // Указываем пути к фотографиям номера
-      // template.content.querySelector('.room-card__carousel-photo-1').src = `${roomCard.id}`;
-      // template.content.querySelector('.room-card__carousel-photo-2').src = `${roomCard.id}`;
-      // template.content.querySelector('.room-card__carousel-photo-3').src = `${roomCard.id}`;
-      // template.content.querySelector('.room-card__carousel-photo-4').src = `${roomCard.id}`;
-      // Заполняем шапку карточки данными номера
+
+      template.content.querySelector('.room-card__carousel-photo-1').src = "https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/".concat(roomCard.id, "-1.jpg?raw=true");
+      template.content.querySelector('.room-card__carousel-photo-2').src = "https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/".concat(roomCard.id, "-2.jpg?raw=true");
+      template.content.querySelector('.room-card__carousel-photo-3').src = "https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/".concat(roomCard.id, "-3.jpg?raw=true");
+      template.content.querySelector('.room-card__carousel-photo-4').src = "https://github.com/LiberPolly/FSD_2nd_task/blob/master/src/components/room-cards/images/".concat(roomCard.id, "-4.jpg?raw=true"); // Заполняем шапку карточки данными номера
 
       template.content.querySelector('.room-header__room-number').textContent = roomCard.id;
       template.content.querySelector('.room-header__room-category').textContent = roomCard.category;
       template.content.querySelector('.room-header__room-price').textContent = roomCard.price; // Указываем количество отзывов и добавляем, соответственно склоненное слово "отзыв"
 
       template.content.querySelector('.room-card__reviews-amount').textContent = roomCard.reviews;
-      template.content.querySelector('.room-card__reviews').textContent = (0,_noun_declension_noun_declension__WEBPACK_IMPORTED_MODULE_6__.default)(roomCard.reviews, 'отзыв', 'отзыва', 'отзывов'); // Создаем массив элементов всех звезд рейтинга
+      template.content.querySelector('.room-card__reviews').textContent = (0,_noun_declension_noun_declension__WEBPACK_IMPORTED_MODULE_6__.default)(roomCard.reviews, 'отзыв', 'отзыва', 'отзывов'); // // Создаем массив элементов всех звезд рейтинга
 
-      var rateStars = _toConsumableArray(template.content.querySelectorAll('.material-icons.rate-button__star')); // Создаем массив элементов в количестве, соответствующем количеству полных звезд рейтинга
+      var rateStars = _toConsumableArray(template.content.querySelectorAll('.material-icons.rate-button__star')); // Для каждой полной звезды указываем соответствующее наименование из шрифта material icons
 
 
-      var fullStars = rateStars.splice(0, +roomCard.rate);
-      console.log(fullStars); // Для каждой полной звезды указываем соответствующее наименование из шрифта material icons
+      lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(rateStars, function (rateStar, starIndex) {
+        var star = rateStar;
+        var index = starIndex;
 
-      lodash_forEach__WEBPACK_IMPORTED_MODULE_4___default()(fullStars, function (star) {
-        console.log(1);
-        var rateStar = star;
-        rateStar.textContent = 'star';
+        if (index < +roomCard.rate) {
+          star.textContent = 'star';
+        } else {
+          star.textContent = 'star_border';
+        }
       }); // Клонируем контент тега template с данными текущей карты и вставляем его в конец списка
 
       roomCardsList.append(template.content.cloneNode(true)); // В созданной и добавленной на страницу карточке инициализируем карусель
 
       jquery__WEBPACK_IMPORTED_MODULE_2___default()("#carousel".concat(roomCard.id)).carousel({
-        interval: 4000
+        interval: 8000
       });
     });
   };
@@ -1480,7 +1482,20 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_room_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-room.css */ "./pages/search-room/search-room.css");
+ // Показ и скрытие меню фильтров по клику на чекбокс.
 
+if (document.querySelector('.search-room__bar')) {
+  var filtersBar = document.querySelector('.search-room__bar');
+  var checkboxMenu = filtersBar.querySelector('.search-room__mob-menu-checkbox');
+  var filtersList = filtersBar.querySelector('.search-room__filters-list');
+  checkboxMenu.addEventListener('click', function () {
+    if (checkboxMenu.checked) {
+      filtersList.style.display = 'none';
+    } else {
+      filtersList.style.display = 'flex';
+    }
+  });
+}
 
 /***/ }),
 

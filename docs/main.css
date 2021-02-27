@@ -41,6 +41,9 @@ button {
   background-color: unset;
   cursor: pointer;
 }
+button:focus {
+  outline: none;
+}
 h1 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -1970,8 +1973,14 @@ summary::after {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 1450px) {
+  .room-cards {
+    justify-content: space-evenly;
+  }
+}
 .room-cards .room-card {
   width: 16.875rem;
+  margin-right: 0.5rem;
   margin-bottom: 1.25rem;
   border-radius: 4px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -1979,6 +1988,18 @@ summary::after {
 }
 .room-cards .room-card__carousel .carousel-control-next,
 .room-cards .room-card__carousel .carousel-control-prev {
+  opacity: 0;
+}
+.room-cards .room-card__carousel:hover .carousel-control-next {
+  opacity: 1;
+}
+.room-cards .room-card__carousel:hover .carousel-control-prev {
+  opacity: 1;
+}
+.room-cards .room-card__carousel:active .carousel-control-next {
+  opacity: 1;
+}
+.room-cards .room-card__carousel:active .carousel-control-prev {
   opacity: 1;
 }
 .room-cards .room-card__carousel .carousel-indicators {
@@ -2519,14 +2540,113 @@ summary::after {
 }
 
 .search-room {
+  position: relative;
   display: flex;
   padding: 1.6rem 8.355rem 1.3rem 8.75rem;
   border-bottom: 1px solid #e5e5e5;
   background-color: #fff;
 }
+@media (max-width: 1450px) {
+  .search-room {
+    padding: 1.6rem 2rem 1.3rem;
+  }
+}
+@media (max-width: 1199px) {
+  .search-room {
+    padding: 1.6rem 1.6rem 1.3rem;
+  }
+}
+@media (max-width: 991px) {
+  .search-room {
+    padding: 1.6rem 0.5rem 1.3rem;
+  }
+}
+@media (max-width: 767px) {
+  .search-room {
+    padding: 1.6rem 0.2rem 1.3rem;
+  }
+}
 .search-room__bar {
-  width: 16.625rem;
+  display: flex;
+  flex-direction: column;
   margin-right: 3.75rem;
+}
+@media (max-width: 1450px) {
+  .search-room__bar {
+    margin-right: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .search-room__bar {
+    position: absolute;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.search-room__mob-menu {
+  display: none;
+  position: relative;
+  margin-left: 1rem;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .search-room__mob-menu {
+    display: flex;
+  }
+}
+.search-room__mob-menu .search-room__mob-menu-mark::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0rem;
+  left: 0rem;
+  height: 3rem;
+  width: 3rem;
+  border: solid 0.2rem transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background-clip: padding-box, border-box;
+}
+.search-room__mob-menu .search-room__mob-menu-mark::after {
+  content: '';
+  position: absolute;
+  display: flex;
+  opacity: 0.2;
+  left: 0.9rem;
+  top: 0.25rem;
+  width: 1.2rem;
+  height: 1.8rem;
+  border: solid #bd9cff;
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
+}
+.search-room__mob-menu .search-room__mob-menu-checkbox {
+  opacity: 0;
+}
+.search-room__mob-menu .search-room__mob-menu-checkbox:checked + .search-room__mob-menu-mark::after {
+  opacity: 1;
+}
+.search-room__filters-list {
+  display: flex;
+  flex-direction: column;
+  width: 16.625rem;
+}
+@media (max-width: 767px) {
+  .search-room__filters-list {
+    display: none;
+    padding: 1rem;
+    width: 18.625rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    z-index: 50;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  }
 }
 .search-room__filter-item {
   margin-bottom: 1.875rem;
@@ -2538,9 +2658,19 @@ summary::after {
 .search-room__content-wrapper {
   width: 100%;
 }
+@media (max-width: 767px) {
+  .search-room__content-wrapper {
+    margin-top: 3.5rem;
+  }
+}
 .search-room__content-wrapper .search-room__header {
   margin-top: 0.3rem;
   margin-bottom: 1.25rem;
+}
+@media (max-width: 1450px) {
+  .search-room__content-wrapper .search-room__header {
+    text-align: center;
+  }
 }
 .search-room__content-wrapper .search-room__content {
   margin-bottom: 1.25rem;
