@@ -1,7 +1,8 @@
 import './like-button.css';
-import forEach from 'lodash/forEach';
+// import forEach from 'lodash/forEach';
 
-function toggleLikes(thisButton) {
+export default function toggleLikes(thisButton) {
+  console.log('клик');
   const likeButton = thisButton;
   const checkbox = likeButton.querySelector('.like-button__checkbox');
   const valueEl = likeButton.querySelector('.like-button__value');
@@ -16,11 +17,13 @@ function toggleLikes(thisButton) {
   }
 }
 
+// Код вызывается из reviews.js
 // Поиск лайков и обработка событий на них начинается после полной загрузки страницы,
 // т.к. лайки загружаются динамически.
-window.onload = () => {
-  const likeButtons = document.querySelectorAll('.like-button');
-  forEach(likeButtons, (likeButton) => {
-    likeButton.addEventListener('change', (e) => toggleLikes(e.currentTarget));
-  });
-};
+// window.onload = () => {
+//   console.log('загрузка');
+//   const likeButtons = document.querySelectorAll('.like-button');
+//   forEach(likeButtons, (likeButton) => {
+//     likeButton.addEventListener('change', (e) => toggleLikes(e.currentTarget));
+//   });
+// };
