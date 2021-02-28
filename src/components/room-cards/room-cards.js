@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './room-cards.css';
 import $ from 'jquery';
 import 'bootstrap/js/src/carousel';

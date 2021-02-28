@@ -37,6 +37,7 @@
   justify-content: flex-end;
   margin-right: 15px;
   margin-left: 0;
+  margin-bottom: 0.5rem;
 }
 .room-cards .room-card__carousel .carousel-indicators li {
   width: 7.5px;
