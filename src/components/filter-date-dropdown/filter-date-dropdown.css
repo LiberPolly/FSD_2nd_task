@@ -107,12 +107,12 @@
 .filter-date-dropdown .datepicker .datepicker--cell.-range-from- {
   border: none;
   border-radius: 50%;
-  background-color: none;
+  background-color: unset;
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-range-to- {
   border: none;
   border-radius: 50%;
-  background-color: none;
+  background-color: unset;
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-range-from-::after {
   content: '';
