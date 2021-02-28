@@ -795,19 +795,21 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./components/like-button/like-button.js ***!
   \***********************************************/
 /*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ toggleLikes; }
+/* harmony export */ });
 /* harmony import */ var _like_button_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./like-button.css */ "./components/like-button/like-button.css");
-/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
-/* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_1__);
-
-
+ // import forEach from 'lodash/forEach';
 
 function toggleLikes(thisButton) {
+  console.log('клик');
   var likeButton = thisButton;
   var checkbox = likeButton.querySelector('.like-button__checkbox');
   var valueEl = likeButton.querySelector('.like-button__value');
@@ -820,18 +822,16 @@ function toggleLikes(thisButton) {
     value -= 1;
     valueEl.textContent = value;
   }
-} // Поиск лайков и обработка событий на них начинается после полной загрузки страницы,
+} // Код вызывается из reviews.js
+// Поиск лайков и обработка событий на них начинается после полной загрузки страницы,
 // т.к. лайки загружаются динамически.
-
-
-window.onload = function () {
-  var likeButtons = document.querySelectorAll('.like-button');
-  lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(likeButtons, function (likeButton) {
-    likeButton.addEventListener('change', function (e) {
-      return toggleLikes(e.currentTarget);
-    });
-  });
-};
+// window.onload = () => {
+//   console.log('загрузка');
+//   const likeButtons = document.querySelectorAll('.like-button');
+//   forEach(likeButtons, (likeButton) => {
+//     likeButton.addEventListener('change', (e) => toggleLikes(e.currentTarget));
+//   });
+// };
 
 /***/ }),
 
@@ -1090,6 +1090,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/forEach */ "../node_modules/lodash/forEach.js");
 /* harmony import */ var lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_forEach__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _reviews_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reviews.json */ "./components/reviews/reviews.json");
+/* harmony import */ var _like_button_like_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../like-button/like-button */ "./components/like-button/like-button.js");
+
 
 
 
@@ -1108,8 +1110,37 @@ if (document.querySelector('.reviews')) {
 
       reviewsList.append(template.content.cloneNode(true));
     });
+    console.log('загрузка');
+    var likeButtons = document.querySelectorAll('.like-button');
+    lodash_forEach__WEBPACK_IMPORTED_MODULE_1___default()(likeButtons, function (likeButton) {
+      likeButton.addEventListener('change', function (e) {
+        return (0,_like_button_like_button__WEBPACK_IMPORTED_MODULE_3__.default)(e.currentTarget);
+      });
+    });
   };
-}
+} // function toggleLikes(thisButton) {
+//   console.log('клик');
+//   const likeButton = thisButton;
+//   const checkbox = likeButton.querySelector('.like-button__checkbox');
+//   const valueEl = likeButton.querySelector('.like-button__value');
+//   let value = +valueEl.textContent;
+//   if (checkbox.checked) {
+//     value += 1;
+//     valueEl.textContent = value;
+//   } else {
+//     value -= 1;
+//     valueEl.textContent = value;
+//   }
+// }
+// // Поиск лайков и обработка событий на них начинается после полной загрузки страницы,
+// // т.к. лайки загружаются динамически.
+// window.onload = () => {
+//   console.log('загрузка');
+//   const likeButtons = document.querySelectorAll('.like-button');
+//   forEach(likeButtons, (likeButton) => {
+//     likeButton.addEventListener('change', (e) => toggleLikes(e.currentTarget));
+//   });
+// };
 
 /***/ }),
 
@@ -1140,7 +1171,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "../node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ "../node_modules/bootstrap/dist/css/bootstrap.css");
 /* harmony import */ var _room_cards_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./room-cards.css */ "./components/room-cards/room-cards.css");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/src/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
@@ -2749,7 +2780,7 @@ webpackContext.id = "./pages sync recursive ^\\.\\/.*\\.js$";
 /******/ 		};
 /******/ 		
 /******/ 		var deferredModules = [
-/******/ 			["./main.js","vendors-node_modules_air-datepicker_src_js_air-datepicker_js-node_modules_bootstrap_js_src_ca-af703f"]
+/******/ 			["./main.js","vendors-node_modules_air-datepicker_src_js_air-datepicker_js-node_modules_bootstrap_js_src_ca-423ee9"]
 /******/ 		];
 /******/ 		// no chunk on demand loading
 /******/ 		

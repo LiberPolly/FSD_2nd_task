@@ -332,7 +332,7 @@ summary::after {
   line-height: 2.2rem;
   letter-spacing: 0.1px;
   text-transform: uppercase;
-  background-color: none;
+  background-color: unset;
   color: #bd9cff;
   cursor: pointer;
 }
@@ -560,12 +560,12 @@ summary::after {
 .date-dropdowns .datepicker .datepicker--cell.-range-from- {
   border: none;
   border-radius: 50%;
-  background-color: none;
+  background-color: unset;
 }
 .date-dropdowns .datepicker .datepicker--cell.-range-to- {
   border: none;
   border-radius: 50%;
-  background-color: none;
+  background-color: unset;
 }
 .date-dropdowns .datepicker .datepicker--cell.-range-from-::after {
   content: '';
@@ -1068,12 +1068,12 @@ summary::after {
 .filter-date-dropdown .datepicker .datepicker--cell.-range-from- {
   border: none;
   border-radius: 50%;
-  background-color: none;
+  background-color: unset;
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-range-to- {
   border: none;
   border-radius: 50%;
-  background-color: none;
+  background-color: unset;
 }
 .filter-date-dropdown .datepicker .datepicker--cell.-range-from-::after {
   content: '';
@@ -2006,6 +2006,7 @@ summary::after {
   justify-content: flex-end;
   margin-right: 15px;
   margin-left: 0;
+  margin-bottom: 0.5rem;
 }
 .room-cards .room-card__carousel .carousel-indicators li {
   width: 7.5px;
